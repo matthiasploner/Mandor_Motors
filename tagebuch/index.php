@@ -8,7 +8,7 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-image: url('../car.jpg');
+
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -37,6 +37,8 @@
             user-select: none;
             -webkit-user-select: none;
             touch-action: manipulation;
+            position: absolute;
+            top:50%;
         }
 
         .topnav {
@@ -109,21 +111,18 @@
             cursor: pointer;
         }
 
-        .center {
+        .top {
             position: absolute;
-            top: 20%;
+            top: 0%;
             width: 100%;
             text-align: center;
             color: #f1f1f1;
         }
 
-        .center h1 {
-            font-size: 55px;
-            font-family: PT Sans, serif;
-        }
-
-        .center p {
-            font-size: 20px;
+        .top h1 {
+            font-size: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
         }
 
         .navbar {
@@ -150,17 +149,20 @@
             display: none;
         }
         .textarea{
-            width: 100%;
+
             height: 150px;
             padding: 12px 20px;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
+            /*box-sizing: border-box;*/
+            /*border: 2px solid #ccc;
             border-radius: 4px;
-            background-color: #f8f8f8;
+            background-color: #f8f8f8;*/
             font-size: 16px;
             resize: none;
             bottom:10px;
-            overflow: scroll;
+            position: fixed;
+            margin: auto;
+            width: 80%;
+            text-align: center;
         }
         @media only screen and (max-width: 600px) {
             .topnav-right {
@@ -185,7 +187,6 @@
 
             .center h1 {
                 font-size: 40px;
-                font-family: PT Sans, serif;
             }
 
             .center p {
@@ -271,13 +272,16 @@
         </div>
     </div>
 </div>
-<h1>Unser Tagebuch</h1>
-<div class="textarea">
+<div class="top"><h1>Unser Tagebuch</h1></div>
+
+
     <form method="post">
-            <textarea id="text" name="text" cols="35" rows="4"></textarea>
+        <div class="textarea">
+            <textarea id="text" name="text" cols="100" rows="8"></textarea>
             <button onclick=saveText()>What is the time?</button>
+        </div>
     </form>
-</div>
+
 <script>
 
     function saveText(){
