@@ -14,6 +14,17 @@
             background-size: cover;
         }
 
+        .textareaRead{
+
+            font-size: 16px;
+            resize: none;
+            top:100px;
+            position: fixed;
+            margin: auto;
+            width: 90%;
+            text-align: center;
+        }
+
         button{
             align-items: center;
             background: #FFFFFF;
@@ -120,7 +131,7 @@
         }
 
         .top h1 {
-            font-size: 35px;
+            font-size: 30px;
             font-family: Arial, Helvetica, sans-serif;
             color: black;
         }
@@ -161,7 +172,7 @@
             bottom:10px;
             position: fixed;
             margin: auto;
-            width: 80%;
+            width: 90%;
             text-align: center;
         }
         @media only screen and (max-width: 600px) {
@@ -273,7 +284,11 @@
     </div>
 </div>
 <div class="top"><h1>Unser Tagebuch</h1></div>
-
+<div class="textareaRead">
+    <textarea readonly cols="100" rows="20">
+    Hallo
+</textarea>
+</div>
 
     <form method="post">
         <div class="textarea">
