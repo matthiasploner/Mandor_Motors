@@ -1,25 +1,31 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color:grey;
+    background-color:darkgreen;
 }
 .textarea{
-
     height: 150px;
     padding: 12px 20px;
     font-size: 16px;
     resize: none;
     bottom:10px;
-    position: fixed;
+    position: absolute;
     margin: auto;
-    width: 90%;
-    text-align: center;
-    overflow:auto;
 
+    text-align: center;
+}
+
+.styleArea{
+
+    background-color: #dddddd;
+    color:#666666;
+    padding: 1em;
+    border-radius: 10px;
+    border:2px solid transparent;
+    outline:none;
 }
 .textareaRead{
     height: 200px;
@@ -27,16 +33,21 @@ body {
     font-size: 16px;
     resize: none;
     top:100px;
-    position: fixed;
+    position: absolute;
     margin: auto;
-    width: 90%;
     text-align: center;
-
 }
 
 input[type="date"]{
     position: absolute;
-    left: 15%;
+    left: 13%;
+    bottom:60%;
+}
+
+select{
+
+    position: absolute;
+    left: 13%;
 }
 
 button{
@@ -45,7 +56,7 @@ button{
     border: 0 solid #E2E8F0;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     box-sizing: border-box;
-    color: #1A202C;
+    color: #666666;
     display: inline-flex;
     font-family: Inter, sans-serif;
     font-size: 1rem;
@@ -64,6 +75,7 @@ button{
     touch-action: manipulation;
     position: absolute;
     top:50%;
+
 }
 
 .topnav {

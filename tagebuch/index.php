@@ -36,22 +36,27 @@
 </div>
 <div class="top"><h1>Unser Tagebuch</h1></div>
 <div class="textareaRead">
-    <textarea style="resize:none" readonly cols="100" rows="28">
+    <textarea class="styleArea" style="resize:none" readonly cols="100" rows="28">
     Hallo
 </textarea>
 </div>
     <form method="post">
-        <div class="textarea">
-            <div><input type="date" name="dateofbirth" id="dateofbirth"></div>
 
-            <textarea style="resize:none" id="text" name="text" cols="100" rows="8"></textarea>
+        <div class="textarea">
+
+            <input style="resize:none"id="text"type="date" name="dateofbirth" id="dateofbirth">
+            <select>
+                <option>Matthias Plaickner</option>
+                <option>Simon Ploner</option>
+            </select>
+            <textarea class="styleArea " name="text" cols="100" rows="8"></textarea>
             <button onclick=saveText()>Speichern</button>
+
         </div>
+
     </form>
-<select>
-    <option>Matthias Plaickner</option>
-    <option>Simon Ploner</option>
-</select>
+
+
 <script>
 
     function saveText(){
