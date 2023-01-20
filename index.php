@@ -117,25 +117,26 @@
             font-size: 16px;
         }
 
-        .dropdown-content {
+        .main {
+            padding: 16px;
+            margin-bottom: 30px;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .menu-overlay {
             display: none;
         }
 
-        .dropdown-btn {
-            display: none;
+        .mobile-nav-btn {
+            display: none
         }
 
         @media only screen and (max-width: 600px) {
             .topnav-right {
                 display: none;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .topnav-right a {
-                margin: 10px 0;
-                float: none;
-                display: block;
             }
 
             .center {
@@ -155,42 +156,6 @@
                 font-size: 20px;
             }
 
-            .dropdown-mobile{
-                float: left;
-            }
-
-            .dropdown-btn {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-                background-color: transparent;
-                color: white;
-                padding: 20px;
-            }
-            .dropdown-btn:hover {
-                background-color: #1111;
-            }
-            .dropdown-btn i {
-                font-size: 24px;
-            }
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: transparent;
-                min-width: 160px;
-                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-                z-index: 1;
-                left: auto;
-                right: 0;
-            }
-            .dropdown-content a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-            }
-
             body {
                 background-image: url('car.jpg');
                 background-repeat: no-repeat;
@@ -200,6 +165,59 @@
                 height:100%;
                 width:100%;
             }
+
+            #mobile-nav {
+                position: fixed;
+                display: block;
+                top: 0;
+                right: 0;
+                width: 0;
+                height: 100%;
+                background-color: rgba(0,0,0,0.7);
+                overflow-x: hidden;
+                transition: right 0.5s ease;
+                z-index: 1;
+            }
+
+            #mobile-nav a {
+                padding: 8px;
+                text-decoration: none;
+                font-size: 60px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+            #mobile-nav a:hover {
+                color: #f1f1f1;
+            }
+
+            .mobile-nav-btn{
+                display: block;
+                float: right;
+                padding: 10px;
+                background-color: transparent;
+                border: none;
+                font-size: 30px;
+            }
+
+            .mobile-nav-clsbtn{
+                float: right;
+                padding: 10px;
+                color: #818181;
+                background-color: transparent;
+                border: none;
+                font-size: 30px;
+            }
+
+            .mobile-content {
+                position: relative;
+                top: 25%;
+                left: 15%;
+                width: 100%;
+                text-align: center;
+                margin-top: 30px;
+            }
         }
     </style>
 </head>
@@ -208,7 +226,7 @@
     <a class="active" href="#"><img src="MM_Icon.png"></a>
     <div class="topnav-right">
         <a href="#">About Us</a>
-        <a href="login">Account</a>
+        <a href="#">Account</a>
         <div class="dropdown-PC">
             <div class="dropdown-btnPC" onclick='dropdownFunction("pcDropdown")'>
                 <span>Menu</span>
@@ -220,15 +238,15 @@
             </div>
         </div>
     </div>
-    <div class="dropdown-mobile">
-        <div class="dropdown-btn" onclick='dropdownFunction("mobileDropdown")'>
-            <span>≡</span>
-        </div>
-        <div id="mobileDropdown" class="dropdown-content">
+    <div id="mobile-nav" class="menu-overlay">
+        <button class="mobile-nav-clsbtn" onclick="navclose()">≡</button>
+        <div class="mobile-content">
             <a href="#">About Us</a>
             <a href="#">Account</a>
         </div>
     </div>
+
+    <button class="mobile-nav-btn" onclick="navopen()">≡</button>
 </div>
 
 <div class="center">
@@ -246,8 +264,14 @@
 </div>
 
 <script>
-    function dropdownFunction(str) {
-        document.getElementById(str).classList.toggle("show");
+    function dropdownFunction() {
+        document.getElementById("pcDropdown").classList.toggle("show");
+    }
+    function navopen() {
+        document.getElementById("mobile-nav").style.width = "100%";
+    }
+    function navclose() {
+        document.getElementById("mobile-nav").style.width = "0%";
     }
 </script>
 </body>
