@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="utf-8">
@@ -59,6 +59,7 @@
             min-width: 80px;
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
             z-index: 1;
+            right: 0;
         }
 
         .dropdown-pcContent a {
@@ -99,6 +100,26 @@
 
         .center p {
             font-size: 20px;
+        }
+
+        .center button {
+            background-color: transparent;
+            min-width: 200px;
+            border-radius: 12px;
+            border-color: white;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 250px 100px 0;
+            cursor: pointer;
+        }
+
+        .center button:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
         }
 
         .navbar {
@@ -232,9 +253,8 @@
                 <span>Menu</span>
             </div>
             <div id="pcDropdown" class="dropdown-pcContent">
-                <a href="#">Link1</a>
-                <a href="#">Link2</a>
-                <a href="#">Link3</a>
+                <a href="/tagebuch">Tagebuch</a>
+                <a href="#">Bauplan</a>
             </div>
         </div>
     </div>
@@ -252,6 +272,8 @@
 <div class="center">
     <h1>MK1</h1>
     <p>What colour is your MK1?</p>
+    <button onclick="window.location.href='/tagebuch'">More about MK1</button>
+    <button onclick="window.location.href='/tagebuch'">Stream</button>
 </div>
 
 <div class="navbar">
