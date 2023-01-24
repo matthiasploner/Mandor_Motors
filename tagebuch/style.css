@@ -4,48 +4,70 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color:darkgreen;
+    background-color:#88B04B;
 }
 .textarea{
     height: 150px;
     padding: 12px 20px;
     font-size: 16px;
     resize: none;
-    bottom:10px;
-    position: absolute;
+    bottom:40px;
+    position: fixed;
     margin: auto;
-
+    width: 90%;
     text-align: center;
 }
 
 .styleArea{
-
     background-color: #dddddd;
     color:#666666;
     padding: 1em;
     border-radius: 10px;
     border:2px solid transparent;
     outline:none;
+    font-family: 'Heebo',sans-serif;
+    font-weight: 500;
+
+}
+.styleHover:hover{
+    background-color: #eeeeee;
 }
 .textareaRead{
     height: 200px;
     padding: 12px 20px;
     font-size: 16px;
     resize: none;
-    top:100px;
-    position: absolute;
+    top:70px;
+    position: fixed;
     margin: auto;
     text-align: center;
+    width: 90%;
+}
+
+svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 input[type="date"]{
     position: absolute;
     left: 13%;
-    bottom:60%;
+    bottom:30%;
+    background: #dddddd;
+    padding:15px;
+    transform: translate(-50%,-50%);
+    font-family: monospace;
+    color:#ffffff;
+    font-size: 16px;
+    border:none;
+    outline:none;
+    border-radius: 5px;
+
 }
 
 select{
-
     position: absolute;
     left: 13%;
 }
