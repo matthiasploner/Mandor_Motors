@@ -271,7 +271,7 @@
 
 <div class="center">
     <h1>MK1</h1>
-    <p>What colour is your MK1?</p>
+    <p>What color is your MK1?</p>
     <button onclick="window.location.href='/tagebuch'">More about MK1</button>
     <button onclick="window.location.href='/tagebuch'">Stream</button>
 </div>
@@ -290,7 +290,7 @@
         document.getElementById("pcDropdown").classList.toggle("show");
     }
     function navopen() {
-        document.getElementById("mobile-nav").style.width = "100%";
+        document.getElementById("mobWile-nav").style.width = "100%";
     }
     function navclose() {
         document.getElementById("mobile-nav").style.width = "0%";
