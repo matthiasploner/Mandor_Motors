@@ -6,12 +6,15 @@ body {
     background-size: cover;
     background-color:#88B04B;
 }
+
+
+
 .textarea{
     height: 150px;
     padding: 12px 20px;
     font-size: 16px;
     resize: none;
-    bottom:40px;
+    bottom: 10px;
     position: fixed;
     margin: auto;
     width: 90%;
@@ -37,7 +40,7 @@ body {
     padding: 12px 20px;
     font-size: 16px;
     resize: none;
-    top:70px;
+    top:100px;
     position: fixed;
     margin: auto;
     text-align: center;
@@ -53,8 +56,8 @@ svg {
 
 input[type="date"]{
     position: absolute;
-    left: 13%;
-    bottom:30%;
+    bottom:20px;
+    left:20px;
     background: #dddddd;
     padding:15px;
     transform: translate(-50%,-50%);
@@ -64,12 +67,16 @@ input[type="date"]{
     border:none;
     outline:none;
     border-radius: 5px;
+}
 
+select{
+    bottom: 20px;
 }
 
 select{
     position: absolute;
     left: 13%;
+    background-color: #dddddd;
 }
 
 button{
@@ -95,8 +102,8 @@ button{
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    position: absolute;
-    top:50%;
+    /*position: absolute;
+    top:50%;*/
 
 }
 
