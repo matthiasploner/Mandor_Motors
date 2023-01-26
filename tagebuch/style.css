@@ -6,12 +6,13 @@ body {
     background-size: cover;
     background-color:#88B04B;
 }
+
 .textarea{
     height: 150px;
     padding: 12px 20px;
     font-size: 16px;
     resize: none;
-    bottom:40px;
+    bottom: 15%;
     position: fixed;
     margin: auto;
     width: 90%;
@@ -37,24 +38,17 @@ body {
     padding: 12px 20px;
     font-size: 16px;
     resize: none;
-    top:70px;
+    top:10%;
     position: fixed;
     margin: auto;
     text-align: center;
     width: 90%;
 }
 
-svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 
 input[type="date"]{
     position: absolute;
-    left: 13%;
-    bottom:30%;
     background: #dddddd;
     padding:15px;
     transform: translate(-50%,-50%);
@@ -64,12 +58,13 @@ input[type="date"]{
     border:none;
     outline:none;
     border-radius: 5px;
-
+    left:90%;
 }
 
 select{
     position: absolute;
     left: 13%;
+    background-color: #dddddd;
 }
 
 button{
@@ -96,7 +91,7 @@ button{
     -webkit-user-select: none;
     touch-action: manipulation;
     position: absolute;
-    top:50%;
+    right:10%;
 
 }
 
