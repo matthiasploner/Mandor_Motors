@@ -22,46 +22,45 @@
     </div>
 <div class="container-fluid">
     <div class="row">
-
-                <div class="col-sm-1">
-                    <form method="post">
-                        <div class="">
-                            <input style="resize:none"id="text"type="date" name="dateofbirth" id="dateofbirth">
-                        </div>
-                    </form>
-                    <select class="select-selected">
+        <div class="textarea">
+            <div class="col-sm-1">
+                <form method="post">
+                        <input style="resize:none"id="date"type="date" name="dateofbirth" id="dateofbirth">
+                </form>
+            </div>
+            <div class="col-sm-1">
+                    <select id="selectUser">
+                        <option>--Alle--</option>
                         <option>Matthias Plaickner</option>
                         <option>Simon Ploner</option>
                         <option>Thomas Reinthaler</option>
                         <option>Miacheal Huber</option>
                         <option>Matthias Ploner</option>
                     </select>
-                </div>
-                <div class="col-lg">
-                    <div class="textarea">
-                        <textarea class="styleArea styleHover" style="resize: none" cols="100" rows="8"></textarea>
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="">
-                        <button onclick=saveText()>Speichern</button>
-                    </div>
+            </div>
+            <div class="col-sm-8">
+                    <textarea class="styleArea styleHover" id="message" style="resize: none" cols="100" rows="8"></textarea>
+            </div>
+            <div class="col-sm-1">
+                    <button onclick=saveText()>Speichern</button>
+            </div>
 
-                </div>
-
-
+        </div>
     </div>
 </div>
-
-
-
-
-
 
 <script>
 
     function saveText(){
+        var select = document.getElementById('selectUser');
+        var value = select.options[select.selectedIndex].value;
+        console.log(value);
 
+        const message = document.getElementById('message');
+        console.log(message.value);
+
+        var x = document.getElementById("date");
+        console.log(x.value)
     }
 </script>
 
