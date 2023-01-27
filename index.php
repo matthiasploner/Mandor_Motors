@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="topnav">
-    <a class="active" href="#"><img src="MM_Icon.png"></a>
+    <a class="active" href="../"><img src="MM_Icon.png"></a>
     <div class="topnav-right">
         <a href="#">About Us</a>
         <a href="#">Account</a>
@@ -30,6 +30,8 @@
         <div class="mobile-content">
             <a href="#">About Us</a>
             <a href="#">Account</a>
+            <a href="#">Tagebuch</a>
+            <a href="#">Bauplan</a>
         </div>
     </div>
 
@@ -44,7 +46,7 @@
 </div>
 
 <div class="navbar">
-    <a href="#">Mandor Motors</a>
+    <a href="../">Mandor Motors</a>
     <a href="#">Privacy & Legal</a>
     <a href="#">Contact</a>
     <a href="#">Careers</a>
@@ -57,7 +59,7 @@
         document.getElementById("pcDropdown").classList.toggle("show");
     }
     function navopen() {
-        document.getElementById("mobWile-nav").style.width = "100%";
+        document.getElementById("mobile-nav").style.width = "100%";
     }
     function navclose() {
         document.getElementById("mobile-nav").style.width = "0%";
