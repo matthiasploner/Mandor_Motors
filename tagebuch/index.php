@@ -11,8 +11,8 @@
 </head>
 <body>
 <div class="topnav">
-
-    <a class="active" href="http://10.10.30.42"><img src="../MM_Icon.png"></a>
+    <a href="../"><img src="../MM_Icon.png"></a>
+</div>
 
 <div class="top"><h1>Unser Tagebuch</h1></div>
     <div class="textareaRead">
