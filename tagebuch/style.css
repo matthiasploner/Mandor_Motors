@@ -216,22 +216,6 @@ button{
         display: block;
     }
 
-    .center {
-        position: absolute;
-        top: 7%;
-        width: 100%;
-        text-align: center;
-        color: #f1f1f1;
-    }
-
-    .center h1 {
-        font-size: 40px;
-    }
-
-    .center p {
-        font-size: 20px;
-    }
-
     .dropdown-mobile{
         float: left;
     }
