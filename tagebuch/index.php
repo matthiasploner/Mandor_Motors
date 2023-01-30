@@ -24,25 +24,23 @@
     <div class="row">
         <div class="textarea">
             <div class="col-sm-1">
-                <form method="post">
-                        <input style="resize:none"id="date"type="date" name="dateofbirth" id="dateofbirth">
-                </form>
+                <input style="resize:none" type="date" name="date">
             </div>
-            <div class="col-sm-1">
-                    <select id="selectUser">
-                        <option>--Alle--</option>
-                        <option>Matthias Plaickner</option>
-                        <option>Simon Ploner</option>
-                        <option>Thomas Reinthaler</option>
-                        <option>Miacheal Huber</option>
-                        <option>Matthias Ploner</option>
-                    </select>
-            </div>
+                <div class="col-sm-1">
+                        <select id="selectUser">
+                            <option>--Alle--</option>
+                            <option>Matthias Plaickner</option>
+                            <option>Simon Ploner</option>
+                            <option>Thomas Reinthaler</option>
+                            <option>Miacheal Huber</option>
+                            <option>Matthias Ploner</option>
+                        </select>
+                </div>
             <div class="col-sm-8">
                     <textarea class="styleArea styleHover" id="message" style="resize: none" cols="100" rows="8"></textarea>
             </div>
             <div class="col-sm-1">
-                    <button onclick=saveText()>Speichern</button>
+                <button onclick=saveText()>Speichern</button>
             </div>
 
         </div>
@@ -53,14 +51,43 @@
 
     function saveText(){
         var select = document.getElementById('selectUser');
-        var value = select.options[select.selectedIndex].value;
-        console.log(value);
-
+        var selectValue = select.options[select.selectedIndex].value;
         const message = document.getElementById('message');
-        console.log(message.value);
 
-        var x = document.getElementById("date");
-        console.log(x.value)
+        var id;
+        var date = document.getElementById("date");
+        if(selectValue==="Michael Huber"){
+            id=1;
+        }
+        if(selectValue==="Matthias Plaickner"){
+            id=2;
+        }
+        if(selectValue==="Matthias Ploner"){
+            id=3;
+        }
+        if(selectValue==="Simon Ploner"){
+            id=4;
+        }
+        if(selectValue==="Thomas Reinthaler"){
+            id=5;
+        }
+
+        console.log(selectValue);
+/*
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "uploadSQL.php?benutzer="+id+"&message="+message.value+"&date="+date.value,true);   //file.php muss natürlich angepasst werden
+
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                values = JSON.parse(xhttp.responseText);
+                console.log(values);
+                // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
+            }
+        };
+
+
+        xhttp.send();
+*/
     }
 </script>
 

@@ -58,7 +58,8 @@ input[type="date"]{
     border:none;
     outline:none;
     border-radius: 5px;
-    left:90%;
+    left:100%;
+    bottom:10%;
 }
 
 select{
