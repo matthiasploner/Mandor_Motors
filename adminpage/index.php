@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adminstyle.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tagebuch</title>
+    <title>adminpage</title>
 </head>
 
 <body>
@@ -35,3 +35,5 @@
         </div>
     </div>
 </div>
+Hallo
+</body>
