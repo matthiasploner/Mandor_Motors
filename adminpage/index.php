@@ -9,31 +9,39 @@
 
 <body>
 <div class="topnav">
-
-    <a class="active" href="http://10.10.30.42"><img src="../MM_Icon.png"></a>
+    <a href="#"><img src="MM_Icon.png"></a>
     <div class="topnav-right">
         <a href="#">About Us</a>
-        <a href="login">Account</a>
+        <a href="#">Account</a>
         <div class="dropdown-PC">
             <div class="dropdown-btnPC" onclick='dropdownFunction("pcDropdown")'>
                 <span>Menu</span>
             </div>
             <div id="pcDropdown" class="dropdown-pcContent">
-                <a href="#">Link1</a>
-                <a href="#">Link2</a>
-                <a href="#">Link3</a>
+                <a href="/tagebuch">Tagebuch</a>
+                <a href="/bauplan">Bauplan</a>
+                <a href="/adminpage">Admin-Page</a>
             </div>
         </div>
     </div>
-    <div class="dropdown-mobile">
-        <div class="dropdown-btn" onclick='dropdownFunction("mobileDropdown")'>
-            <span>≡</span>
-        </div>
-        <div id="mobileDropdown" class="dropdown-content">
+    <div id="mobile-nav" class="menu-overlay">
+        <button class="mobile-nav-clsbtn" onclick="navclose()">≡</button>
+        <div class="mobile-content">
             <a href="#">About Us</a>
             <a href="#">Account</a>
+            <a href="/tagebuch">Tagebuch</a>
+            <a href="/bauplan">Bauplan</a>
+            <a href="/adminpage">Admin-Page</a>
         </div>
     </div>
 </div>
-Hallo
+    <div class="centertext">
+        <h1>Admin-Page</h1>
+    </div>
+    <div class="center">
+        <button onclick="window.location.href='/tagebuch'">Steuerung</button>
+        <button onclick="window.location.href='/tagebuch'">Stream</button>
+        <button onclick="window.location.href='/tagebuch'">Informationen</button>
+        <button onclick="window.location.href='/tagebuch'">Änderungen</button>
+    </div>
 </body>

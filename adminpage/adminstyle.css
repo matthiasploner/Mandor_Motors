@@ -1,104 +1,19 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('settings.jpg');
+    background-image: url('../settings.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
-
-.textarea{
-    height: 150px;
-    padding: 12px 20px;
-    font-size: 16px;
-    resize: none;
-    bottom:40px;
-    position: fixed;
-    margin: auto;
-    width: 90%;
-    text-align: center;
-}
-
-.styleArea{
-    background-color: #dddddd;
-    color:#666666;
-    padding: 1em;
-    border-radius: 10px;
-    border:2px solid transparent;
-    outline:none;
-    font-family: 'Heebo',sans-serif;
-    font-weight: 500;
-
-}
-.styleHover:hover{
-    background-color: #eeeeee;
-}
-.textareaRead{
-    height: 200px;
-    padding: 12px 20px;
-    font-size: 16px;
-    resize: none;
-    top:70px;
-    position: fixed;
-    margin: auto;
-    text-align: center;
-    width: 90%;
-}
-
-svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-input[type="date"]{
-    position: absolute;
-    left: 13%;
-    bottom:30%;
-    background: #dddddd;
-    padding:15px;
-    transform: translate(-50%,-50%);
-    font-family: monospace;
-    color:#ffffff;
-    font-size: 16px;
-    border:none;
-    outline:none;
-    border-radius: 5px;
-
-}
-
-select{
-    position: absolute;
-    left: 13%;
-}
-
-button{
-    align-items: center;
-    background: #FFFFFF;
-    border: 0 solid #E2E8F0;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    box-sizing: border-box;
-    color: #666666;
-    display: inline-flex;
-    font-family: Inter, sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    height: 56px;
-    justify-content: center;
-    line-height: 24px;
-    overflow-wrap: break-word;
-    padding: 24px;
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 8px 8px;
     text-decoration: none;
-    width: auto;
-    border-radius: 8px;
+    margin: 2px 2px;
     cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    position: absolute;
-    top:50%;
-
 }
 
 .topnav {
@@ -146,6 +61,7 @@ button{
     min-width: 80px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
+    right: 0;
 }
 
 .dropdown-pcContent a {
@@ -171,17 +87,40 @@ button{
     cursor: pointer;
 }
 
-.top {
+.center {
     position: absolute;
-    top: 0%;
+    top: -10%;
     width: 100%;
     text-align: center;
     color: #f1f1f1;
 }
 
-.top h1 {
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+.center h1 {
+    font-size: 55px;
+    font-family: PT Sans, serif;
+}
+
+.center p {
+    font-size: 20px;
+}
+
+.center button {
+    background-color: transparent;
+    min-width: 200px;
+    border-radius: 12px;
+    border-color: black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20% 20px 0;
+    cursor: pointer;
+}
+
+.center button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
     color: black;
 }
 
@@ -201,25 +140,30 @@ button{
     font-size: 16px;
 }
 
-.dropdown-content {
+.main {
+    padding: 16px;
+    margin-bottom: 30px;
+}
+
+.show {
+    display: block;
+}
+
+.menu-overlay {
     display: none;
 }
 
-.dropdown-btn {
-    display: none;
+.mobile-nav-btn {
+    display: none
+}
+
+.centertext {
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
     .topnav-right {
         display: none;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .topnav-right a {
-        margin: 10px 0;
-        float: none;
-        display: block;
     }
 
     .center {
@@ -232,58 +176,64 @@ button{
 
     .center h1 {
         font-size: 40px;
+        font-family: PT Sans, serif;
     }
 
     .center p {
         font-size: 20px;
     }
 
-    .dropdown-mobile{
-        float: left;
-    }
 
-    .dropdown-btn {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        background-color: transparent;
-        color: white;
-        padding: 20px;
-    }
-    .dropdown-btn:hover {
-        background-color: #1111;
-    }
-    .dropdown-btn i {
-        font-size: 24px;
-    }
-
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: transparent;
-        min-width: 160px;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        z-index: 1;
-        left: auto;
-        right: 0;
-    }
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
+    #mobile-nav {
+        position: fixed;
         display: block;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        overflow-x: hidden;
+        transition: right 0.5s ease;
+        z-index: 1;
     }
 
-    body {
-
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        background-size: cover;
-        height:100%;
-        width:100%;
+    #mobile-nav a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 50px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
     }
 
+    #mobile-nav a:hover {
+        color: #f1f1f1;
+    }
+
+    .mobile-nav-btn{
+        display: block;
+        float: right;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
+    }
+
+    .mobile-nav-clsbtn{
+        float: right;
+        padding: 10px;
+        color: #818181;
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
+    }
+
+    .mobile-content {
+        position: relative;
+        top: 25%;
+        left: 15%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
 }
