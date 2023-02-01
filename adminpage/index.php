@@ -1,3 +1,14 @@
+<?php
+    require '../login/loginfunctions.php';
+
+    if(isset($_COOKIE['benutzername']) && isset($_COOKIE['token'])){
+        verifyCookie();
+    }
+    else{
+        header("Location: /login");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -9,7 +20,7 @@
 
 <body>
 <div class="topnav">
-    <a href="#"><img src="MM_Icon.png"></a>
+    <a href="#"><img src="../MM_Icon.png"></a>
     <div class="topnav-right">
         <a href="#">About Us</a>
         <a href="#">Account</a>

@@ -1,3 +1,14 @@
+<?php
+    require '../login/loginfunctions.php';
+
+    if(isset($_COOKIE['benutzername']) && isset($_COOKIE['token'])){
+        verifyCookie();
+    }
+    else{
+        header("Location: /login");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
