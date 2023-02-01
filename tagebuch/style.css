@@ -13,10 +13,13 @@ body {
     font-size: 16px;
     resize: none;
     bottom: 15%;
-    position: fixed;
+    position: absolute;
     margin: auto;
-    width: 90%;
+    width: 100%;
     text-align: center;
+    box-sizing: border-box;
+
+
 }
 
 .styleArea{
@@ -39,10 +42,8 @@ body {
     font-size: 16px;
     resize: none;
     top:10%;
-    position: fixed;
-    margin: auto;
-    text-align: center;
-    width: 90%;
+    position: absolute;
+
 }
 
 
@@ -58,14 +59,13 @@ input[type="date"]{
     border:none;
     outline:none;
     border-radius: 5px;
-    left:100%;
-    bottom:10%;
+
 }
 
 select{
     position: absolute;
-    left: 13%;
     background-color: #dddddd;
+    top:20%;
 }
 
 button{

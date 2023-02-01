@@ -26,29 +26,31 @@
 </div>
 
 <div class="top"><h1>Unser Tagebuch</h1></div>
-    <div class="textareaRead">
-        <textarea class="styleArea" style="resize:none" readonly cols="100" rows="16">
+    <div class="textareaRead col-lg-8 col-lg-offset-2">
+        <textarea class="styleArea form-control" style="resize:none" cols="100" readonly rows="18">
             Hallo
         </textarea>
+
     </div>
+
 <div class="container-fluid">
     <div class="row">
         <div class="textarea">
-            <div class="col-sm-1">
-                <input style="resize:none" type="date" name="date">
+            <h4>Daten einfügen:</h4>
+            <div class="col-sm-2">
+                <p>Benutzer für Eintrag auswählen:</p>
+                    <select id="selectUser">
+                        <option>--Alle--</option>
+                        <option>Matthias Plaickner</option>
+                        <option>Simon Ploner</option>
+                        <option>Thomas Reinthaler</option>
+                        <option>Michael Huber</option>
+                        <option>Matthias Ploner</option>
+                    </select>
+                <input style="resize:none" id="datum" type="date" name="date">
             </div>
-                <div class="col-sm-1">
-                        <select id="selectUser">
-                            <option>--Alle--</option>
-                            <option>Matthias Plaickner</option>
-                            <option>Simon Ploner</option>
-                            <option>Thomas Reinthaler</option>
-                            <option>Miacheal Huber</option>
-                            <option>Matthias Ploner</option>
-                        </select>
-                </div>
-            <div class="col-sm-8">
-                    <textarea class="styleArea styleHover" id="message" style="resize: none" cols="100" rows="8"></textarea>
+            <div class="col-lg-8">
+                    <textarea class="styleArea styleHover form-control" id="message" style="resize: none"rows="8"></textarea>
             </div>
             <div class="col-sm-1">
                 <button onclick=saveText()>Speichern</button>
@@ -61,30 +63,33 @@
 <script>
 
     function saveText(){
+
         var select = document.getElementById('selectUser');
         var selectValue = select.options[select.selectedIndex].value;
         const message = document.getElementById('message');
 
         var id;
-        var date = document.getElementById("date");
-        if(selectValue==="Michael Huber"){
+        var date = document.getElementById("datum");
+
+        if(selectValue=="Michael Huber"){
             id=1;
         }
-        if(selectValue==="Matthias Plaickner"){
+        if(selectValue=="Matthias Plaickner"){
             id=2;
         }
-        if(selectValue==="Matthias Ploner"){
+        if(selectValue=="Matthias Ploner"){
             id=3;
         }
-        if(selectValue==="Simon Ploner"){
+        if(selectValue=="Simon Ploner"){
             id=4;
         }
-        if(selectValue==="Thomas Reinthaler"){
+        if(selectValue=="Thomas Reinthaler"){
             id=5;
         }
+        console.log(id);
+        //console.log("uploadSQL.php?benutzer="+id+"&message="+message.value+"&date="+date.value);
+        console.log(date.value);
 
-        console.log(selectValue);
-/*
         var xhttp = new XMLHttpRequest();
         xhttp.open("GET", "uploadSQL.php?benutzer="+id+"&message="+message.value+"&date="+date.value,true);   //file.php muss natürlich angepasst werden
 
@@ -95,10 +100,9 @@
                 // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
             }
         };
-
-
         xhttp.send();
-*/
+        document.getElementById('message').value = '';
+
     }
 </script>
 

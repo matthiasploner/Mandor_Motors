@@ -4,10 +4,10 @@
     if ($db->connect_error) {
         die("Connection failed: " . $db->connect_error);
     }
-    echo "Connected";
-/*
+
+
     // set parameters and execute
-    $datum = $_GET["datum"];
+    $datum = $_GET["date"];
     $message = $_GET["message"];
     $userId=$_GET["benutzer"];
 
@@ -17,12 +17,12 @@
 
     $stmt->execute();
 
-    printf("Datenätze eingefügt: %d.\n", $stmt->error);
+    $string="Datenätze eingefügt:". $stmt->error.$datum.$message;
 
-    echo "New entries created successfully";
+    //echo "New entries created successfully";
 
     $stmt->close();
-    $db->close();*/
-    $string=$_GET["message"];
+    $db->close();
+
     echo json_encode($string);
 ?>
