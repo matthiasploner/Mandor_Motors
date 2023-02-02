@@ -10,8 +10,8 @@
         <div class="topnav">
             <a href="#"><img src="MM_Icon.png"></a>
             <div class="topnav-right">
-                <a href="#">About Us</a>
-                <a href="#">Account</a>
+                <a href="/Team">About Us</a>
+                <a href="/login">Account</a>
                 <div class="dropdown-PC">
                     <div class="dropdown-btnPC" onclick='dropdownFunction("pcDropdown")'>
                         <span>Menu</span>
@@ -26,8 +26,8 @@
             <div id="mobile-nav" class="menu-overlay">
                 <button class="mobile-nav-clsbtn" onclick="navclose()">≡</button>
                 <div class="mobile-content">
-                    <a href="#">About Us</a>
-                    <a href="#">Account</a>
+                    <a href="/Team">About Us</a>
+                    <a href="/login">Account</a>
                     <a href="/tagebuch">Tagebuch</a>
                     <a href="/bauplan">Bauplan</a>
                     <a href="/adminpage">Admin-Page</a>
