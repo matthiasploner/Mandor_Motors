@@ -45,13 +45,21 @@ body {
     position: absolute;
 
 }
-
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 8px 8px;
+    text-decoration: none;
+    margin: 2px 2px;
+    cursor: pointer;
+}
 
 
 input[type="date"]{
     position: absolute;
     background: #dddddd;
-    padding:15px;
+    padding:12px;
     transform: translate(-50%,-50%);
     font-family: monospace;
     color:#ffffff;
