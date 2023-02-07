@@ -11,15 +11,29 @@ input[type=button], input[type=submit], input[type=reset] {
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('car.jpg');
+}
+.bg1 {
+    background-image: url("/BP_IMG.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: local;
     background-size: cover;
+    min-height: 800px;
+}
+
+.bg2{
+    background-image: url("/BP_IMG.jpg");
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    min-height: 800px;
 }
 
 .topnav {
     overflow: hidden;
     background-color: transparent;
+    position: fixed;
+    width: 100%;
+    min-height: 300px;
 }
 
 .topnav a {
@@ -87,60 +101,6 @@ body {
     color: black;
     cursor: pointer;
 }
-
-.center {
-    position: relative;
-    top: 20%;
-    width: 100%;
-    text-align: center;
-    color: #f1f1f1;
-}
-
-.center h1 {
-    font-size: 55px;
-    font-family: PT Sans, serif;
-}
-
-.center p {
-    font-size: 20px;
-}
-
-.center button {
-    background-color: transparent;
-    min-width: 200px;
-    border-radius: 12px;
-    border-color: white;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 15% 10% 0;
-    cursor: pointer;
-}
-
-.center button:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: black;
-}
-
-.navbar {
-    overflow: hidden;
-    background-color: transparent;
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-}
-
-.navbar a {
-    color: #ffffff;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 16px;
-}
-
 .main {
     padding: 16px;
     margin-bottom: 30px;
@@ -163,25 +123,8 @@ body {
         display: none;
     }
 
-    .center {
-        position: absolute;
-        top: 7%;
-        width: 100%;
-        text-align: center;
-        color: #f1f1f1;
-    }
-
-    .center h1 {
-        font-size: 40px;
-        font-family: PT Sans, serif;
-    }
-
-    .center p {
-        font-size: 20px;
-    }
-
     body {
-        background-image: url('car.jpg');
+        background-image: url("/BP_IMG.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
