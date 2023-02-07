@@ -3,27 +3,37 @@
         $benutzer = $_POST['benutzername'];
         $passwort = $_POST['passwort'];
         $db = new mysqli("127.0.0.1", "root", "Kennwort0", "website");
-        $stmt = $db->prepare("SELECT Passwort, Ablaufdatum FROM Benutzer WHERE Benutzername = ?");
+        $stmt = $db->prepare("SELECT Passwort, Ablaufdatum FROM Benutzer WHERE Benutzername LIKE ?");
         $stmt->bind_param("s", $benutzer);
         $stmt->execute();
         $result = $stmt->get_result();
         $stmt->close();
+
         if($result->num_rows != 0){
             $ergebnis = $result->fetch_assoc();
             if(password_verify($passwort, $ergebnis['Passwort'])){
                 $token = bin2hex(random_bytes(20));
-                $stmt = $db->prepare("UPDATE Benutzer SET Ablaufdatum=ADDDATE(now(), 3), Token = ? WHERE Benutzername = ?");
+                $stmt = $db->prepare("UPDATE Benutzer SET Ablaufdatum=ADDDATE(now(), 3), Token = ? WHERE Benutzername LIKE ?");
                 $stmt->bind_param( "ss", $token, $benutzer);
                 $stmt->execute();
                 $stmt->close();
                 $db->close();
-                setcookie("token", $token, time() + (86400 * 30), "/");
+
+                setcookie("token", $token, time() + (86400 * 30), "/"); //30 tage
                 setcookie("benutzername", $benutzer, time() + (86400 * 30), "/");
-                header("Location: /adminpage");
+                if(isset($_COOKIE['destination'])){
+                    $dest = $_COOKIE['destination'];
+                    setcookie("destination", "", -1, "/");
+                    unset($GLOBALS['destination']);
+                    header("Location: /" . $dest);
+                }
+                else{
+                    header("Location: /adminpage");
+                }
             }
         }else{
             $db->close();
-            echo "falsche Anmeldedaten";
+            echo "falsche Anmeldedaten"; //bitte besser machen
         }
     }
     function verifyCookie(){
