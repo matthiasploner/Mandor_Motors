@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="styleSheet.css">
     <title>Tagebuch</title>
 </head>
-<body>
+<body onload="readText()">
+
     <div class="topnav">
         <a href="../"><img src="../MM_Icon.png"></a>
     </div>
@@ -25,9 +26,11 @@
                     <div class="top"><h1>Unser Tagebuch</h1></div>            
                     <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="12"></textarea>
         </div>
-        
+        <br><br><br><br><br>
         <div class="col-lg-3">
-             <br><br><br><br><br>
+         <a href='.'javascript:toggle("containerid")'.'>Filter anwenden</a>
+            <div id="containerid" style="display:none">
+             
                 <p>Benutzer und Datum für Eintrag auswählen:</p>
                     <select id="selectReadUser">
                         <option>--Alle--</option>
@@ -39,13 +42,16 @@
                     </select>
                     <input style="resize:none" id="readDate" type="date" name="date">
                     <button onclick=readText()>Suchen</button>
-        </div>   
+            </div>   
+        </div>
     <div  class="textareaRead col-lg-8">
     <br>
          <textarea class="styleArea styleHover form-control" id="message" style="resize: none"rows="8"></textarea>
     </div>
-    
+ 
     <div class="col-lg-3">
+   
+    
                 <br><br>
                 <p>Benutzer und Datum für Eintrag auswählen:</p>
                     <select id="selectReadUser">
@@ -67,8 +73,10 @@
                     <div class="top"><h1>Unser Tagebuch</h1></div>            
                     <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="16"></textarea>
         </div>
-            <div class="col-lg-3">
-                <br><br><br><br>
+           <br><br><br><br><br>
+            <a href='.'javascript:toggle("containerid")'.'>Filter anwenden</a>
+            <div id="containerid" style="display:none">
+             
                 <p>Benutzer und Datum für Eintrag auswählen:</p>
                     <select id="selectReadUser">
                         <option>--Alle--</option>
@@ -80,13 +88,31 @@
                     </select>
                     <input style="resize:none" id="readDate" type="date" name="date">
                     <button onclick=readText()>Suchen</button>
-            </div>';
+            </div>   
+        </div>';
     }
     ?>
 
 
     <script>
+        var controlle=0;
+
+        function toggle(id){
+
+            var e= document.getElementById(id);
+            if (e.style.display == "none"){
+                e.style.display = "";
+                controlle=1;
+            } else {
+                e.style.display = "none";
+                controlle=0;
+            }
+        }
+
+
         function readText(){
+
+
             var select = document.getElementById('selectReadUser');
             var selectValue = select.options[select.selectedIndex].value;
             var id=getUser(selectValue);
@@ -94,16 +120,19 @@
             readArea.valueOf();
             var date = document.getElementById("readDate");
             var xhttp = new XMLHttpRequest();
-            console.log(date.value,id);
 
-            xhttp.open("GET", "readSQL.php?benutzer="+id+"&date="+date.value,true);   //file.php muss natürlich angepasst werden
+            if(controlle=0){
+                xhttp.open("GET", "readSQL.php",true);
+            }else{
+                xhttp.open("GET", "readSQL.php?benutzer="+id+"&date="+date.value,true);   //file.php muss natürlich angepasst werden
+            }
 
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     values = JSON.parse(xhttp.responseText);
                     console.log(values);
 
-                    document.getElementById('readArea').value = values["Eintragstext"];
+                    //document.getElementById('readArea').value = values["Eintragstext"];
                     // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
                 }
             };
@@ -120,10 +149,6 @@
             var id=getUser(selectValue);
             var date = document.getElementById("datum");
 
-
-            console.log(id);
-            //console.log("uploadSQL.php?benutzer="+id+"&message="+message.value+"&date="+date.value);
-            console.log(date.value);
 
             var xhttp = new XMLHttpRequest();
             xhttp.open("GET", "uploadSQL.php?benutzer="+id+"&message="+message.value+"&date="+date.value,true);   //file.php muss natürlich angepasst werden
@@ -161,6 +186,6 @@
             return id;
         }
     </script>
-</body>
+</>
 </html>
 
