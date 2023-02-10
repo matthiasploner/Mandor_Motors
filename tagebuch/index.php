@@ -25,32 +25,26 @@
         verifyCookie();
     echo '
             <div class="top"><h1>Unser Tagebuch</h1></div>
-                <div class="col-lg-2">
-                    <br><br><br><br>
-                    <p>Benutzer und Datum für Eintrag auswählen:</p>
-                        <select id="selectReadUser">
-                            <option>--Alle--</option>
-                            <option>Matthias Plaickner</option>
-                            <option>Simon Ploner</option>
-                            <option>Thomas Reinthaler</option>
-                            <option>Michael Huber</option>
-                            <option>Matthias Ploner</option>
-                        </select>
-                        <input style="resize:none" id="readDate" type="date" name="date">
-                        <div class="col-lg-2">
-                            <button onclick=readText()>Speichern</button>
-                        </div>
-                </div>
-    <div class="textareaRead col-lg-8">
-            <div class="top"><h1>Unser Tagebuch</h1></div>
-            <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="16">
-            </textarea>
-            <p>
-    
-    
-    
-            </p>
-    </div>
+            <div class="col-lg-2">
+                <br><br><br><br>
+                <p>Benutzer und Datum für Eintrag auswählen:</p>
+                    <select id="selectReadUser">
+                        <option>--Alle--</option>
+                        <option>Matthias Plaickner</option>
+                        <option>Simon Ploner</option>
+                        <option>Thomas Reinthaler</option>
+                        <option>Michael Huber</option>
+                        <option>Matthias Ploner</option>
+                    </select>
+                    <input style="resize:none" id="readDate" type="date" name="date">
+                    <div class="col-lg-2">
+                        <button onclick=readText()>Speichern</button>
+                    </div>
+            </div>
+            <div class="textareaRead col-lg-8">
+                    <div class="top"><h1>Unser Tagebuch</h1></div>            <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="16">
+                    </textarea>
+            </div>
     <div class="container-fluid">
         <div class="row">
         
@@ -79,31 +73,26 @@
     else{
         setcookie("destination", "tagebuch", time() + 3600, "/");
         echo '<div class="top"><h1>Unser Tagebuch</h1></div>
-                <div class="col-lg-2">
-                    <br><br><br><br>
-                    <p>Benutzer und Datum für Eintrag auswählen:</p>
-                        <select id="selectUser">
-                            <option>--Alle--</option>
-                            <option>Matthias Plaickner</option>
-                            <option>Simon Ploner</option>
-                            <option>Thomas Reinthaler</option>
-                            <option>Michael Huber</option>
-                            <option>Matthias Ploner</option>
-                        </select>
-                    <input style="resize:none" id="datum" type="date" name="date">
+            <div class="col-lg-2">
+                <br><br><br><br>
+                <p>Benutzer und Datum für Eintrag auswählen:</p>
+                    <select id="selectReadUser">
+                        <option>--Alle--</option>
+                        <option>Matthias Plaickner</option>
+                        <option>Simon Ploner</option>
+                        <option>Thomas Reinthaler</option>
+                        <option>Michael Huber</option>
+                        <option>Matthias Ploner</option>
+                    </select>
+                    <input style="resize:none" id="readDate" type="date" name="date">
                     <div class="col-lg-2">
                         <button onclick=readText()>Speichern</button>
                     </div>
-                </div>
-                <div class="textareaRead col-lg-8">         
-            <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="18">
-            </textarea>
-            <p>
-    
-    
-    
-            </p>
-        </div>
+            </div>
+            <div class="textareaRead col-lg-8">
+                <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="16">
+                </textarea>
+            </div>
                 <div class="col-lg-4 col-lg-offset-2"><button onclick=window.location.href="/login">Anmelden</button></div>';
     }
     ?>
@@ -120,6 +109,7 @@
             readArea.valueOf();
             var date = document.getElementById("readDate");
             var xhttp = new XMLHttpRequest();
+            console.log(date.value,id);
 
             xhttp.open("GET", "readSQL.php?benutzer="+id+"&date="+date.value,true);   //file.php muss natürlich angepasst werden
 

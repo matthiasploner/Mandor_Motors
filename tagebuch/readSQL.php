@@ -22,8 +22,6 @@
     }else{
         $db->close();
     }
-    //echo "New entries created successfully";
-
     $stmt->close();
     $db->close();
 
