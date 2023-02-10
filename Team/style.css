@@ -10,6 +10,7 @@ body {
 .topnav {
     overflow: hidden;
     background-color: transparent;
+    height: 6.25rem;
 }
 
 .topnav a {
@@ -21,7 +22,7 @@ body {
     display: block;
 }
 
-.topnav a:hover,.topnav span:hover {
+.topnav a:hover{
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.5);
     border-radius: 0.625rem;

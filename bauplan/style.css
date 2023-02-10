@@ -1,13 +1,3 @@
-input[type=button], input[type=submit], input[type=reset] {
-    background-color: transparent;
-    border: none;
-    color: black;
-    padding: 8px 8px;
-    text-decoration: none;
-    margin: 2px 2px;
-    cursor: pointer;
-}
-
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -17,7 +7,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: local;
     background-size: cover;
-    min-height: 800px;
+    min-height: 50rem;
 }
 
 .bg2{
@@ -25,7 +15,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: local;
     background-size: cover;
-    min-height: 800px;
+    min-height: 50rem;
 }
 
 .topnav {
@@ -33,19 +23,22 @@ body {
     background-color: transparent;
     position: fixed;
     width: 100%;
-    min-height: 300px;
+    height: 8.75rem;
 }
 
 .topnav a {
     float: left;
-    color: #ffffff;
-    padding: 14px 16px;
+    color: black;
+    padding: 0.875rem 1rem;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25rem;
+    display: block;
 }
 
-.topnav a:hover {
-    color: black;
+.topnav a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.5);
+    border-radius: 0.625rem;
 }
 
 .topnav-right {
@@ -53,43 +46,27 @@ body {
 }
 
 .topnav img{
-    width: 208px;
-    height: 40px;
+    width: 13rem;
+    height: 2.5rem;
 }
 
 .dropdown-PC {
     float: left;
 }
 
-.dropdown-btnPC {
-    background-color: transparent;
-    color: white;
-    padding: 14px 16px;
-    font-size: 20px;
-    border: none
-}
-
 .dropdown-pcContent {
     display: none;
     position: absolute;
-    background-color: transparent;
-    min-width: 80px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    min-width: 5rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.5);
+    border-radius: 0.625rem;
+    margin-top: 3.2rem;
     z-index: 1;
     right: 0;
 }
 
 .dropdown-pcContent a {
-    float: none;
-    color: #f1f1f1;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-pcContent a:hover {
-    background-color: transparent;
-    color: black;
+    /*float: none;*/
 }
 
 .dropdown-PC:hover .dropdown-pcContent {
@@ -97,25 +74,11 @@ body {
 }
 
 .dropdown-PC:hover .dropdown-btnPC {
-    background-color: transparent;
-    color: black;
     cursor: pointer;
 }
-.main {
-    padding: 16px;
-    margin-bottom: 30px;
-}
 
-.show {
-    display: block;
-}
-
-.menu-overlay {
+.menu-overlay, .mobile-nav-btn {
     display: none;
-}
-
-.mobile-nav-btn {
-    display: none
 }
 
 @media only screen and (max-width: 600px) {
@@ -133,7 +96,7 @@ body {
         width:100%;
     }
 
-    #mobile-nav {
+    .menu-overlay {
         position: fixed;
         display: block;
         top: 0;
@@ -146,43 +109,39 @@ body {
         z-index: 1;
     }
 
-    #mobile-nav a {
-        padding: 8px;
+    .menu-overlay a {
+        padding: 0.5rem;
         text-decoration: none;
-        font-size: 50px;
+        font-size: 3.125rem;
         color: #818181;
-        display: block;
         transition: 0.3s;
     }
 
-    #mobile-nav a:hover {
-        color: #f1f1f1;
+    .menu-overlay a:hover {
+        color: white;
     }
 
     .mobile-nav-btn{
         display: block;
         float: right;
-        padding: 10px;
+        padding: 0.6rem;
         background-color: transparent;
         border: none;
-        font-size: 30px;
+        font-size: 2rem;
     }
 
     .mobile-nav-clsbtn{
         float: right;
-        padding: 10px;
+        padding: 0.6rem;
         color: #818181;
         background-color: transparent;
         border: none;
-        font-size: 30px;
+        font-size: 2rem;
     }
 
     .mobile-content {
         position: relative;
-        top: 25%;
-        left: 15%;
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
+        width: 25rem;
+        margin: 9rem 3rem;
     }
 }
