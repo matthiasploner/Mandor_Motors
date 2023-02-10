@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -17,16 +16,18 @@
     <div class="topnav">
         <a href="../"><img src="../MM_Icon.png"></a>
     </div>
-
-
-
     <?php
     if(isset($_COOKIE['benutzername']) && isset($_COOKIE['token'])){
         verifyCookie();
-    echo '
-            <div class="top"><h1>Unser Tagebuch</h1></div>
-            <div class="col-lg-2">
-                <br><br><br><br>
+
+        echo '
+        <div class="textareaRead col-lg-8">
+                    <div class="top"><h1>Unser Tagebuch</h1></div>            
+                    <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="12"></textarea>
+        </div>
+        
+        <div class="col-lg-3">
+             <br><br><br><br><br>
                 <p>Benutzer und Datum für Eintrag auswählen:</p>
                     <select id="selectReadUser">
                         <option>--Alle--</option>
@@ -37,43 +38,36 @@
                         <option>Matthias Ploner</option>
                     </select>
                     <input style="resize:none" id="readDate" type="date" name="date">
-                    <div class="col-lg-2">
-                        <button onclick=readText()>Speichern</button>
-                    </div>
-            </div>
-            <div class="textareaRead col-lg-8">
-                    <div class="top"><h1>Unser Tagebuch</h1></div>            <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="16">
-                    </textarea>
-            </div>
-    <div class="container-fluid">
-        <div class="row">
-        
-            <div class="textarea">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Benutzer und Datum für Eintrag auswählen:</p>
-                        <select id="selectUser">
-                            <option>--Alle--</option>
-                            <option>Matthias Plaickner</option>
-                            <option>Simon Ploner</option>
-                            <option>Thomas Reinthaler</option>
-                            <option>Michael Huber</option>
-                            <option>Matthias Ploner</option>
-                        </select>
-                    <input style="resize:none" id="datum" type="date" name="date">
-                </div>
-                <div class="col-lg-8 col-lg-offset-2">
-                        <textarea class="styleArea styleHover form-control" id="message" style="resize: none"rows="8"></textarea>
-                </div>
-                <div class="col-sm-1">
+                    <button onclick=readText()>Suchen</button>
+        </div>   
+    <div  class="textareaRead col-lg-8">
+    <br>
+         <textarea class="styleArea styleHover form-control" id="message" style="resize: none"rows="8"></textarea>
+    </div>
+    
+    <div class="col-lg-3">
+                <br><br>
+                <p>Benutzer und Datum für Eintrag auswählen:</p>
+                    <select id="selectReadUser">
+                        <option>--Alle--</option>
+                        <option>Matthias Plaickner</option>
+                        <option>Simon Ploner</option>
+                        <option>Thomas Reinthaler</option>
+                        <option>Michael Huber</option>
+                        <option>Matthias Ploner</option>
+                    </select>
+                    <input style="resize:none" id="readDate" type="date" name="date">
                     <button onclick=saveText()>Speichern</button>
-                </div>
-            </div>
-        </div>
-    </div><br>';}
+    </div>';
+    }
     else{
         setcookie("destination", "tagebuch", time() + 3600, "/");
-        echo '<div class="top"><h1>Unser Tagebuch</h1></div>
-            <div class="col-lg-2">
+        echo '
+        <div class="textareaRead col-lg-8">
+                    <div class="top"><h1>Unser Tagebuch</h1></div>            
+                    <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="16"></textarea>
+        </div>
+            <div class="col-lg-3">
                 <br><br><br><br>
                 <p>Benutzer und Datum für Eintrag auswählen:</p>
                     <select id="selectReadUser">
@@ -85,22 +79,13 @@
                         <option>Matthias Ploner</option>
                     </select>
                     <input style="resize:none" id="readDate" type="date" name="date">
-                    <div class="col-lg-2">
-                        <button onclick=readText()>Speichern</button>
-                    </div>
-            </div>
-            <div class="textareaRead col-lg-8">
-                <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="16">
-                </textarea>
-            </div>
-                <div class="col-lg-4 col-lg-offset-2"><button onclick=window.location.href="/login">Anmelden</button></div>';
+                    <button onclick=readText()>Suchen</button>
+            </div>';
     }
     ?>
 
 
     <script>
-
-
         function readText(){
             var select = document.getElementById('selectReadUser');
             var selectValue = select.options[select.selectedIndex].value;
@@ -176,8 +161,6 @@
             return id;
         }
     </script>
-
-
 </body>
 </html>
 
