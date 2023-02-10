@@ -13,8 +13,8 @@
                 <a href="/Team">About Us</a>
                 <a href="/login">Account</a>
                 <div class="dropdown-PC">
-                    <div class="dropdown-btnPC" onclick='dropdownFunction("pcDropdown")'>
-                        <span>Menu</span>
+                    <div class="dropdown-btnPC" onclick='dropdownFunction()'>
+                        <a>Menu</a>
                     </div>
                     <div id="pcDropdown" class="dropdown-pcContent">
                         <a href="/tagebuch">Tagebuch</a>
