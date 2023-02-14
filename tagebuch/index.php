@@ -41,7 +41,9 @@
                         <option>Matthias Ploner</option>
                     </select>
                     <input style="resize:none" id="readDate" type="date" name="date">
+                    <br>
                     <button onclick=readText()>Suchen</button>
+                    <button onclick=readText()>Filter löschen</button>
             </div>   
         </div>
     <div  class="textareaRead col-lg-8">
@@ -71,7 +73,7 @@
         echo '
         <div class="textareaRead col-lg-8">
                     <div class="top"><h1>Unser Tagebuch</h1></div>            
-                    <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="16"></textarea>
+                    <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="22"></textarea>
         </div>
            <br><br><br><br><br>
             <a href='.'javascript:toggle("containerid")'.'>Filter anwenden</a>
@@ -87,7 +89,9 @@
                         <option>Matthias Ploner</option>
                     </select>
                     <input style="resize:none" id="readDate" type="date" name="date">
+                    <br>
                     <button onclick=readText()>Suchen</button>
+                    <button onclick=readText()>Filter löschen</button>
             </div>   
         </div>';
     }
