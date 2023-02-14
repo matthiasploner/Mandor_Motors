@@ -5,13 +5,11 @@
     if ($db->connect_error) {
         $ergebnis="Connection failed";
     }
-
-    // set parameters and execute
     if(isset($_GET["date"])==true){
         $datum = $_GET["date"];
         $userId = $_GET["benutzer"];
 
-        $stmt = $db->prepare("SELECT Eintragstext FROM Eintrag WHERE BenutzerID = ? and Datum = ? ");
+        $stmt = $db->prepare("SELECT Eintragstext FROM Eintrag WHERE BenutzerID = ? and Datum = ? ;");
 
         $stmt->bind_param("is", $userId, $datum);
         $stmt->execute();
@@ -19,13 +17,7 @@
         $result = $stmt->get_result();
         $stmt->close();
         $ergebnis = $result->fetch_assoc();
-    }else{
-        $result=$db->query("SELECT Eintragstext FROM Eintrag");
-        $ergebnis = $result->fetch_all();
-
     }
-
-
 
     if($result->num_rows != 0){
 

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styleSheet.css">
     <title>Tagebuch</title>
 </head>
-<body onload="readText()">
+<body onload="loadAll()">
 
     <div class="topnav">
         <a href="../"><img src="../MM_Icon.png"></a>
@@ -102,11 +102,27 @@
             var e= document.getElementById(id);
             if (e.style.display == "none"){
                 e.style.display = "";
-                controlle=1;
             } else {
                 e.style.display = "none";
-                controlle=0;
             }
+        }
+
+        function loadAll(){
+            var xhttp = new XMLHttpRequest();
+
+
+            xhttp.open("GET", "readAll.php",true);   //file.php muss natürlich angepasst werden
+
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    values = JSON.parse(xhttp.responseText);
+                    console.log(values);
+
+                    document.getElementById('readArea').value = values["Eintragstext"];
+                    // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
+                }
+            };
+            xhttp.send();
         }
 
 
@@ -121,18 +137,15 @@
             var date = document.getElementById("readDate");
             var xhttp = new XMLHttpRequest();
 
-            if(controlle=0){
-                xhttp.open("GET", "readSQL.php",true);
-            }else{
-                xhttp.open("GET", "readSQL.php?benutzer="+id+"&date="+date.value,true);   //file.php muss natürlich angepasst werden
-            }
+
+            xhttp.open("GET", "readSQL.php?benutzer="+id+"&date="+date.value,true);   //file.php muss natürlich angepasst werden
 
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     values = JSON.parse(xhttp.responseText);
                     console.log(values);
 
-                    //document.getElementById('readArea').value = values["Eintragstext"];
+                    document.getElementById('readArea').value = values["Eintragstext"];
                     // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
                 }
             };
