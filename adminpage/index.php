@@ -19,41 +19,35 @@
 </head>
 
 <body>
-<div class="topnav">
-    <a href="#"><img src="../MM_Icon.png"></a>
-    <div class="topnav-right">
-        <a href="/Team">About Us</a>
-        <a href="/login">Account</a>
-        <div class="dropdown-PC">
-            <div class="dropdown-btnPC" onclick='dropdownFunction("pcDropdown")'>
-                <span>Menu</span>
-            </div>
-            <div id="pcDropdown" class="dropdown-pcContent">
-                <a href="/tagebuch">Tagebuch</a>
-                <a href="/bauplan">Bauplan</a>
-            </div>
-        </div>
-    </div>
-    <div class="dropdown-mobile">
-        <div class="dropdown-btn" onclick='dropdownFunction("mobileDropdown")'>
-            <span>≡</span>
-        </div>
-        <div id="mobileDropdown" class="dropdown-content">
+    <div class="topnav">
+        <a href="../"><img src="../MM_Icon.png"></a>
+        <div class="topnav-right">
             <a href="/Team">About Us</a>
             <a href="/login">Account</a>
-            <a href="/tagebuch">Tagebuch</a>
-            <a href="/bauplan">Bauplan</a>
-    <div id="mobile-nav" class="menu-overlay">
-        <button class="mobile-nav-clsbtn" onclick="navclose()">≡</button>
-        <div class="mobile-content">
-            <a href="#">About Us</a>
-            <a href="#">Account</a>
-            <a href="/tagebuch">Tagebuch</a>
-            <a href="/bauplan">Bauplan</a>
-            <a href="/adminpage">Admin-Page</a>
+            <div class="dropdown-PC">
+                <div class="dropdown-btnPC" onclick='dropdownFunction()'>
+                    <a>Menu</a>
+                </div>
+                <div id="pcDropdown" class="dropdown-pcContent">
+                    <a href="/tagebuch">Tagebuch</a>
+                    <a href="/bauplan">Bauplan</a>
+                    <a href="#">Admin-Page</a>
+                </div>
+            </div>
         </div>
+        <div id="mobile-nav" class="menu-overlay">
+            <button class="mobile-nav-clsbtn" onclick="navclose()">≡</button>
+            <div class="mobile-content">
+                <a href="/Team">About Us</a>
+                <a href="/login">Account</a>
+                <a href="/tagebuch">Tagebuch</a>
+                <a href="/bauplan">Bauplan</a>
+                <a href="#">Admin-Page</a>
+            </div>
+        </div>
+
+        <button class="mobile-nav-btn" onclick="navopen()">≡</button>
     </div>
-</div>
     <div class="centertext">
         <h1>Admin-Page</h1>
     </div>
@@ -63,4 +57,12 @@
         <button onclick="window.location.href='/tagebuch'">Informationen</button>
         <button onclick="window.location.href='/tagebuch'">Änderungen</button>
     </div>
+    <script>
+        function navopen() {
+        document.getElementById("mobile-nav").style.width = "100%";
+        }
+        function navclose() {
+        document.getElementById("mobile-nav").style.width = "0%";
+        }
+    </script>
 </body>
