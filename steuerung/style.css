@@ -1,0 +1,11 @@
+body {
+    position: fixed;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    color: rgb(128,128,128);
+    font-size: xx-large;
+}
+
+h1, p{
+    user-select: none;
+    text-align: center;
+}

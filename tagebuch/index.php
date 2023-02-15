@@ -22,14 +22,14 @@
     <div class="topnav">
         <a href="../"><img src="../MM_Icon.png"></a>
         <div class="topnav-right">
-            <a href="#">About Us</a>
+            <a href="/Team">About Us</a>
             <a href="/login">Account</a>
             <div class="dropdown-PC">
                 <div class="dropdown-btnPC" onclick='dropdownFunction()'>
                     <a>Menu</a>
                 </div>
                 <div id="pcDropdown" class="dropdown-pcContent">
-                    <a href="/tagebuch">Tagebuch</a>
+                    <a href="#">Tagebuch</a>
                     <a href="/bauplan">Bauplan</a>
                     <a href="/adminpage">Admin-Page</a>
                 </div>
@@ -38,9 +38,9 @@
         <div id="mobile-nav" class="menu-overlay">
             <button class="mobile-nav-clsbtn" onclick="navclose()">≡</button>
             <div class="mobile-content">
-                <a href="#">About Us</a>
+                <a href="/Team">About Us</a>
                 <a href="/login">Account</a>
-                <a href="/tagebuch">Tagebuch</a>
+                <a href="#">Tagebuch</a>
                 <a href="/bauplan">Bauplan</a>
                 <a href="/adminpage">Admin-Page</a>
             </div>
@@ -48,6 +48,7 @@
 
         <button class="mobile-nav-btn" onclick="navopen()">≡</button>
     </div>
+    <br><br>
     <?php
     if(isset($_COOKIE['benutzername']) && isset($_COOKIE['token'])){
         verifyCookie();
