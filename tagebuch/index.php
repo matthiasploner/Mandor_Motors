@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="mmlogo.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -55,6 +56,7 @@
 
         echo '
         <div class="textareaRead col-lg-8">
+                    <br>
                     <div class="top"><h1>Unser Tagebuch</h1></div>            
                     <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="12"></textarea>
         </div>
@@ -107,8 +109,9 @@
         setcookie("destination", "tagebuch", time() + 3600, "/");
         echo '
         <div class="textareaRead col-lg-8">
+                    <br>
                     <div class="top"><h1>Unser Tagebuch</h1></div>            
-                    <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="22"></textarea>
+                    <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="21"></textarea>
         </div>
            <br><br><br><br><br>
             <a href='.'javascript:toggle("containerid")'.'>Filter anwenden</a>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" type="image/vnd.microsoft.icon" href="mmlogo.ico">
         <title>MM_Steuerung</title>
         <meta name="viewport" content="user-scalable=no">
         <link rel="stylesheet" href="style.css">
