@@ -13,6 +13,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="functions.js"></script>
     <link rel="stylesheet" href="styleSheet.css">
     <title>Tagebuch</title>
 </head>
@@ -76,7 +77,7 @@
                     </form>
                     <br>
                     <button onclick=readText()>Suchen</button>
-                    <button onclick=readText()>Filter löschen</button>
+                    <button onclick=loadAll()>Filter löschen</button>
             </div>   
         </div>
     <div  class="textareaRead col-lg-8">
@@ -134,157 +135,7 @@
         </div>';
     }
     ?>
-    <script>
-        var availableDates = ["2022-11-23"];
-
-        $(function()
-        {
-            $('#datepicker').datepicker({ beforeShowDay:
-                    function(dt)
-                    {
-                        return [available(dt), "" ];
-                    }
-                , changeMonth: true, changeYear: false,dateFormat: 'yy/mm/dd',});
-        });
 
 
-
-        function available(date) {
-            dmy = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
-            if ($.inArray(dmy, availableDates) != -1) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        var controlle=0;
-
-        function toggle(id){
-
-            var e= document.getElementById(id);
-            if (e.style.display == "none"){
-                e.style.display = "";
-            } else {
-                e.style.display = "none";
-            }
-        }
-
-        function loadAll(){
-            var xhttp = new XMLHttpRequest();
-
-
-            xhttp.open("GET", "readAll.php",true);   //file.php muss natürlich angepasst werden
-
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    values = JSON.parse(xhttp.responseText);
-                    console.log(values);
-                    var tagebuch="";
-                    for (let step = 0; step < values.length; step++){
-                        tagebuch+=values[step][2];
-                        tagebuch+="\n";
-                        tagebuch+=values[step][1];
-                        tagebuch+="\n";
-                        tagebuch+=values[step][0];
-                        tagebuch+="\n\n";
-                    }
-                    document.getElementById('readArea').value = tagebuch;
-                    // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
-                }
-            };
-            xhttp.send();
-        }
-
-
-        function readText(){
-
-
-            var select = document.getElementById('selectReadUser');
-            var selectValue = select.options[select.selectedIndex].value;
-            var id=getUser(selectValue);
-            var readArea=document.getElementById('readArea');
-            readArea.valueOf();
-            var date=$("#datepicker").datepicker({ dateFormat: 'yyyy/mm/dd' }).val();
-
-
-            var xhttp = new XMLHttpRequest();
-
-            console.log(date);
-            xhttp.open("GET", "readSQL.php?benutzer="+id+"&date="+date,true);   //file.php muss natürlich angepasst werden
-
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    values = JSON.parse(xhttp.responseText);
-                    console.log(values);
-                    var tagebuch="";
-                    for (let step = 0; step < values.length; step++){
-                        if(values[step].length==2)
-                        {
-                            tagebuch += values[step][1];
-                            tagebuch += "\n";
-                        }
-                        tagebuch+=values[step][0];
-                        tagebuch+="\n\n";
-                    }
-                    document.getElementById('readArea').value = tagebuch;
-                    // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
-                }
-            };
-            xhttp.send();
-
-        }
-
-
-
-        function saveText(){
-            console.log("Hallo");
-            var select = document.getElementById('selectUser');
-            var selectValue = select.options[select.selectedIndex].value;
-            const message = document.getElementById('message');
-            var id=getUser(selectValue);
-            var date = document.getElementById("date");
-
-            console.log(date.value);
-            var xhttp = new XMLHttpRequest();
-            xhttp.open("GET", "uploadSQL.php?benutzer="+id+"&message="+message.value+"&date="+date.value,true);   //file.php muss natürlich angepasst werden
-
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    values = JSON.parse(xhttp.responseText);
-                    console.log(values);
-                    // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
-                }
-            };
-            xhttp.send();
-            document.getElementById('message').value = '';
-
-        }
-        function getUser(name){
-            var id;
-            if(name=="Michael Huber"){
-                id=5;
-            }
-            if(name=="Matthias Plaickner"){
-                id=2;
-            }
-            if(name=="Matthias Ploner"){
-                id=1;
-            }
-            if(name=="Simon Ploner"){
-                id=4;
-            }
-            if(name=="Thomas Reinthaler"){
-                id=3;
-            }if(name=="gemeinsame Arbeiten"){
-                id=6;
-            }
-            if(name=="--Alle--"){
-                id=7;
-            }
-            return id;
-        }
-    </script>
-</>
 </html>
 
