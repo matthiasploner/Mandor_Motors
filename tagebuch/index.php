@@ -7,8 +7,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="styleSheet.css">
     <title>Tagebuch</title>
 </head>
@@ -60,13 +64,16 @@
                 <p>Benutzer und Datum für Eintrag auswählen:</p>
                     <select id="selectReadUser">
                         <option>--Alle--</option>
+                        <option>gemeinsame Arbeiten</option>
                         <option>Matthias Plaickner</option>
                         <option>Simon Ploner</option>
                         <option>Thomas Reinthaler</option>
                         <option>Michael Huber</option>
                         <option>Matthias Ploner</option>
                     </select>
-                    <input style="resize:none" id="readDate" type="date" name="date">
+                    <form id="form1" runat="server">
+                        date: <input type="text" id="datepicker" />
+                    </form>
                     <br>
                     <button onclick=readText()>Suchen</button>
                     <button onclick=readText()>Filter löschen</button>
@@ -82,15 +89,15 @@
     
                 <br><br>
                 <p>Benutzer und Datum für Eintrag auswählen:</p>
-                    <select id="selectReadUser">
-                        <option>--Alle--</option>
+                    <select id="selectUser">
+                        <option>gemeinsame Arbeiten</option>
                         <option>Matthias Plaickner</option>
                         <option>Simon Ploner</option>
                         <option>Thomas Reinthaler</option>
                         <option>Michael Huber</option>
                         <option>Matthias Ploner</option>
                     </select>
-                    <input style="resize:none" id="readDate" type="date" name="date">
+                    <input style="resize:none" id="date" type="date" name="date">
                     <button onclick=saveText()>Speichern</button>
     </div>';
     }
@@ -108,23 +115,49 @@
                 <p>Benutzer und Datum für Eintrag auswählen:</p>
                     <select id="selectReadUser">
                         <option>--Alle--</option>
+                        <option>gemeinsame Arbeiten</option>
                         <option>Matthias Plaickner</option>
                         <option>Simon Ploner</option>
                         <option>Thomas Reinthaler</option>
                         <option>Michael Huber</option>
                         <option>Matthias Ploner</option>
                     </select>
-                    <input style="resize:none" id="readDate" type="date" name="date">
+                    <form id="form1" runat="server">
+                        date: <input type="text" id="datepicker" />
+                    </form>
+                
+            
                     <br>
                     <button onclick=readText()>Suchen</button>
-                    <button onclick=readText()>Filter löschen</button>
+                    <button onclick=loadAll()>Filter löschen</button>
             </div>   
         </div>';
     }
     ?>
-
-
     <script>
+        var availableDates = ["2022-11-23"];
+
+        $(function()
+        {
+            $('#datepicker').datepicker({ beforeShowDay:
+                    function(dt)
+                    {
+                        return [available(dt), "" ];
+                    }
+                , changeMonth: true, changeYear: false,dateFormat: 'yy/mm/dd',});
+        });
+
+
+
+        function available(date) {
+            dmy = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
+            if ($.inArray(dmy, availableDates) != -1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
         var controlle=0;
 
         function toggle(id){
@@ -147,8 +180,16 @@
                 if (this.readyState == 4 && this.status == 200) {
                     values = JSON.parse(xhttp.responseText);
                     console.log(values);
-
-                    document.getElementById('readArea').value = values["Eintragstext"];
+                    var tagebuch="";
+                    for (let step = 0; step < values.length; step++){
+                        tagebuch+=values[step][2];
+                        tagebuch+="\n";
+                        tagebuch+=values[step][1];
+                        tagebuch+="\n";
+                        tagebuch+=values[step][0];
+                        tagebuch+="\n\n";
+                    }
+                    document.getElementById('readArea').value = tagebuch;
                     // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
                 }
             };
@@ -164,18 +205,29 @@
             var id=getUser(selectValue);
             var readArea=document.getElementById('readArea');
             readArea.valueOf();
-            var date = document.getElementById("readDate");
+            var date=$("#datepicker").datepicker({ dateFormat: 'yyyy/mm/dd' }).val();
+
+
             var xhttp = new XMLHttpRequest();
 
-
-            xhttp.open("GET", "readSQL.php?benutzer="+id+"&date="+date.value,true);   //file.php muss natürlich angepasst werden
+            console.log(date);
+            xhttp.open("GET", "readSQL.php?benutzer="+id+"&date="+date,true);   //file.php muss natürlich angepasst werden
 
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     values = JSON.parse(xhttp.responseText);
                     console.log(values);
-
-                    document.getElementById('readArea').value = values["Eintragstext"];
+                    var tagebuch="";
+                    for (let step = 0; step < values.length; step++){
+                        if(values[step].length==2)
+                        {
+                            tagebuch += values[step][1];
+                            tagebuch += "\n";
+                        }
+                        tagebuch+=values[step][0];
+                        tagebuch+="\n\n";
+                    }
+                    document.getElementById('readArea').value = tagebuch;
                     // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
                 }
             };
@@ -186,13 +238,14 @@
 
 
         function saveText(){
+            console.log("Hallo");
             var select = document.getElementById('selectUser');
             var selectValue = select.options[select.selectedIndex].value;
             const message = document.getElementById('message');
             var id=getUser(selectValue);
-            var date = document.getElementById("datum");
+            var date = document.getElementById("date");
 
-
+            console.log(date.value);
             var xhttp = new XMLHttpRequest();
             xhttp.open("GET", "uploadSQL.php?benutzer="+id+"&message="+message.value+"&date="+date.value,true);   //file.php muss natürlich angepasst werden
 
@@ -223,8 +276,11 @@
             }
             if(name=="Thomas Reinthaler"){
                 id=3;
-            }if(name=="--Alle--"){
+            }if(name=="gemeinsame Arbeiten"){
                 id=6;
+            }
+            if(name=="--Alle--"){
+                id=7;
             }
             return id;
         }
