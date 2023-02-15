@@ -6,7 +6,7 @@ if ($db->connect_error) {
     $ergebnis="Connection failed";
 }
 
-    $result=$db->query("Select Eintragstext from Eintrag");
+    $result=$db->query("Select Eintragstext,Datum,Benutzername from Eintrag natural Join Benutzer order by Datum");
     $ergebnis = $result->fetch_all();
 
 

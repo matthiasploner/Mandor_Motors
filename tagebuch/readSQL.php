@@ -5,26 +5,32 @@
     if ($db->connect_error) {
         $ergebnis="Connection failed";
     }
-    if(isset($_GET["date"])==true){
+    $userId = $_GET["benutzer"];
+    if($_GET["date"]!=null){
         $datum = $_GET["date"];
-        $userId = $_GET["benutzer"];
 
-        $stmt = $db->prepare("SELECT Eintragstext FROM Eintrag WHERE BenutzerID = ? and Datum = ? ;");
+        if($_GET["benutzer"]!=7) {
+            $stmt = $db->prepare("SELECT Eintragstext FROM Eintrag WHERE BenutzerID = ? and Datum = ? ;");
+            $stmt->bind_param("is", $userId, $datum);
+        }else{
+            $stmt = $db->prepare("SELECT Eintragstext,Benutzername FROM Eintrag natural join Benutzer WHERE Datum = ?;");
+            $stmt->bind_param("s",  $datum);
+        }
 
-        $stmt->bind_param("is", $userId, $datum);
-        $stmt->execute();
 
-        $result = $stmt->get_result();
-        $stmt->close();
-        $ergebnis = $result->fetch_assoc();
-    }
 
-    if($result->num_rows != 0){
-
-        $db->close();
     }else{
-        $db->close();
+        $stmt = $db->prepare("SELECT Eintragstext,Datum FROM Eintrag WHERE BenutzerID = ?;");
+        $stmt->bind_param("i",  $userId);
     }
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $stmt->close();
+    $ergebnis = $result->fetch_all();
+    $stmt->close();
+    $db->close();
+
 
 
 
