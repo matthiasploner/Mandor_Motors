@@ -52,7 +52,7 @@
         <h1>Admin-Page</h1>
     </div>
     <div class="center">
-        <button onclick="window.location.href='/tagebuch'">Steuerung</button>
+        <button onclick="window.location.href='/steuerung'">Steuerung</button>
         <button onclick="window.location.href='/tagebuch'">Stream</button>
         <button onclick="window.location.href='/tagebuch'">Informationen</button>
         <button onclick="window.location.href='/tagebuch'">Änderungen</button>
