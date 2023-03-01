@@ -12,6 +12,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../mmlogo.ico">
     <link rel="stylesheet" href="adminstyle.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
