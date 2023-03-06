@@ -9,3 +9,38 @@ h1, p{
     user-select: none;
     text-align: center;
 }
+
+.turn-str {
+    position: fixed;
+    bottom: 8rem;
+    left: 1rem;
+}
+
+.turn-str > button {
+    font-size: 4.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.str-grid {
+    position: fixed;
+    display: grid;
+    grid-gap: 0.625rem;
+    grid-template-columns: repeat(3, 6.25rem);
+    grid-template-rows: repeat(3, 6.25rem);
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.str-grid > button {
+    font-size: 5rem;
+}
+
+.str-grid > button:nth-child(even) {
+    font-size: 4rem;
+    padding-bottom: 5rem;
+}
+
+button:active {
+    background-color: #e74c3c;
+}
