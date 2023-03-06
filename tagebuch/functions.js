@@ -35,6 +35,8 @@ function available(date) {
     console.log(availableDates);
 
     dmy = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
+    console.log(dmy);
+    console.log(formatDate(date));
     if ($.inArray(dmy, availableDates) != -1) {
         return true;
     } else {
@@ -42,6 +44,19 @@ function available(date) {
     }
 }
 
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2)
+        month = '0' + month;
+    if (day.length < 2)
+        day = '0' + day;
+
+    return [year, month, day].join('-');
+}
 
 function toggle(id){
 
