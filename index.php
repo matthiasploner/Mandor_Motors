@@ -19,7 +19,7 @@
                     </div>
                     <div id="pcDropdown" class="dropdown-pcContent">
                         <a href="/tagebuch">Tagebuch</a>
-                        <a href="/bauplan">Bauplan</a>
+                        <a href="/entwicklung">Entwicklung</a>
                         <a href="/adminpage">Admin-Page</a>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     <a href="/Team">About Us</a>
                     <a href="/login">Account</a>
                     <a href="/tagebuch">Tagebuch</a>
-                    <a href="/bauplan">Bauplan</a>
+                    <a href="/entwicklung">Entwicklung</a>
                     <a href="/adminpage">Admin-Page</a>
                 </div>
             </div>
