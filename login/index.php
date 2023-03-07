@@ -49,11 +49,11 @@
                     <form method="post">
                         <span class="text-center">login</span>
                         <div class="input-container">
-                            <input type="text" name="benutzername"/>
+                            <input type="text" name="benutzername" disabled/>
                             <label>Username</label>
                         </div>
                         <div class="input-container">
-                            <input type="password" name="passwort"/>
+                            <input type="password" name="passwort" disabled/>
                             <label>Passwort</label>
                         </div>
                         <button type="submit" class="btn">submit</button>

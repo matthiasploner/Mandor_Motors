@@ -35,13 +35,27 @@ function available(date) {
     console.log(availableDates);
 
     dmy = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
-    if ($.inArray(dmy, availableDates) != -1) {
+    pDate=formatDate(date);
+    if ($.inArray(pDate, availableDates) != -1) {
         return true;
     } else {
         return false;
     }
 }
 
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2)
+        month = '0' + month;
+    if (day.length < 2)
+        day = '0' + day;
+
+    return [year, month, day].join('-');
+}
 
 function toggle(id){
 
