@@ -35,9 +35,8 @@ function available(date) {
     console.log(availableDates);
 
     dmy = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
-    console.log(dmy);
-    console.log(formatDate(date));
-    if ($.inArray(dmy, availableDates) != -1) {
+    pDate=formatDate(date);
+    if ($.inArray(pDate, availableDates) != -1) {
         return true;
     } else {
         return false;
