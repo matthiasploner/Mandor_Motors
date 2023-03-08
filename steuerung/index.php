@@ -5,6 +5,7 @@
         <title>MM_Steuerung</title>
         <meta name="viewport" content="user-scalable=no">
         <link rel="stylesheet" href="style.css">
+        <script src="functions.js"></script>
     </head>
     <body scroll="no">
         <div class="turn-str">
@@ -14,9 +15,9 @@
 
         <div class="str-grid">
             <button>↖</button>
-            <button>↑</button>
+            <button onmousedown="vorwaerts()" onmouseup="stop()" use>↑</button>
             <button>↗</button>
-            <button>←</button>
+            <button onmousedown="links()" onmouseup="stop()">←</button>
             <div></div>
             <button>→</button>
             <button>↙</button>
