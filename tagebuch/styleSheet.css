@@ -101,3 +101,69 @@ input[type="date"]{
 .styleHover:hover{
     background-color: #eeeeee;
 }
+
+@media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 600px) {
+        .topnav-right {
+            display: none;
+        }
+
+        body {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: auto;
+            height:100%;
+            width:100%;
+        }
+
+        .menu-overlay {
+            position: fixed;
+            display: block;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            overflow-x: hidden;
+            transition: right 0.5s ease;
+            z-index: 1;
+        }
+
+        .menu-overlay a {
+            padding: 0rem 0.5rem;
+            text-decoration: none;
+            font-size: 5rem;
+            color: #818181;
+            transition: 0.3s;
+        }
+
+        .menu-overlay a:hover {
+            color: white;
+        }
+
+        .mobile-nav-btn{
+            display: block;
+            float: right;
+            padding: 0.6rem;
+            background-color: transparent;
+            border: none;
+            font-size: 3rem;
+        }
+
+        .mobile-nav-clsbtn{
+            float: right;
+            padding: 0.6rem;
+            color: #818181;
+            background-color: transparent;
+            border: none;
+            font-size: 3rem;
+        }
+
+        .mobile-content {
+            position: relative;
+            width: 30rem;
+            margin: 15rem 5rem;
+        }
+    }
+}
