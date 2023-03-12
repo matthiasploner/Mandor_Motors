@@ -15,7 +15,7 @@
 
         <div class="str-grid">
             <button>↖</button>
-            <button onmousedown="vorwaerts()" onmouseup="stop()" use>↑</button>
+            <button onmousedown="vorwaerts()" onmouseup="stop()">↑</button>
             <button>↗</button>
             <button onmousedown="links()" onmouseup="stop()">←</button>
             <div></div>

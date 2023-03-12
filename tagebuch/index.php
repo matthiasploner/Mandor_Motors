@@ -7,6 +7,7 @@
         <link rel="icon" type="image/vnd.microsoft.icon" href="../mmlogo.ico">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -56,10 +57,10 @@
             verifyCookie();
 
             echo '
-            <div class="textareaRead col-lg-8">
+            <div class="col-lg-8">
                 <br>
                 <div class="top"><h1>Unser Tagebuch</h1></div>            
-                <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="12"></textarea>
+                <textarea class="form-control styleArea" style="resize:none" id="readArea" cols="100" readonly rows="12"></textarea>
             </div>
             <br><br><br><br><br>
             <div class="col-lg-3">
@@ -84,9 +85,9 @@
                         <button onclick=loadAll()>Filter löschen</button>
                 </div>   
             </div>
-        <div  class="textareaRead col-lg-8">
-        <br>
-             <textarea class="styleArea styleHover form-control" id="message" style="resize: none"rows="8"></textarea>
+        <div  class="col-lg-8">
+            <br>
+            <textarea class="styleHover form-control styleArea" id="message" style="resize: none"rows="8"></textarea>
         </div>
      
         <div class="col-lg-3">
@@ -109,10 +110,10 @@
         else{
             setcookie("destination", "tagebuch", time() + 3600, "/");
             echo '
-            <div class="textareaRead col-lg-8">
+            <div class="col-lg-8">
                         <br>
                         <div class="top"><h1>Unser Tagebuch</h1></div>            
-                        <textarea class="styleArea form-control" style="resize:none" id="readArea" cols="100" readonly rows="21"></textarea>
+                        <textarea class="form-control styleArea" style="resize:none" id="readArea" cols="100" readonly rows="21"></textarea>
             </div>
                <br><br><br><br><br>
                 <a href='.'javascript:toggle("containerid")'.'>Filter anwenden</a>
