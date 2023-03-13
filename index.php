@@ -41,8 +41,8 @@
         <div class="center">
             <h1>MK1</h1>
             <p>What color is your MK1?</p>
-            <button onclick="window.location.href='/tagebuch'">More about MK1</button>
-            <button onclick="window.location.href='/tagebuch'">Stream</button>
+            <button onclick="window.location.href='/entwicklung'">More about MK1</button>
+            <button onclick="window.location.href='/Stream'">Stream</button>
         </div>
 
         <script>

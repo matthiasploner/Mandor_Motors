@@ -40,10 +40,19 @@
 
             <button class="mobile-nav-btn" onclick="navopen()">≡</button>
         </div>
-        <div class="car_pic">
-            <div class="col-md-12 col-lg-12 col-sm-12">
+        <div class="slideshow-container-1">
+            <div class="slide-1 blueprint">
+                <img src="../carr.jpg" class="img-responsive" alt="Bild">
+                <p>Bauplan des Autos</p>
+            </div>
+            <div class="slide-1 blueprint">
                 <img src="../BP_IMG.jpg" class="img-responsive" alt="Bild">
             </div>
+            <div class="slide-1 blueprint">
+                    <img src="../BP_IMG.jpg" class="img-responsive" alt="Bild">
+            </div>
+            <a class="prev" onclick="arrowNextSlide(-1)">❮</a>
+            <a class="next" onclick="arrowNextSlide(1)">❯</a>
         </div>
         <div class="components">
             <div class="col-md-4 col-lg-4 col-sm-12">
@@ -92,16 +101,6 @@
                 <p>Ein Arduino Ultraschallsensor ist ein elektronisches Bauteil, das in der Lage ist, Ultraschallwellen auszusenden und das Echo dieser Wellen zu empfangen. Der Sensor wird normalerweise mit einem Arduino-Board verbunden, um Entfernungen zu messen, Objekte zu erkennen und andere Anwendungen zu realisieren. Der Sensor sendet Ultraschallwellen aus und misst die Zeit, die benötigt wird, um das Echo zurückzusenden. Anhand dieser Zeitmessung kann die Entfernung zum Zielobjekt berechnet werden</p>
             </div>
         </div>
-        <script>
-            function dropdownFunction() {
-                document.getElementById("pcDropdown").classList.toggle("show");
-            }
-            function navopen() {
-                document.getElementById("mobile-nav").style.width = "100%";
-            }
-            function navclose() {
-                document.getElementById("mobile-nav").style.width = "0%";
-            }
-        </script>
+        <script src="functions.js"></script>
     </body>
 </html>

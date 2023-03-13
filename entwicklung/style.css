@@ -72,8 +72,20 @@ body {
     display: none;
 }
 
-.car_pic img{
+.slide-1 img{
     border-radius: 7rem;
+    width: 80%;
+}
+
+.slide-1 {
+    margin-left: 20rem;
+}
+
+.slide-1 p{
+    color: #f2f2f2;
+    font-size: 2rem;
+    width: 80%;
+    text-align: center;
 }
 
 .components img{
@@ -84,6 +96,36 @@ body {
     color: white;
 }
 
+.slideshow-container-1{
+    max-width: 225rem;
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: 17rem;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2rem;
+    margin-top: -3.4rem;
+    color: white;
+    font-weight: bold;
+    font-size: 4rem;
+    transition: 0.6s ease;
+    border-radius: 0 1rem 1rem 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255,255,255,0.8);
+}
 @media only screen and (max-width: 600px) {
     .topnav-right {
         display: none;

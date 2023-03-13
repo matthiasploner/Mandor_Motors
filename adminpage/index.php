@@ -52,6 +52,7 @@
     <div class="centertext">
         <h1>Admin-Page</h1>
     </div>
+    <br>
     <div class="center">
         <button onclick="window.location.href='/steuerung'">Steuerung</button>
         <button onclick="window.location.href='/tagebuch'">Stream</button>

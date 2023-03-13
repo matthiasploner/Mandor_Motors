@@ -67,8 +67,8 @@ body {
 }
 
 .center {
-    position: absolute;
-    top: 40%;
+    position:relative !important;
+    top: 0% !important;
     width: 100%;
     text-align: center;
     color: white;
@@ -86,7 +86,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 1rem;
-    margin: 20% 1.25rem 0;
+
     cursor: pointer;
 }
 
@@ -108,9 +108,7 @@ body {
     }
 
     .center {
-        position: absolute;
-        top: 25%;
-        width: 100%;
+
         text-align: center;
         color: white;
         font-family: PT Sans, serif;
