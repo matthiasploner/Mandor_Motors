@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="myStyle.css">
 <?php
     function verifylogin(){
         $benutzer = $_POST['benutzername'];
@@ -33,7 +34,12 @@
             }
         }else{
             $db->close();
-            echo "falsche Anmeldedaten"; //bitte besser machen
+            echo '<div class="box">';
+                echo '<div class="fehler">';
+                    echo "<br><br><br>";
+                    echo "<h2>falsche Anmeldedaten</h2>";
+                echo "</div>";
+            echo "</div>";
         }
     }
     function verifyCookie(){

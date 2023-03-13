@@ -72,6 +72,12 @@ body {
     border-radius: 7rem;
 }
 
+.personenmain img{
+    border-radius: 7rem;
+    width: 90%;
+    height: 90%;
+}
+
 .personen {
     color: white;
 }

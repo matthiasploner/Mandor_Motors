@@ -1,6 +1,13 @@
+body{
+    background-image: url('../login.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Noto Sans', sans-serif;
+}
+
 .cookie-consent {
-    background-color: white;
-    border: 1px solid black;
+    background-color: black;
     bottom: 0;
     display: inline-block;
     left: 0;
@@ -12,7 +19,7 @@
 }
 
 .centered {
-    position: fixed; /* or absolute */
+    position: fixed;
     top: 30%;
     left: 40%;
 }
@@ -25,32 +32,39 @@
 .cookie-consent p {
     font-size: 16px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .cookie-consent button {
-    background-color: green;
-    border: none;
-    color: white;
+    background-color: transparent;
+    min-width: 12.5rem;
+    border-radius: 0.75rem;
     cursor: pointer;
     display: inline-block;
     font-size: 16px;
     margin-right: 10px;
     padding: 10px 20px;
 }
+.button_wrap{
+    display: flex;
+}
+
+.button1 button{
+    border-color: lime;
+    color: lime;
+}
+
+.button2 button{
+    border-color: red;
+    color: red;
+}
 
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
 
-body{
-    background-position: center;
-    background-origin: content-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height:100vh;
-    font-family: 'Noto Sans', sans-serif;
-}
+
 .text-center{
-    color:#fff;
+    color: white;
     text-transform:uppercase;
     font-size: 23px;
     margin: -50px 0 80px 0;
@@ -59,13 +73,14 @@ body{
 }
 .box{
     position:absolute;
+    color: transparent;
     left:50%;
     top:50%;
     transform: translate(-50%,-50%);
-    background-color: rgba(0, 0, 0, 0.89);
     border-radius:3px;
     padding:4.5rem 6.25rem;
 }
+
 .input-container{
     position:relative;
     margin-bottom:45px;
@@ -75,7 +90,7 @@ body{
     top:0px;
     left:0px;
     font-size:25px;
-    color:#fff;
+    color: white;
     pointer-event:none;
     transition: all 0.5s ease-in-out;
 }
@@ -86,25 +101,37 @@ body{
     width:100%;
     padding:8px 0 5px 0;
     font-size:40px;
-    color:#fff;
+    color: white;
+    margin-top: 1rem;
 }
-.input-container input:focus{
-    border:none;
-    outline:none;
-    border-bottom:1px solid #e74c3c;
+
+.fehler{
+    background:transparent;
+    width:100%;
+    padding:8px 0 5px 0;
+    font-size:40px;
+    color: red;
+    margin-top: 11rem;
+    margin-left: 33rem;
 }
+
+
 .btn{
-    color:#fff;
-    background-color:#e74c3c;
-    outline: none;
-    border: 0;
-    color: #fff;
-    padding:20px 35px;
-    text-transform:uppercase;
-    margin-top:80px;
-    border-radius:2px;
-    cursor:pointer;
-    position:relative;
+    background-color: transparent;
+    min-width: 12.5rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-color: red;
+    color: red;
+}
+
+.btn:hover{
+    border-color: darkred;
+    color: darkred;
 }
 
 .input-container input:focus ~ label,
