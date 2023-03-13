@@ -10,7 +10,6 @@ $(function()
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             values = JSON.parse(xhttp.responseText);
-            console.log(values);
             for (let i = 0; i < values.length; i++) {
                 availableDates[i]=values[i][0];
             }
@@ -32,8 +31,6 @@ $(function()
 
 
 function available(date) {
-    console.log(availableDates);
-
     dmy = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
     pDate=formatDate(date);
     if ($.inArray(pDate, availableDates) != -1) {
@@ -76,7 +73,6 @@ function loadAll(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             values = JSON.parse(xhttp.responseText);
-            console.log(values);
             var tagebuch="";
             for (let step = 0; step < values.length; step++){
                 tagebuch+=values[step][2];
@@ -95,37 +91,48 @@ function loadAll(){
 
 
 function readText(){
-
-
     var select = document.getElementById('selectReadUser');
     var selectValue = select.options[select.selectedIndex].value;
     var id=getUser(selectValue);
     var readArea=document.getElementById('readArea');
     readArea.valueOf();
     var date=$("#datepicker").datepicker({ format: 'yy/mm/dd' }).val();
-    console.log(date);
 
     var xhttp = new XMLHttpRequest();
-
-    console.log(date);
     xhttp.open("GET", "readSQL.php?benutzer="+id+"&date="+date,true);   //file.php muss natürlich angepasst werden
 
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             values = JSON.parse(xhttp.responseText);
-            console.log(values);
             var tagebuch="";
             for (let step = 0; step < values.length; step++){
                 if(values[step].length==2)
                 {
-                    tagebuch += values[step][1];
+
+                    if(values[step][1]==="sthubmic"){
+                        tagebuch += "Michael Huber";
+                    }
+                    if(values[step][1]==="stplosim"){
+                        tagebuch += "Simon Ploner";
+                    }
+                    if(values[step][1]==="stplamat"){
+                        tagebuch += "Matthias Plaickner";
+                    }
+                    if(values[step][1]==="stplomat"){
+                        tagebuch += "Matthias Ploner";
+                    }
+                    if(values[step][1]==="streitho"){
+                        tagebuch += "Thomas Reinthaler";
+                    }
+
                     tagebuch += "\n";
                 }
                 tagebuch+=values[step][0];
                 tagebuch+="\n\n";
+
             }
             document.getElementById('readArea').value = tagebuch;
-            // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
+
         }
     };
     xhttp.send();

@@ -82,11 +82,6 @@
     <p>Motoren</p>
     <p>RC-Auto-Motoren sind elektrische Motoren, die speziell für den Einsatz in ferngesteuerten Autos entwickelt wurden. Diese Motoren sind in der Regel bürstenlos und haben eine hohe Leistungsdichte, um hohe Geschwindigkeiten und schnelle Beschleunigungen zu ermöglichen. RC-Auto-Motoren werden in verschiedenen Größen und Leistungsklassen angeboten und können je nach Modell des RC-Autos unterschiedliche Spannungsoptionen haben. Es gibt auch Motoren, die speziell für den Einsatz in Geländewagen oder Rennwagen ausgelegt sind. Der Motor ist eines der wichtigsten Elemente in einem RC-Auto und trägt entscheidend zur Leistung und Geschwindigkeit des Fahrzeugs bei.</p>
 </div>
-<div class="col-md-4 col-lg-4 col-sm-12">
-    <img src="../ultrasonic.png" class="img-responsive" alt="Bild">
-    <p>Ultraschall-Sensor</p>
-    <p>Motoren</p>
-</div>
 
 <script>
     function dropdownFunction() {
