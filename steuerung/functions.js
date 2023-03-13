@@ -1,25 +1,31 @@
 
 
 function vorwaerts(){
-    var url = "http://127.0.0.1:5000";
-    var representationOfDesiredState = "The cheese is old and moldy, where is the bathroom?";
+    const url = 'http://127.0.0.1:5000/vorwaerts'; // Setze hier deine API-URL ein
 
-    var client = new XMLHttpRequest();
+    const data = {
+        'message' : 'vorwaerts'
+    };
 
-    client.open("GET", url, false);
 
 
-    client.send(representationOfDesiredState);
+    fetch('http://localhost:5000/test', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({"message":"Hallo"})
+    })
+        .then(response => response.text())
+        .then(data => {
 
-    if (client.status == 200)
-        alert("The request succeeded!\n\nThe response representation was:\n\n" + client.responseText)
-    else
-        alert("The request did not succeed!\n\nThe response status was: " + client.status + " " + client.statusText + ".");
+            console.log(data)
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
 }
 
-
-
-// Send request
 
 
 function zurueck(){
