@@ -12,7 +12,7 @@
             <button>↶</button>
             <button>↷</button>
         </div>
-
+        <iframe id="myiframe" src="http://10.11.11.100:8000/index.html" width="640" height="480"></iframe>
         <div class="str-grid">
             <button>↖</button>
             <button onmousedown="vorwaerts()" onmouseup="stop()">↑</button>
