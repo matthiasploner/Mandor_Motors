@@ -45,15 +45,6 @@
             <button onclick="window.location.href='/tagebuch'">Stream</button>
         </div>
 
-        <div class="navbar">
-            <a href="#">Mandor Motors</a>
-            <a href="#">Privacy & Legal</a>
-            <a href="#">Contact</a>
-            <a href="#">Careers</a>
-            <a href="#">News</a>
-            <a href="#">Locations</a>
-        </div>
-
         <script>
             function dropdownFunction() {
                 document.getElementById("pcDropdown").classList.toggle("show");
