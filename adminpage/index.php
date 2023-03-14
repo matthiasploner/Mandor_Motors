@@ -36,6 +36,7 @@
                     <a>Menu</a>
                 </div>
                 <div id="pcDropdown" class="dropdown-pcContent">
+                    <a href="/downloads">Downloads</a>
                     <a href="/tagebuch">Tagebuch</a>
                     <a href="/entwicklung">Entwicklung</a>
                     <a href="#">Admin-Page</a>
@@ -53,6 +54,7 @@
                         echo $_COOKIE['benutzername'];
                     }
                     ?></a>
+                <a href="/downloads">Downloads</a>
                 <a href="/tagebuch">Tagebuch</a>
                 <a href="/entwicklung">Entwicklung</a>
                 <a href="#">Admin-Page</a>
@@ -68,6 +70,7 @@
     <div class="center">
         <button onclick="window.location.href='/steuerung'">Steuerung</button>
         <button onclick="window.location.href='/Stream'">Stream</button>
+        <button onclick="window.location.href='/aenderungen'">Änderungen</button>
     </div>
     <script>
         function navopen() {
