@@ -37,6 +37,7 @@
                     <a>Menu</a>
                 </div>
                 <div id="pcDropdown" class="dropdown-pcContent">
+                    <a href="/downloads">Downloads</a>
                     <a href="/tagebuch">Tagebuch</a>
                     <a href="/entwicklung">Entwicklung</a>
                     <a href="/adminpage">Admin-Page</a>
@@ -54,6 +55,7 @@
                         echo $_COOKIE['benutzername'];
                     }
                     ?></a>
+                <a href="/downloads">Downloads</a>
                 <a href="/tagebuch">Tagebuch</a>
                 <a href="/entwicklung">Entwicklung</a>
                 <a href="/adminpage">Admin-Page</a>
