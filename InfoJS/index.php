@@ -2,6 +2,7 @@
     <head>
 
         <script src="functions.js"></script>
+        <title>Mandor Motors</title>
     </head>
     <body>
         <div id ="textfeld">

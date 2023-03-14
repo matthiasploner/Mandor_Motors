@@ -58,12 +58,12 @@
     <address>
         Mandor Motors GbR<br>
         +39 342 767 8341<br>
-        Dantestraße, 39E 39042 Brixen, Autonome Provinz Bozen - Südtirol
+        <a href="https://www.google.com/maps/place/Dantestra%C3%9Fe,+39e,+39042+Brixen,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol/@46.720341,11.6485398,18.21z/data=!4m6!3m5!1s0x4778050d856c4db3:0x5d34ee04dcc99ff7!8m2!3d46.7201447!4d11.6487849!16s%2Fg%2F11f4rdd5qz" target="_blank">Dantestraße, 39E 39042 Brixen, Autonome Provinz Bozen - Südtirol</a>
     </address>
     <h4>Vertreten durch die Geschäftsführer:</h4>
     <ul>
-        <li>Matthias Plaickner, Unterbrunnergasse 18, 39040 Natz-Schabs</li>
-        <li>Simon Ploner, Nauders 6, 39037 Rodeneck</li>
+        <li>Matthias Plaickner, <a href="https://www.google.com/maps/place/Unterbrunnergasse,+18,+39040+Natz,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol/@46.7522479,11.6805642,17z/data=!3m1!4b1!4m5!3m4!1s0x477804c743602409:0x1f9e53515a3d1629!8m2!3d46.7522442!4d11.6827529" target="_blank">Unterbrunnergasse 18, 39040 Natz-Schabs</a></li>
+        <li>Simon Ploner, <a href="https://www.google.com/maps/place/Nauders,+6,+39037+Rodengo+BZ/@46.78652,11.686132,17z/data=!3m1!4b1!4m6!3m5!1s0x4778033e220376ef:0x95eb94c37582355!8m2!3d46.7865163!4d11.6883207!16s%2Fg%2F11t9pb6b91" target="_blank"> Nauders 6, 39037 Rodeneck </a></li>
     </ul>
     <h4>Kontakt:</h4>
     <ul>
@@ -72,8 +72,8 @@
     </ul>
     <h4>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h4>
     <ul>
-        <li>Simon Ploner, Nauders 6, 39037 Rodeneck</li>
-        <li>Micheal Huber, Kiener-Dorfweg 12, 39030 Kiens</li>
+        <li>Simon Ploner, <a href="https://www.google.com/maps/place/Nauders,+6,+39037+Rodengo+BZ/@46.78652,11.686132,17z/data=!3m1!4b1!4m6!3m5!1s0x4778033e220376ef:0x95eb94c37582355!8m2!3d46.7865163!4d11.6883207!16s%2Fg%2F11t9pb6b91" target="_blank"> Nauders 6, 39037 Rodeneck</a></li>
+        <li>Micheal Huber, <a href="https://www.google.com/maps/place/Kiener+Dorfweg,+12,+39030+Kiens,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol/@46.8077112,11.8352907,17z/data=!3m1!4b1!4m6!3m5!1s0x47781e70323c96fd:0x539962f03be0a3a1!8m2!3d46.8077075!4d11.8374794!16s%2Fg%2F11cpktzr5j" target="_blank"> Kiener-Dorfweg 12, 39030 Kiens </a></li>
     </ul>
     <h4>Haftungshinweis:</h4>
     <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. </p>
