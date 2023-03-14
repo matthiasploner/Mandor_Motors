@@ -80,7 +80,7 @@
                             <button type="submit" class="btn">Anmelden</button>
                         </form>
                         <?php if(isset($_COOKIE['benutzername']) && isset($_COOKIE['token'])){
-                            echo'<button type="submit" class="btn">Abmelden</button>';
+                            echo'<button id="log-out" type="submit" class="btn">Abmelden</button>';
                         }
                         ?>
                     </div>
@@ -111,4 +111,5 @@
             ?>
         </div>
     </body>
+    <script src="functions.js"></script>
 </html>
