@@ -17,7 +17,7 @@
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="functions.js"></script>
         <link rel="stylesheet" href="styleSheet.css">
-        <title>Tagebuch</title>
+        <title>Mandor Motors</title>
     </head>
     <body onload="loadAll()">
 
