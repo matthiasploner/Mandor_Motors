@@ -52,7 +52,7 @@
     <button class="mobile-nav-btn" onclick="navopen()">≡</button>
 </div>
 <div class="impressum">
-<div class="col-md-4 col-lg-4 col-sm-12 col-md-offset-1">
+<div class="col-md-3 col-lg-6 col-sm-12 col-md-offset-1">
     <h1>Impressum:</h1>
     <h4>Verantwortlich für den Inhalt dieser Webseite gemäß § 5 TMG:</h4>
     <address>
@@ -80,8 +80,7 @@
     <p> Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
     <h4>Urheberrecht:</h4>
     <p>Die auf dieser Webseite verwendeten Texte, Bilder und Grafiken sind urheberrechtlich geschützt. </p>
-    <p>Eine Vervielfältigung oder Verwendung dieser Inhalte in anderen elektronischen oder gedruckten Publikationen,</p>
-    <p>ist ohne ausdrückliche Zustimmung des Autors nicht gestattet.</p>
+    <p>Eine Vervielfältigung oder Verwendung dieser Inhalte in anderen elektronischen oder gedruckten Publikationen, ist ohne ausdrückliche Zustimmung des Autors nicht gestattet.</p>
 </div>
 </div>
 </body>
