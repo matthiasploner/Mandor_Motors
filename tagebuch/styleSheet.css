@@ -2,10 +2,6 @@ body {
     background-color: black;
 }
 
-.center p, h1{
-    color: white;
-}
-
 .topnav {
     overflow: hidden;
     background-color: transparent;
@@ -82,18 +78,15 @@ button{
 
 select{
     background-color: #dddddd;
+    border-radius: 1rem;
 }
 
-input[type="date"]{
+.tagebuch{
+    margin-top: 3rem;
+}
 
-    background: #dddddd;
-    padding:15px;
-    font-family: monospace;
-    color:black;
-    font-size: 16px;
-    border:none;
-    outline:none;
-    border-radius: 5px;
+.tagebuch p, h1{
+    color: white;
 }
 
 .styleHover:hover{
@@ -103,6 +96,22 @@ input[type="date"]{
 .styleArea{
     background-color: #555555 !important;
     color:white; !important;
+}
+
+.search-select{
+    margin-top: 7rem;
+}
+
+.search-select-user, .save-select-user{
+    margin-bottom: 1rem;
+}
+
+.search-select-date input{
+    width: 16rem;
+}
+
+.tagebuch-write, .save-select{
+    margin-top: 2rem;
 }
 
 @media only screen and (max-width: 600px) {

@@ -13,10 +13,16 @@
     </head>
     <body>
         <div class="topnav">
-            <a href="../"><img src="../MMM_Icon.png"></a>
+            <a href="../"><img src="../MM_Icon.png"></a>
             <div class="topnav-right">
                 <a href="#">About Us</a>
-                <a href="/login">Account</a>
+                <a href="/login"><?php
+                    if(!isset($_COOKIE['benutzername'])){
+                        echo 'Account';
+                    }else{
+                        echo $_COOKIE['benutzername'];
+                    }
+                    ?></a>
                 <div class="dropdown-PC">
                     <div class="dropdown-btnPC" onclick='dropdownFunction()'>
                         <a>Menu</a>
@@ -32,7 +38,13 @@
                 <button class="mobile-nav-clsbtn" onclick="navclose()">≡</button>
                 <div class="mobile-content">
                     <a href="#">About Us</a>
-                    <a href="/login">Account</a>
+                    <a href="/login"><?php
+                        if(!isset($_COOKIE['benutzername'])){
+                            echo 'Account';
+                        }else{
+                            echo $_COOKIE['benutzername'];
+                        }
+                        ?></a>
                     <a href="/tagebuch">Tagebuch</a>
                     <a href="/entwicklung">Entwicklung</a>
                     <a href="/adminpage">Admin-Page</a>
@@ -40,6 +52,12 @@
             </div>
 
             <button class="mobile-nav-btn" onclick="navopen()">≡</button>
+        </div>
+        <div class="personenmain">
+            <div class="col-md-12 col-lg-11 col-sm-12 col-md-offset-1" >
+                <img src="../the_team.jpg" class="img-responsive" alt="Matthias Plaickner">
+                <br><br>
+            </div>
         </div>
             <div class="personen">
                 <div class="col-md-4 col-lg-4 col-sm-12">
@@ -65,7 +83,7 @@
                     <br>
                 </div>
                 <div class="col-lg-offset-1 col-md-offset-1 col-md-4 col-lg-4 col-sm-12">
-                    <img src="../Michael_Huber.jpg" class="img-responsive" alt="Matthias Plaickner">
+                    <img src="../Michael_Huberr.jpg" class="img-responsive" alt="Matthias Plaickner">
                     <h3><b>Michael Huber (CMO)</b></h3>
                     <p>Michael Huber ist unser Leiter in der Marketingabteilung mit umfassender Erfahrung in der Entwicklung und Umsetzung von Marketingstrategien für Unternehmen verschiedener Branchen. Mit einem Abschluss in Marketing und einer umfangreichen Expertise in den Bereichen Branding, Kommunikation und Digital Marketing, ist Michael ein kompetenter Mitarbeiter für alle Fragen rund um das Thema Marketing. Er versteht es, die Stärken und Herausforderungen eines Unternehmens zu analysieren und maßgeschneiderte Lösungen zu entwickeln, um die Marktposition zu verbessern und das Wachstum zu fördern. Michael hat eine Leidenschaft für die Entwicklung von kreativen und effektiven Marketing-Kampagnen, die auf die Bedürfnisse der Zielgruppe zugeschnitten sind. Er ist in der Lage, die Entwicklung von Werbebotschaften und Inhalten zu leiten, um das Markenbewusstsein zu steigern und die Kundenbindung zu verbessern.</p>
                     <h4><b>E-mail: sthubmic@bx.fallmerayer.it</b></h4>
