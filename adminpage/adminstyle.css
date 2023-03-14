@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('../settings.jpg');
+    background-image: url('../adminwall.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -13,11 +13,9 @@ body {
     height: 6.25rem;
 }
 
-
-
 .topnav a {
     float: left;
-    color: black;
+    color: white;
     padding: 0.875rem 1rem;
     text-decoration: none;
     font-size: 1.25rem;
@@ -67,11 +65,12 @@ body {
 }
 
 .center {
-    position:relative !important;
-    top: 0% !important;
+    position: relative;
+    top: 1%;
     width: 100%;
     text-align: center;
     color: white;
+    cursor: default;
     font-family: PT Sans, serif;
 }
 
@@ -79,14 +78,12 @@ body {
     background-color: transparent;
     min-width: 12.5rem;
     border-radius: 0.75rem;
-    border-color: black;
-    color: black;
+    border-color: white;
+    color: white;
     padding: 1rem 2rem;
-    text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 1rem;
-
+    margin: 2% 3% 0;
     cursor: pointer;
 }
 
@@ -100,6 +97,7 @@ body {
 
 .centertext {
     text-align: center;
+    color: white;
 }
 
 @media only screen and (max-width: 600px) {
@@ -119,7 +117,7 @@ body {
     }
 
     body {
-        background-image: url('../settings.jpg');
+        background-image: url('../adminwall.png');
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
@@ -135,7 +133,7 @@ body {
         right: 0;
         width: 0;
         height: 100%;
-        background-color: rgba(0,0,0,0.7);
+        background-color: white;
         overflow-x: hidden;
         transition: right 0.5s ease;
         z-index: 1;
