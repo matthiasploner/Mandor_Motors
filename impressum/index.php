@@ -68,7 +68,7 @@
     <h4>Kontakt:</h4>
     <ul>
         <li>Telefon: +39 349 628 9729</li>
-        <li>E-Mail: <a href="mandormotors@gmail.com">mandormotors@gmail.com</a></li>
+        <li>E-Mail: <a href="mailto: mandormotors@gmail.com">mandormotors@gmail.com</a></li>
     </ul>
     <h4>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h4>
     <ul>
