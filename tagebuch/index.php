@@ -51,95 +51,58 @@
             <button class="mobile-nav-btn" onclick="navopen()">≡</button>
         </div>
         <br><br>
-        <div class="center">
+        <div class="tagebuch">
+            <div class="col-lg-8">
+                <h1>Unser Tagebuch</h1>
+                <textarea class="form-control styleArea" style="resize:none" id="readArea" cols="100" readonly rows="20"></textarea>
+            </div>
+            <div class="col-lg-3 search-select">
+                <div id="containerid">
+                    <p>Benutzer und Datum für Eintrag auswählen:</p>
+                    <select class="search-select-user" id="selectReadUser">
+                        <option>--Alle--</option>
+                        <option>gemeinsame Arbeiten</option>
+                        <option>Matthias Plaickner</option>
+                        <option>Simon Ploner</option>
+                        <option>Thomas Reinthaler</option>
+                        <option>Michael Huber</option>
+                        <option>Matthias Ploner</option>
+                    </select>
+                    <form class="search-select-date" id="form1" runat="server">
+                        <input type="text" id="datepicker" placeholder=" yyyy-mm-dd"/>
+                    </form>
+                    <button onclick=readText()>Suchen</button>
+                    <button onclick=loadAll()>Filter löschen</button>
+                </div>
+            </div>
         <?php
-        if(isset($_COOKIE['benutzername']) && isset($_COOKIE['token'])){
-            verifyCookie();
+            if(isset($_COOKIE['benutzername']) && isset($_COOKIE['token'])){
+                verifyCookie();
 
-            echo '
-            <div class="col-lg-8">
-                <br>
-                <div class="top"><h1>Unser Tagebuch</h1></div>            
-                <textarea class="form-control styleArea" style="resize:none" id="readArea" cols="100" readonly rows="12"></textarea>
+                echo '
+            <div  class="col-lg-8 tagebuch-write">
+                <textarea class="styleHover form-control styleArea" id="message" style="resize: none"rows="7"></textarea>
             </div>
-            <br><br><br><br><br>
-            <div class="col-lg-3">
-             <a href='.'javascript:toggle("containerid")'.'>Filter anwenden</a>
-                <div id="containerid" style="display:none">
-                 
-                    <p>Benutzer und Datum für Eintrag auswählen:</p>
-                        <select id="selectReadUser">
-                            <option>--Alle--</option>
-                            <option>gemeinsame Arbeiten</option>
-                            <option>Matthias Plaickner</option>
-                            <option>Simon Ploner</option>
-                            <option>Thomas Reinthaler</option>
-                            <option>Michael Huber</option>
-                            <option>Matthias Ploner</option>
-                        </select>
-                        <form id="form1" runat="server">
-                            date: <input type="text" id="datepicker" />
-                        </form>
-                        <br>
-                        <button onclick=readText()>Suchen</button>
-                        <button onclick=loadAll()>Filter löschen</button>
-                </div>   
-            </div>
-        <div  class="col-lg-8">
-            <br>
-            <textarea class="styleHover form-control styleArea" id="message" style="resize: none"rows="8"></textarea>
-        </div>
-     
-        <div class="col-lg-3">
-       
-        
-                    <br><br>
-                    <p>Benutzer und Datum für Eintrag auswählen:</p>
-                        <select id="selectUser">
-                            <option>gemeinsame Arbeiten</option>
-                            <option>Matthias Plaickner</option>
-                            <option>Simon Ploner</option>
-                            <option>Thomas Reinthaler</option>
-                            <option>Michael Huber</option>
-                            <option>Matthias Ploner</option>
-                        </select>
-                        <input style="resize:none" id="date" type="date" name="date">
-                        <button onclick=saveText()>Speichern</button>
-        </div>';
-        }
-        else{
-            setcookie("destination", "tagebuch", time() + 3600, "/");
-            echo '
-            <div class="col-lg-8">
-                        <br>
-                        <div class="top"><h1>Unser Tagebuch</h1></div>            
-                        <textarea class="form-control styleArea" style="resize:none" id="readArea" cols="100" readonly rows="21"></textarea>
-            </div>
-               <br><br><br><br><br>
-                <a href='.'javascript:toggle("containerid")'.'>Filter anwenden</a>
-                <div id="containerid" style="display:none">
-                 
-                    <p>Benutzer und Datum für Eintrag auswählen:</p>
-                        <select id="selectReadUser">
-                            <option>--Alle--</option>
-                            <option>gemeinsame Arbeiten</option>
-                            <option>Matthias Plaickner</option>
-                            <option>Simon Ploner</option>
-                            <option>Thomas Reinthaler</option>
-                            <option>Michael Huber</option>
-                            <option>Matthias Ploner</option>
-                        </select>
-                        <form id="form1" runat="server">
-                            date: <input type="text" id="datepicker" />
-                        </form>
-                    
-                
-                        <br>
-                        <button onclick=readText()>Suchen</button>
-                        <button onclick=loadAll()>Filter löschen</button>
-                </div>   
+         
+            <div class="col-lg-3 save-select">
+                        <p>Benutzer und Datum für Eintrag auswählen:</p>
+                            <select class="save-select-user" id="selectUser">
+                                <option>gemeinsame Arbeiten</option>
+                                <option>Matthias Plaickner</option>
+                                <option>Simon Ploner</option>
+                                <option>Thomas Reinthaler</option>
+                                <option>Michael Huber</option>
+                                <option>Matthias Ploner</option>
+                            </select>
+                            <form class="save-select-date" id="form2" runat="server">
+                                <input type="text" id="sec-datepicker" placeholder=" yyyy-mm-dd"/>
+                            </form>
+                            <button onclick=saveText()>Speichern</button>
             </div>';
-        }
+            }
+            else{
+                setcookie("destination", "tagebuch", time() + 3600, "/");
+            }
         ?>
         </div>
     </body>

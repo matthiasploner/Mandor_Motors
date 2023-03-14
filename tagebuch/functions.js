@@ -146,7 +146,7 @@ function saveText(){
     var selectValue = select.options[select.selectedIndex].value;
     const message = document.getElementById('message');
     var id=getUser(selectValue);
-    var date = document.getElementById("date");
+    var date = document.getElementById("sec-datepicker");
 
     console.log(date.value);
     var xhttp = new XMLHttpRequest();
@@ -166,25 +166,20 @@ function saveText(){
 
 
 function getUser(name){
-    var id;
+    let id;
     if(name=="Michael Huber"){
         id=5;
-    }
-    if(name=="Matthias Plaickner"){
+    }else if(name=="Matthias Plaickner"){
         id=2;
-    }
-    if(name=="Matthias Ploner"){
+    }else if(name=="Matthias Ploner"){
         id=1;
-    }
-    if(name=="Simon Ploner"){
+    }else if(name=="Simon Ploner"){
         id=4;
-    }
-    if(name=="Thomas Reinthaler"){
+    }else if(name=="Thomas Reinthaler"){
         id=3;
-    }if(name=="gemeinsame Arbeiten"){
+    }else if(name=="gemeinsame Arbeiten"){
         id=6;
-    }
-    if(name=="--Alle--"){
+    }else if(name=="--Alle--"){
         id=7;
     }
     return id;
@@ -199,3 +194,9 @@ function navopen() {
 function navclose() {
     document.getElementById("mobile-nav").style.width = "0%";
 }
+
+$( function() {
+    $( "#sec-datepicker" ).datepicker({
+        changeMonth: true, changeYear: false, dateFormat: 'yy-mm-dd'}
+    );
+} );
