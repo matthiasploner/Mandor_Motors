@@ -12,7 +12,7 @@
 
 <html>
     <head>
-        <title>Login</title>
+        <title>Mandor Motors</title>
         <link rel="icon" type="image/vnd.microsoft.icon" href="../mmlogo.ico">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -77,8 +77,12 @@
                                 <input type="password" name="passwort"/>
                                 <label>Passwort:</label><br>
                             </div>
-                            <button type="submit" class="btn">submit</button>
+                            <button type="submit" class="btn">Anmelden</button>
                         </form>
+                        <?php if(isset($_COOKIE['benutzername']) && isset($_COOKIE['token'])){
+                            echo'<button type="submit" class="btn">Abmelden</button>';
+                        }
+                        ?>
                     </div>
                     <?php
                 }
