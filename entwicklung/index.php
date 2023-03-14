@@ -42,14 +42,16 @@
         </div>
         <div class="slideshow-container-1">
             <div class="slide-1 blueprint">
-                <img src="../carr.jpg" class="img-responsive" alt="Bild">
-                <p>Bauplan des Autos</p>
+                <img src="../tomplan.png" class="img-responsive" alt="Bild">
+                <p>Erste Skizze des Bauplanes vom MK1</p>
             </div>
             <div class="slide-1 blueprint">
-                <img src="../BP_IMG.jpg" class="img-responsive" alt="Bild">
+                <img src="../bauplan.png" class="img-responsive" alt="Bild">
+                <p>Bauplan und 3d Modell des MK1</p>
             </div>
             <div class="slide-1 blueprint">
-                    <img src="../BP_IMG.jpg" class="img-responsive" alt="Bild">
+                <img src="../firstlook.jpg" class="img-responsive" alt="Bild">
+                <p>Prototyp auf der Teststrecke</p>
             </div>
             <a class="prev" onclick="arrowNextSlide(-1)">❮</a>
             <a class="next" onclick="arrowNextSlide(1)">❯</a>
