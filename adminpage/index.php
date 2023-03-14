@@ -68,6 +68,7 @@
     <div class="center">
         <button onclick="window.location.href='/steuerung'">Steuerung</button>
         <button onclick="window.location.href='/Stream'">Stream</button>
+        <button onclick="window.location.href='/aenderungen'">Änderungen</button>
     </div>
     <script>
         function navopen() {
