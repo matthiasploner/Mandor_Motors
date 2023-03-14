@@ -25,7 +25,13 @@
             <a href="../"><img src="../MM_Icon.png"></a>
             <div class="topnav-right">
                 <a href="/Team">About Us</a>
-                <a href="/login">Account</a>
+                <a href="/login"><?php
+                    if(!isset($_COOKIE['benutzername'])){
+                        echo 'Account';
+                    }else{
+                        echo $_COOKIE['benutzername'];
+                    }
+                    ?></a>
                 <div class="dropdown-PC">
                     <div class="dropdown-btnPC" onclick='dropdownFunction()'>
                         <a>Menu</a>
@@ -41,7 +47,13 @@
                 <button class="mobile-nav-clsbtn" onclick="navclose()">≡</button>
                 <div class="mobile-content">
                     <a href="/Team">About Us</a>
-                    <a href="/login">Account</a>
+                    <a href="/login"><?php
+                        if(!isset($_COOKIE['benutzername'])){
+                            echo 'Account';
+                        }else{
+                            echo $_COOKIE['benutzername'];
+                        }
+                        ?></a>
                     <a href="#">Tagebuch</a>
                     <a href="/entwicklung">Entwicklung</a>
                     <a href="/adminpage">Admin-Page</a>
