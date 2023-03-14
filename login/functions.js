@@ -1,6 +1,7 @@
 document.getElementById("log-out").addEventListener("click", function(){
     document.cookie = "benutzername=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
     document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+    location.href = "/login";
 });
 
 function dropdownFunction() {
