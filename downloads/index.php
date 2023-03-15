@@ -62,11 +62,46 @@
         <button class="mobile-nav-btn" onclick="navopen()">≡</button>
     </div>
         <div class="download">
-            <div class="col-md-4 col-lg-4 col-sm-12">
-                <img src="../bauplan.png" class="img-responsive" alt="Download">
-                <h3><b>Bauplan</b></h3>
-                <h4><b>Download: <a href="mailto: stplamat@bx.fallmerayer.it">Hier</a></b></h4>
+            <div class="tp-download">
+                <h1><b>TP-Downloads</b></h1>
+                <div class="col-md-2 col-lg-2 col-sm-12">
+                    <img src="../pdf.png" class="img-responsive" alt="Download">
+                    <h3><b>Bauplan</b></h3>
+                    <h4><b>Download: <a href="../pdf.png" download>Hier</a></b></h4>
+                </div>
+                <div class="col-md-2 col-lg-offset-1 col-sm-12">
+                    <img src="../pdf.png" class="img-responsive" alt="Download">
+                    <h3><b>Bauplan</b></h3>
+                    <h4><b>Download: <a href="../pdf.png" download>Hier</a></b></h4>
+                </div>
+                <div class="col-md-2 col-lg-offset-1 col-sm-12">
+                    <img src="../pdf.png" class="img-responsive" alt="Download">
+                    <h3><b>Bauplan</b></h3>
+                    <h4><b>Download: <a href="../pdf.png" download>Hier</a></b></h4>
+                </div>
+                <div class="col-md-2 col-lg-offset-1 col-sm-12">
+                    <img src="../pdf.png" class="img-responsive" alt="Download">
+                    <h3><b>Bauplan</b></h3>
+                    <h4><b>Download: <a href="../pdf.png" download>Hier</a></b></h4>
+                </div>
+                <div class="col-md-2 col-lg-2 col-sm-12">
+                    <img src="../pdf.png" class="img-responsive" alt="Download">
+                    <h3><b>Bauplan</b></h3>
+                    <h4><b>Download: <a href="../pdf.png" download>Hier</a></b></h4>
+                </div>
+                <div class="col-md-2 col-lg-offset-1 col-sm-12">
+                    <img src="../pdf.png" class="img-responsive" alt="Download">
+                    <h3><b>Bauplan</b></h3>
+                    <h4><b>Download: <a href="../pdf.png" download>Hier</a></b></h4>
+                </div>
+                <div class="col-md-2 col-lg-offset-1 col-sm-12">
+                    <img src="../pdf.png" class="img-responsive" alt="Download">
+                    <h3><b>Bauplan</b></h3>
+                    <h4><b>Download: <a href="../pdf.png" download>Hier</a></b></h4>
+                </div>
+
             </div>
+
         </div>
     </body>
 </html>
