@@ -38,7 +38,7 @@
                 <div id="pcDropdown" class="dropdown-pcContent">
                     <a href="/downloads">Downloads</a>
                     <a href="/tagebuch">Tagebuch</a>
-                    <a href="/driveassistent">Entwicklung</a>
+                    <a href="/entwicklung">Entwicklung</a>
                     <a href="#">Admin-Page</a>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     ?></a>
                 <a href="/downloads">Downloads</a>
                 <a href="/tagebuch">Tagebuch</a>
-                <a href="/driveassistent">Entwicklung</a>
+                <a href="/entwicklung">Entwicklung</a>
                 <a href="#">Admin-Page</a>
             </div>
         </div>
@@ -70,7 +70,7 @@
     <div class="center">
         <button onclick="window.location.href='/steuerung'">Steuerung</button>
         <button onclick="window.location.href='/Stream'">Stream</button>
-        <button onclick="window.location.href='/aenderungen'">Drive-Assistent</button>
+        <button onclick="window.location.href='/driveassistent'">Drive-Assistent</button>
     </div>
     <script>
         function navopen() {

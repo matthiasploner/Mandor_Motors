@@ -39,7 +39,7 @@
                 <div id="pcDropdown" class="dropdown-pcContent">
                     <a href="/downloads">Downloads</a>
                     <a href="/tagebuch">Tagebuch</a>
-                    <a href="/driveassistent">Entwicklung</a>
+                    <a href="/entwicklung">Entwicklung</a>
                     <?php
                         if(isset($_COOKIE['benutzername'])) {
                             echo '<a href="/adminpage">Admin-Page</a>';
@@ -61,7 +61,7 @@
                     ?></a>
                 <a href="/downloads">Downloads</a>
                 <a href="/tagebuch">Tagebuch</a>
-                <a href="/driveassistent">Entwicklung</a>
+                <a href="/entwicklung">Entwicklung</a>
                 <?php
                     if(isset($_COOKIE['benutzername'])) {
                         echo '<a href="/adminpage">Admin-Page</a>';
