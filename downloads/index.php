@@ -66,106 +66,105 @@
                 <h1><b>TP-Downloads</b></h1>
                 <div class="col-md-2 col-lg-2 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Websiteplanung.pdf</b></h3>
+                    <h4><b>Websiteplanung.pdf</b></h4>
                     <h4><b>Download: <a href="../Websiteplanung.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Scrum-Methode.pdf</b></h3>
+                    <h4><b>Scrum-Methode.pdf</b></h4>
                     <h4><b>Download: <a href="../Scrum-Methode.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Figma, Trello, Gantt und Website.pdf</b></h3>
+                    <h4><b>Figma, Trello, Gantt und Website.pdf</b></h4>
                     <h4><b>Download: <a href="../Figma, Trello, Gantt und Website.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>ER-Modell und Use-Case.pdf</b></h3>
+                    <h4><b>ER-Modell und Use-Case.pdf</b></h4>
                     <h4><b>Download: <a href="../ER-Modell und Use-Case.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-2 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Bauplan_Advanced.pdf</b></h3>
+                    <h4><b>Bauplan_Advanced.pdf</b></h4>
                     <h4><b>Download: <a href="../Bauplan_Advanced.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Bauplan und Websiteplan.pdf</b></h3>
+                    <h4><b>Bauplan und Websiteplan.pdf</b></h4>
                     <h4><b>Download: <a href="../Bauplan und Websiteplan.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Angebot, Projektumfang und Kostenschätzung.pdf</b></h3>
+                    <h4><b>Angebot, Projektumfang und Kostenschätzung.pdf</b></h4>
                     <h4><b>Download: <a href="../Angebot, Projektumfang und Kostenschätzung.pdf" download>Hier</a></b></h4>
                 </div>
             </div>
-
-            <div class="tp-download">
+            <div class="pm-download">
                 <h1><b>PM-Downloads</b></h1>
                 <div class="col-md-2 col-lg-2 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Business Case und Lastenheft.pdf</b></h3>
+                    <h4><b>Business Case und Lastenheft.pdf</b></h4>
                     <h4><b>Download: <a href="../Business Case und Lastenheft.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Finanzierungsplan.pdf</b></h3>
+                    <h4><b>Finanzierungsplan.pdf</b></h4>
                     <h4><b>Download: <a href="../Finanzierungsplan.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Firmengründungsblatt.pdf</b></h3>
+                    <h4><b>Firmengründungsblatt.pdf</b></h4>
                     <h4><b>Download: <a href="../Firmengründungsblatt.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Gantt-Diagramm.pdf</b></h3>
+                    <h4><b>Gantt-Diagramm.pdf</b></h4>
                     <h4><b>Download: <a href="../Gantt-Diagramm.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-2 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Kostenplan.pdf</b></h3>
+                    <h4><b>Kostenplan.pdf</b></h4>
                     <h4><b>Download: <a href="../Kostenplan.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Meilensteine.pdf</b></h3>
+                    <h4><b>Meilensteine.pdf</b></h4>
                     <h4><b>Download: <a href="../Meilensteine.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>OBS.pdf</b></h3>
+                    <h4><b>OBS.pdf</b></h4>
                     <h4><b>Download: <a href="../OBS.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>WBS.pdf</b></h3>
+                    <h4><b>WBS.pdf</b></h4>
                     <h4><b>Download: <a href="../WBS.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Projektauftrag.pdf</b></h3>
+                    <h4><b>Projektauftrag.pdf</b></h4>
                     <h4><b>Download: <a href="../Projektauftrag.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>RessourcenPlan.pdf</b></h3>
+                    <h4><b>RessourcenPlan.pdf</b></h4>
                     <h4><b>Download: <a href="../RessourcenPlan.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Risikoanalyse.pdf</b></h3>
+                    <h4><b>Risikoanalyse.pdf</b></h4>
                     <h4><b>Download: <a href="../Risikoanalyse.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Rollenbeschreibung.pdf</b></h3>
+                    <h4><b>Rollenbeschreibung.pdf</b></h4>
                     <h4><b>Download: <a href="../Rollenbeschreibung.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h3><b>Sponsoren_Broschüre.pdf</b></h3>
+                    <h4><b>Sponsoren_Broschüre.pdf</b></h4>
                     <h4><b>Download: <a href="../Sponsoren_Broschüre.pdf" download>Hier</a></b></h4>
                 </div>
             </div>
