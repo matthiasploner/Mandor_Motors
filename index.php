@@ -26,7 +26,7 @@
                     <div id="pcDropdown" class="dropdown-pcContent">
                         <a href="/downloads">Downloads</a>
                         <a href="/tagebuch">Tagebuch</a>
-                        <a href="/entwicklung">Entwicklung</a>
+                        <a href="/driveassistent">Entwicklung</a>
                         <?php
                         if(isset($_COOKIE['benutzername'])) {
                             echo '<a href="/adminpage">Admin-Page</a>';
@@ -48,7 +48,7 @@
                         ?></a>
                     <a href="/downloads">Downloads</a>
                     <a href="/tagebuch">Tagebuch</a>
-                    <a href="/entwicklung">Entwicklung</a>
+                    <a href="/driveassistent">Entwicklung</a>
                     <?php
                         if(isset($_COOKIE['benutzername'])) {
                             echo '<a href="/adminpage">Admin-Page</a>';
@@ -74,7 +74,7 @@
         </div>
 
         <div class="navbar">
-            <a>Mandor Motors</a>
+            <a href="/downloads">Downloads</a>
             <a href="/impressum">Impressum</a>
             <a href="mailto: mandormotors@gmail.com">Contact</a>
             <a href="https://www.google.com/maps/place/Dantestra%C3%9Fe,+39e,+39042+Brixen,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol/@46.720341,11.6485398,18.21z/data=!4m6!3m5!1s0x4778050d856c4db3:0x5d34ee04dcc99ff7!8m2!3d46.7201447!4d11.6487849!16s%2Fg%2F11f4rdd5qz" target="_blank">Location</a>
