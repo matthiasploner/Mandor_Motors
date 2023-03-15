@@ -64,7 +64,13 @@
             <h1>MK1</h1>
             <p>What color is your MK1?</p>
             <button onclick="window.location.href='/entwicklung'">More about MK1</button>
-            <button onclick="window.location.href='/Stream'">Stream</button>
+            <?php
+                if(isset($_COOKIE['benutzername'])){
+                    echo '<button onclick="window.location.href=\'/steuerung\'">Steuerung</button>';
+                }else{
+                    echo '<button onclick="window.location.href=\'/Stream\'">Stream</button>';
+                }
+            ?>
         </div>
 
         <div class="navbar">
