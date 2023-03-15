@@ -53,7 +53,7 @@
             </div>
             <button class="mobile-nav-btn" onclick="navopen()">≡</button>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-12 stream-window">
+        <div class="col-lg-offset-3 col-md-4 col-sm-12 stream-window">
             <iframe class="stream-frame" id="myiframe" src="http://10.11.11.100:8000/index.html" width="660" height="500"></iframe>
         </div>
     </body>
