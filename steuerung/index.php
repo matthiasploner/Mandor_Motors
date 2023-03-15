@@ -1,3 +1,9 @@
+<?php
+    if(!isset($_COOKIE['benutzername']) || !isset($_COOKIE['token'])){
+        header("Location: /login");
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
