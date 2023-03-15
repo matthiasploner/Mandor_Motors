@@ -60,10 +60,7 @@
 }
 
 body{
-    background-image: url('../stream4.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: black;
     font-family: 'Noto Sans', sans-serif;
 }
 

@@ -27,7 +27,11 @@
                         <a href="/downloads">Downloads</a>
                         <a href="/tagebuch">Tagebuch</a>
                         <a href="/entwicklung">Entwicklung</a>
-                        <a href="/adminpage">Admin-Page</a>
+                        <?php
+                        if(isset($_COOKIE['benutzername'])) {
+                            echo '<a href="/adminpage">Admin-Page</a>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -45,7 +49,11 @@
                     <a href="/downloads">Downloads</a>
                     <a href="/tagebuch">Tagebuch</a>
                     <a href="/entwicklung">Entwicklung</a>
-                    <a href="/adminpage">Admin-Page</a>
+                    <?php
+                        if(isset($_COOKIE['benutzername'])) {
+                            echo '<a href="/adminpage">Admin-Page</a>';
+                        }
+                    ?>
                 </div>
             </div>
 
