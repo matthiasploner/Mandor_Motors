@@ -62,8 +62,21 @@
         <button class="mobile-nav-btn" onclick="navopen()">≡</button>
     </div>
         <div class="download">
+            <div class="programme-download">
+                <h1><b>Andere Programme von uns:</b></h1>
+                <div class="col-md-2 col-lg-2 col-sm-12">
+                    <img src="../zip.png" class="img-responsive" alt="Download">
+                    <h4><b>Fit and Run with Fun</b></h4>
+                    <h4><b>Download: <a href="../FITandRUNwithFun.zip" download>Hier</a></b></h4>
+                </div>
+                <div class="col-md-2 col-lg-offset-1 col-sm-12">
+                    <img src="../zip.png" class="img-responsive" alt="Download">
+                    <h4><b>Text to Speech</b></h4>
+                    <h4><b>Download: <a href="../Text_to_Speech.zip" download>Hier</a></b></h4>
+                </div>
+            </div>
             <div class="tp-download">
-                <h1><b>TP-Downloads</b></h1>
+                <h1><b>Technologie und Planung:</b></h1>
                 <div class="col-md-2 col-lg-2 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
                     <h4><b>Websiteplanung.pdf</b></h4>
@@ -101,11 +114,11 @@
                 </div>
             </div>
             <div class="pm-download">
-                <h1><b>PM-Downloads</b></h1>
+                <h1><b>Projekt-Management:</b></h1>
                 <div class="col-md-2 col-lg-2 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h4><b>Business Case und Lastenheft.pdf</b></h4>
-                    <h4><b>Download: <a href="../Business Case und Lastenheft.pdf" download>Hier</a></b></h4>
+                    <h4><b>Projektauftrag.pdf</b></h4>
+                    <h4><b>Download: <a href="../Projektauftrag.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
@@ -142,10 +155,10 @@
                     <h4><b>WBS.pdf</b></h4>
                     <h4><b>Download: <a href="../WBS.pdf" download>Hier</a></b></h4>
                 </div>
-                <div class="col-md-2 col-lg-offset-1 col-sm-12">
+                <div class="col-md-2 col-lg-2 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h4><b>Projektauftrag.pdf</b></h4>
-                    <h4><b>Download: <a href="../Projektauftrag.pdf" download>Hier</a></b></h4>
+                    <h4><b>Sponsoren_Broschüre.pdf</b></h4>
+                    <h4><b>Download: <a href="../Sponsoren_Broschüre.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
@@ -162,13 +175,12 @@
                     <h4><b>Rollenbeschreibung.pdf</b></h4>
                     <h4><b>Download: <a href="../Rollenbeschreibung.pdf" download>Hier</a></b></h4>
                 </div>
-                <div class="col-md-2 col-lg-offset-1 col-sm-12">
+                <div class="col-md-2 col-lg-2 col-sm-12">
                     <img src="../pdf.png" class="img-responsive" alt="Download">
-                    <h4><b>Sponsoren_Broschüre.pdf</b></h4>
-                    <h4><b>Download: <a href="../Sponsoren_Broschüre.pdf" download>Hier</a></b></h4>
+                    <h4><b>Business Case und Lastenheft.pdf</b></h4>
+                    <h4><b>Download: <a href="../Business Case und Lastenheft.pdf" download>Hier</a></b></h4>
                 </div>
             </div>
-
         </div>
     </body>
 </html>

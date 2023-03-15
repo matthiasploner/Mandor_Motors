@@ -71,8 +71,13 @@ body{
 
 h1 {
     margin-bottom: 2rem;
+    margin-left: 3rem;
 }
 
 .pm-download{
     margin-top: 70rem
+}
+
+.tp-download {
+    margin-top: 35rem
 }
