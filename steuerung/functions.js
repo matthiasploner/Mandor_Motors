@@ -1,6 +1,7 @@
+url="http://10.11.11.100:5000/"
 
 function vorwaerts(){
-    fetch('http://10.11.11.100:5000/vorwaerts', {
+    fetch(url+'vorwaerts', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -20,7 +21,7 @@ function vorwaerts(){
 
 
 function zurueck(){
-    fetch('http://10.11.11.100:5000/ruckwaerts', {
+    fetch(url+'ruckwaerts', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -38,7 +39,24 @@ function zurueck(){
 }
 
 function rechts(){
-    fetch('http://10.11.11.100:5000/rechts', {
+    fetch(url+'rechts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({"message":"Hallo"})
+    })
+        .then(response => response.text())
+        .then(data => {
+
+            console.log(data)
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
+function hartRechts(){
+    fetch(url+'hartRechts', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -55,8 +73,27 @@ function rechts(){
         });
 }
 
+
 function left(){
-    fetch('http://10.11.11.100:5000/links', {
+    fetch(url+'links', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({"message":"Hallo"})
+    })
+        .then(response => response.text())
+        .then(data => {
+
+            console.log(data)
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
+
+function hartLinks(){
+    fetch(url+'hartLinks', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -75,7 +112,7 @@ function left(){
 
 function changeType(){
     let x = document.getElementById("auton");
-    fetch('http://10.11.11.100:5000/changeType', {
+    fetch(url+'changeType', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -96,7 +133,7 @@ function changeSpeed(){
     let x = document.getElementById("myRange").value;
     x=parseInt(x);
     console.log(x)
-    fetch('http://10.11.11.100:5000/changeSpeed', {
+    fetch(url+'changeSpeed', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -114,7 +151,7 @@ function changeSpeed(){
 }
 
 function stop(){
-    fetch('http://10.11.11.100:5000/stop', {
+    fetch(url+'stop', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -131,17 +168,110 @@ function stop(){
         });
 }
 
-function getSpeed(){
-    const url = "http://10.11.11.100:5000/speed"; // Geben Sie die URL für die GET-Anfrage ein
-    response=""
-    fetch(url, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json" // Setzen Sie den Header-Typ für JSON-Daten
-        }
-    })
-        .then(response => response.json()) // Extrahieren Sie die JSON-Daten aus der Antwort
-        console.log(response)
-        .then(data => console.log(data)) // Geben Sie die empfangenen Daten in der Konsole aus
-        .catch(error => console.error(error)); // Behandeln Sie alle Fehler, die während der Anfrage auftreten können
+
+
+
+function getSpeed() {
+    let x=document.getElementById("speed");
+    fetch(url+'speed')
+        .then(response => response.json())
+        .then(data => {
+            x.innerText=data;
+        })
+        .catch(error => console.error(error));
+
+    setTimeout(getSpeed, 1000);
 }
+
+function led(){
+    fetch(url+'licht', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({"message":"Hallo"})
+    })
+        .then(response => response.text())
+        .then(data => {
+
+            console.log(data)
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
+
+function checkAutonom(){
+    let x = document.getElementById("auton");
+    response = ""
+
+    fetch(url+'checkAutonom')
+        .then(response => response.json())
+        .then(data => {
+            if (data === 'true') {
+                console.log('Response is true');
+                x.checked=true;
+            } else if (data === 'false') {
+                console.log('Response is false');
+                x.checked=false;
+            } else {
+                console.log('Unexpected response');
+
+            }
+        })
+        .catch(error => console.error(error));
+}
+
+function checkALicht(){
+    let x = document.getElementById("aLight");
+    response = ""
+
+    fetch(url+'checkALicht')
+        .then(response => response.json())
+        .then(data => {
+            if (data === 'true') {
+                console.log('Response is true');
+                x.checked=true;
+            } else if (data === 'false') {
+                console.log('Response is false');
+                x.checked=false;
+            } else {
+                console.log('Unexpected response');
+
+            }
+        })
+        .catch(error => console.error(error));
+}
+
+function lichtState(){
+    let x = document.getElementById("licht");
+
+
+    fetch(url+'lichtState')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+        })
+        .catch(error => console.error(error));
+}
+
+function autoLight(){
+    let x = document.getElementById("aLight");
+    fetch(url+'autoLight', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({"message":x.checked})
+    })
+        .then(response => response.text())
+        .then(data => {
+
+            console.log(data)
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
+
+
