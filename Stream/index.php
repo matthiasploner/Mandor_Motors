@@ -27,9 +27,14 @@
                         <a>Menu</a>
                     </div>
                     <div id="pcDropdown" class="dropdown-pcContent">
+                        <a href="/downloads">Downloads</a>
                         <a href="/tagebuch">Tagebuch</a>
                         <a href="/entwicklung">Entwicklung</a>
-                        <a href="/adminpage">Admin-Page</a>
+                        <?php
+                            if(isset($_COOKIE['benutzername'])) {
+                                echo '<a href="/adminpage">Admin-Page</a>';
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -44,14 +49,19 @@
                             echo $_COOKIE['benutzername'];
                         }
                         ?></a>
+                    <a href="/downloads">Downloads</a>
                     <a href="/tagebuch">Tagebuch</a>
                     <a href="/entwicklung">Entwicklung</a>
-                    <a href="/adminpage">Admin-Page</a>
+                    <?php
+                        if(isset($_COOKIE['benutzername'])) {
+                            echo '<a href="/adminpage">Admin-Page</a>';
+                        }
+                    ?>
                 </div>
             </div>
             <button class="mobile-nav-btn" onclick="navopen()">≡</button>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-12 stream-window">
+        <div class="col-lg-offset-3 col-md-4 col-sm-12 stream-window">
             <iframe class="stream-frame" id="myiframe" src="http://10.11.11.100:8000/index.html" width="660" height="500"></iframe>
         </div>
     </body>

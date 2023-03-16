@@ -12,7 +12,7 @@
 
 <html>
     <head>
-        <title>Login</title>
+        <title>Mandor Motors</title>
         <link rel="icon" type="image/vnd.microsoft.icon" href="../mmlogo.ico">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -37,9 +37,14 @@
                     <a>Menu</a>
                 </div>
                 <div id="pcDropdown" class="dropdown-pcContent">
+                    <a href="/downloads">Downloads</a>
                     <a href="/tagebuch">Tagebuch</a>
                     <a href="/entwicklung">Entwicklung</a>
-                    <a href="/adminpage">Admin-Page</a>
+                    <?php
+                        if(isset($_COOKIE['benutzername'])) {
+                            echo '<a href="/adminpage">Admin-Page</a>';
+                        }
+                    ?>
                 </div>
             </div>
         </div>
@@ -54,9 +59,14 @@
                         echo $_COOKIE['benutzername'];
                     }
                     ?></a>
+                <a href="/downloads">Downloads</a>
                 <a href="/tagebuch">Tagebuch</a>
                 <a href="/entwicklung">Entwicklung</a>
-                <a href="/adminpage">Admin-Page</a>
+                <?php
+                    if(isset($_COOKIE['benutzername'])) {
+                        echo '<a href="/adminpage">Admin-Page</a>';
+                    }
+                ?>
             </div>
         </div>
         <button class="mobile-nav-btn" onclick="navopen()">≡</button>
@@ -77,8 +87,12 @@
                                 <input type="password" name="passwort"/>
                                 <label>Passwort:</label><br>
                             </div>
-                            <button type="submit" class="btn">submit</button>
+                            <button type="submit" class="btn">Anmelden</button>
                         </form>
+                        <?php if(isset($_COOKIE['benutzername']) && isset($_COOKIE['token'])){
+                            echo'<button id="log-out" type="submit" class="btn">Abmelden</button>';
+                        }
+                        ?>
                     </div>
                     <?php
                 }
@@ -107,4 +121,5 @@
             ?>
         </div>
     </body>
+    <script src="functions.js"></script>
 </html>

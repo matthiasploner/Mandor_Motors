@@ -17,7 +17,7 @@
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="functions.js"></script>
         <link rel="stylesheet" href="styleSheet.css">
-        <title>Tagebuch</title>
+        <title>Mandor Motors</title>
     </head>
     <body onload="loadAll()">
 
@@ -37,9 +37,14 @@
                         <a>Menu</a>
                     </div>
                     <div id="pcDropdown" class="dropdown-pcContent">
+                        <a href="/downloads">Downloads</a>
                         <a href="#">Tagebuch</a>
                         <a href="/entwicklung">Entwicklung</a>
-                        <a href="/adminpage">Admin-Page</a>
+                        <?php
+                            if(isset($_COOKIE['benutzername'])) {
+                                echo '<a href="/adminpage">Admin-Page</a>';
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -54,9 +59,14 @@
                             echo $_COOKIE['benutzername'];
                         }
                         ?></a>
+                    <a href="/downloads">Downloads</a>
                     <a href="#">Tagebuch</a>
                     <a href="/entwicklung">Entwicklung</a>
-                    <a href="/adminpage">Admin-Page</a>
+                    <?php
+                        if(isset($_COOKIE['benutzername'])) {
+                            echo '<a href="/adminpage">Admin-Page</a>';
+                        }
+                    ?>
                 </div>
             </div>
 

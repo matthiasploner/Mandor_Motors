@@ -1,8 +1,14 @@
+<?php
+    if(!isset($_COOKIE['benutzername']) || !isset($_COOKIE['token'])){
+        header("Location: /login");
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <link rel="icon" type="image/vnd.microsoft.icon" href="../mmlogo.ico">
-        <title>MM_Steuerung</title>
+        <title>Mandor Motors</title>
         <meta name="viewport" content="user-scalable=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

@@ -27,9 +27,14 @@
                         <a>Menu</a>
                     </div>
                     <div id="pcDropdown" class="dropdown-pcContent">
+                        <a href="/downloads">Downloads</a>
                         <a href="/tagebuch">Tagebuch</a>
                         <a href="#">Entwicklung</a>
-                        <a href="/adminpage">Admin-Page</a>
+                        <?php
+                            if(isset($_COOKIE['benutzername'])) {
+                                echo '<a href="/adminpage">Admin-Page</a>';
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -44,9 +49,14 @@
                             echo $_COOKIE['benutzername'];
                         }
                         ?></a>
+                    <a href="/downloads">Downloads</a>
                     <a href="/tagebuch">Tagebuch</a>
                     <a href="#">Entwicklung</a>
-                    <a href="/adminpage">Admin-Page</a>
+                    <?php
+                        if(isset($_COOKIE['benutzername'])) {
+                            echo '<a href="/adminpage">Admin-Page</a>';
+                        }
+                    ?>
                 </div>
             </div>
 
@@ -64,6 +74,10 @@
             <div class="slide-1 blueprint">
                 <img src="../firstlook.jpg" class="img-responsive" alt="Bild">
                 <p>Prototyp auf der Teststrecke</p>
+            </div>
+            <div class="slide-1 blueprint">
+                <img src="../proto2.jpg" class="img-responsive" alt="Bild">
+                <p>Prototyp 2 mit Mecanum-Wheels auf der Teststrecke</p>
             </div>
             <a class="prev" onclick="arrowNextSlide(-1)">❮</a>
             <a class="next" onclick="arrowNextSlide(1)">❯</a>
@@ -95,9 +109,14 @@
                 <p>Mecanum-Räder sind spezielle omnidirektionale Räder, die es einem Fahrzeug ermöglichen, sich in jede Richtung zu bewegen, ohne seine Ausrichtung zu ändern. Diese Räder sind mit speziellen Rollen ausgestattet, die es dem Fahrzeug ermöglichen, seitlich zu bewegen, sich um die eigene Achse zu drehen und sogar diagonal zu fahren. Mecanum-Räder werden oft in Robotern, automatisierten Förderanlagen und anderen mobilen Maschinen eingesetzt, die eine präzise Bewegung in engen Räumen oder auf unebenem Gelände erfordern.</p>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-12">
+                <img src="../frontlicht.png" class="img-responsive" alt="Bild">
+                <h3>Frontlicht</h3>
+                <p>RC-Auto-Lichter sind spezielle LEDs, die in ferngesteuerten Autos als Frontscheinwerfer eingebaut werden. Diese Lichter dienen dazu, das RC-Auto besser sichtbar zu machen und der Kamera eine bessere Sicht zu ermöglichen. Enthusiasten nutzen diese Lichter oft, um ihre RC-Autos zu personalisieren und realistischer zu gestalten. RC-Auto-Lichter können entweder über den Hauptakku des Autos oder über separate Batterien betrieben werden. Per Code können sie dann ein und ausgeschalten werden und in Kombination mit einem Fotowiederstand leuchten sie nur, wenn es dunkel ist. </p>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-12">
                 <img src="../lichter.png" class="img-responsive" alt="Bild">
-                <h3>Lichter</h3>
-                <p>RC-Auto-Lichter sind spezielle LEDs, die in ferngesteuerten Autos eingebaut werden, um sie besser sichtbar zu machen und ihnen ein realistischeres Aussehen zu verleihen. Diese Lichter können in einer Vielzahl von Farben und Konfigurationen angebracht werden, wie z.B. Frontscheinwerfer, Rücklichter, Blinker und Nebelscheinwerfer. RC-Auto-Lichter werden oft von Enthusiasten genutzt, um ihre RC-Autos zu personalisieren und realistischer zu gestalten. Sie können entweder über den Hauptakku des RC-Autos oder über separate Batterien betrieben werden.</p>
+                <h3>Rücklichtichter</h3>
+                <p>LEDs sind auch als Rücklichter in ferngesteuerten Autos sehr beliebt. Diese speziellen LEDs dienen dazu, das RC-Auto besser sichtbar zu machen und ihm ein realistischeres Aussehen zu verleihen. Rücklichter können in verschiedenen Farben und Konfigurationen angebracht werden, um das RC-Auto individuell zu gestalten. RC-Auto-Lichter können entweder über den Hauptakku des Autos oder über separate Batterien betrieben werden. Man könnte sie auch als Blinker verwenden.</p>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-12">
                 <img src="../ddriver.png" class="img-responsive" alt="Bild">
@@ -113,6 +132,17 @@
                 <img src="../ultrasonic.png" class="img-responsive" alt="Bild">
                 <h3>Ultraschall-Sensoren</h3>
                 <p>Ein Arduino Ultraschallsensor ist ein elektronisches Bauteil, das in der Lage ist, Ultraschallwellen auszusenden und das Echo dieser Wellen zu empfangen. Der Sensor wird normalerweise mit einem Arduino-Board verbunden, um Entfernungen zu messen, Objekte zu erkennen und andere Anwendungen zu realisieren. Der Sensor sendet Ultraschallwellen aus und misst die Zeit, die benötigt wird, um das Echo zurückzusenden. Anhand dieser Zeitmessung kann die Entfernung zum Zielobjekt berechnet werden</p>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-12">
+                <img src="../fotoresistor.png" class="img-responsive" alt="Bild">
+                <h3>Fotoresistor</h3>
+                <p>Ein Fotoresistor, auch bekannt als Lichtabhängiger Widerstand (LDR), ist ein elektronisches Bauteil, das den Widerstand in Abhängigkeit von der Intensität des auf ihn fallenden Lichts verändert. Das bedeutet, dass wenn das Licht auf den Fotoresistor fällt, sein Widerstand abnimmt, und wenn das Licht abnimmt, sein Widerstand zunimmt. Fotoresistoren werden häufig in elektronischen Schaltungen eingesetzt, um Licht zu messen oder als Helligkeitssensoren in Automobilbeleuchtung, Straßenlaternen, Kameras und anderen Geräten, die auf die Lichtintensität reagieren müssen.</p>
+            </div>
+
+            <div class="col-md-4 col-lg-4 col-sm-12">
+                <img src="../farbsensor.png" class="img-responsive" alt="Bild">
+                <h3>Farbsensor</h3>
+                <p>Farbsensoren sind elektronische Geräte, die verwendet werden, um die Farbe eines Objekts zu messen und zu identifizieren. Sie basieren auf einer Technologie namens Spektroskopie, die das Licht in seine verschiedenen Farbkomponenten zerlegt und misst, wie viel von jeder Farbe vorhanden ist. Es gibt verschiedene Arten von Farbsensoren, darunter RGB-Sensoren, die die drei Grundfarben Rot, Grün und Blau messen, und spektrale Sensoren, die das gesamte Spektrum des Lichts messen. </p>
             </div>
         </div>
         <script src="functions.js"></script>
