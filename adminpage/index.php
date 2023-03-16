@@ -72,6 +72,15 @@
         <button onclick="window.location.href='/Stream'">Stream</button>
         <button onclick="window.location.href='/driveassistent'">Drive-Assistent</button>
     </div>
+    <div class="temp" style="color: white; margin-left: 20%; margin-top: 2rem">
+        <h1>To do</h1>
+        <p>- ?Menu Ausklappen</p>
+        <p>- Steuerung 1 Person only</p>
+        <p>- Handy Ansicht Ausbessern</p>
+        <p>- Tagebuch fixen</p>
+        <p>- Steurung Design</p>
+        <p>- Warteseite</p>
+    </div>
     <script>
         function navopen() {
         document.getElementById("mobile-nav").style.width = "100%";

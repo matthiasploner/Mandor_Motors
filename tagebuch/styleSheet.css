@@ -106,7 +106,7 @@ select{
     margin-bottom: 1rem;
 }
 
-.search-select-date input{
+.search-select-date input, .save-select-date input{
     width: 16rem;
 }
 
