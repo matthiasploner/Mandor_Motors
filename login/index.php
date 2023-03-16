@@ -25,7 +25,7 @@
         <a href="../"><img src="../MM_Icon.png"></a>
         <div class="topnav-right">
             <a href="/Team">About Us</a>
-            <a href="/login"><?php
+            <a href="#"><?php
                 if(!isset($_COOKIE['benutzername'])){
                     echo 'Account';
                 }else{
@@ -52,7 +52,7 @@
             <button class="mobile-nav-clsbtn" onclick="navclose()">≡</button>
             <div class="mobile-content">
                 <a href="/Team">About Us</a>
-                <a href="/login"><?php
+                <a href="#"><?php
                     if(!isset($_COOKIE['benutzername'])){
                         echo 'Account';
                     }else{
