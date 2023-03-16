@@ -73,11 +73,23 @@
             </div>
             <div class="slide-1 blueprint">
                 <img src="../firstlook.jpg" class="img-responsive" alt="Bild">
-                <p>Prototyp auf der Teststrecke</p>
+                <p>MK1 auf der Teststrecke</p>
             </div>
             <div class="slide-1 blueprint">
                 <img src="../proto2.jpg" class="img-responsive" alt="Bild">
-                <p>Prototyp 2 mit Mecanum-Wheels auf der Teststrecke</p>
+                <p>MK2 mit neuen Mecanum-Wheels auf der Teststrecke</p>
+            </div>
+            <div class="slide-1 blueprint">
+                <img src="../MK3.jpg" class="img-responsive" alt="Bild">
+                <p>MK3 mit neuen Sensoren auf der Teststrecke</p>
+            </div>
+            <div class="slide-1 blueprint">
+                <img src="../MK3front.jpg" class="img-responsive" alt="Bild">
+                <p>MK3 Front-Ansicht</p>
+            </div>
+            <div class="slide-1 blueprint">
+                <img src="../MK3unter" class="img-responsive" alt="Bild">
+                <p>Verkabelung unterhalb des MK3s</p>
             </div>
             <a class="prev" onclick="arrowNextSlide(-1)">❮</a>
             <a class="next" onclick="arrowNextSlide(1)">❯</a>

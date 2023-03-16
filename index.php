@@ -61,9 +61,9 @@
         </div>
 
         <div class="center">
-            <h1>MK1</h1>
-            <p>What color is your MK1?</p>
-            <button onclick="window.location.href='/entwicklung'">More about MK1</button>
+            <h1>Sid MK3</h1>
+            <p>What color is your Sid?</p>
+            <button onclick="window.location.href='/driveassistent'">Driver-Assistent</button>
             <?php
                 if(isset($_COOKIE['benutzername'])){
                     echo '<button onclick="window.location.href=\'/steuerung\'">Steuerung</button>';

@@ -112,6 +112,11 @@
                     <h4><b>Angebot, Projektumfang und Kostenschätzung.pdf</b></h4>
                     <h4><b>Download: <a href="../Angebot, Projektumfang und Kostenschätzung.pdf" download>Hier</a></b></h4>
                 </div>
+                <div class="col-md-2 col-lg-offset-1 col-sm-12">
+                    <img src="../zip.png" class="img-responsive" alt="Download">
+                    <h4><b>Technologie und Planung.pdf</b></h4>
+                    <h4><b>Download: <a href="../TechnologieUndPlanung.zip" download>Hier</a></b></h4>
+                </div>
             </div>
             <div class="pm-download">
                 <h1><b>Projekt-Management:</b></h1>
@@ -179,6 +184,11 @@
                     <img src="../pdf.png" class="img-responsive" alt="Download">
                     <h4><b>Business Case und Lastenheft.pdf</b></h4>
                     <h4><b>Download: <a href="../Business Case und Lastenheft.pdf" download>Hier</a></b></h4>
+                </div>
+                <div class="col-md-2 col-lg-offset-1 col-sm-12">
+                    <img src="../zip.png" class="img-responsive" alt="Download">
+                    <h4><b>Projekt-Management.zip</b></h4>
+                    <h4><b>Download: <a href="../ProjektManagement.zip" download>Hier</a></b></h4>
                 </div>
             </div>
         </div>
