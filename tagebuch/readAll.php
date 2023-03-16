@@ -10,10 +10,6 @@ if ($db->connect_error) {
     $ergebnis = $result->fetch_all();
 
 
-
-
-
-
 if($result->num_rows != 0){
 
     $db->close();
