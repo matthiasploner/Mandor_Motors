@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../warten.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.personen{
+    border-radius: 20px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: transparent;
+    height: 6.25rem;
+}
+
+.topnav a{
+    float: left;
+    color: white;
+    padding: 0.875rem 1rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    display: block;
+}
+
+.topnav a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.5);
+    border-radius: 0.625rem;
+}
+
+.topnav-right {
+    float: right;
+}
+
+.topnav img{
+    width: 13rem;
+    height: 2.5rem;
+}
+
+.dropdown-PC {
+    float: left;
+}
+
+.dropdown-pcContent {
+    display: none;
+    position: absolute;
+    min-width: 5rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.5);
+    border-radius: 0.625rem;
+    margin-top: 3.2rem;
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-pcContent a {
+    /*float: none;*/
+}
+
+.dropdown-PC:hover .dropdown-pcContent {
+    display: block;
+}
+
+.dropdown-PC:hover .dropdown-btnPC {
+    cursor: pointer;
+}
+
+.center {
+    position: relative;
+    top: 1%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    cursor: default;
+    font-family: PT Sans, serif;
+}
+
+.center h1 {
+    font-size: 3.5rem;
+}
+
+.center p {
+    font-size: 1.25rem;
+}
+
+.center button {
+    background-color: transparent;
+    min-width: 12.5rem;
+    border-radius: 0.75rem;
+    border-color: white;
+    color: white;
+    padding: 1rem 2rem;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 2% 3% 0;
+    cursor: pointer;
+}
+
+.center button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: transparent;
+    position: absolute;
+    text-align: center;
+    bottom: 1rem;
+    width: 100%;
+}
+
+.navbar a {
+    color: white;
+    padding: 0.875rem 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.menu-overlay, .mobile-nav-btn {
+    display: none;
+}
+
+@media only screen and (max-width: 599px) {
+    .topnav-right {
+        display: none;
+    }
+
+    .center {
+        position: absolute;
+        top: 7%;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-family: PT Sans, serif;
+    }
+
+    .center h1 {
+        font-size: 2.5rem;
+    }
+
+    .center p {
+        font-size: 1.25rem;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        overflow-x: hidden;
+        transition: right 0.5s ease;
+        z-index: 1;
+    }
+
+    .menu-overlay a {
+        padding: 0.5rem;
+        text-decoration: none;
+        font-size: 3.125rem;
+        color: #818181;
+        transition: 0.3s;
+    }
+
+    .menu-overlay a:hover {
+        color: white;
+    }
+
+    .mobile-nav-btn{
+        display: block;
+        float: right;
+        padding: 0.6rem;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+    }
+
+    .mobile-nav-clsbtn{
+        float: right;
+        padding: 0.6rem;
+        color: #818181;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+    }
+
+    .mobile-content {
+        position: relative;
+        width: 25rem;
+        margin: 9rem 3rem;
+    }
+}
