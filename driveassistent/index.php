@@ -61,5 +61,33 @@
             </div>
             <button class="mobile-nav-btn" onclick="navopen()">≡</button>
         </div>
+        <div class="model">
+            <div class="car">
+                <img src="../light-off.png">
+            </div>
+            <div class="distance">
+                <div class="back-left">
+                    <img src="../very-far.png">
+                </div>
+                <div class="back-right">
+                    <img src="../very-far.png">
+                </div>
+                <div class="front-left">
+                    <img src="../very-far.png">
+                </div>
+                <div class="front-right">
+                    <img src="../very-far.png">
+                </div>
+            </div>
+            <div class="colour-sens">
+                <div class="left-colour">
+                    <button class="left-sens"></button>
+                </div>
+                <div class="right-colour">
+                    <button class="right-sens"></button>
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>

@@ -103,7 +103,7 @@
 
                 echo '
             <div  class="col-lg-8 tagebuch-write">
-                <textarea class="styleHover form-control styleArea" id="message" style="resize: none"rows="7"></textarea>
+                <textarea class="styleHover form-control styleArea" id="message" style="resize: none" rows="7"></textarea>
             </div>
          
             <div class="col-lg-3 save-select">
