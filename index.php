@@ -63,7 +63,7 @@
         <div class="center">
             <h1>Sid MK3</h1>
             <p>What color is your Sid?</p>
-            <button onclick="window.location.href='/driveassistent'">Driver-Assistent</button>
+            <button onclick="window.location.href='/driveassistent'">Drive-Assistent</button>
             <?php
                 if(isset($_COOKIE['benutzername'])){
                     echo '<button onclick="window.location.href=\'/steuerung\'">Steuerung</button>';
