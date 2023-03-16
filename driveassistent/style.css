@@ -68,3 +68,69 @@ body{
     margin-left: 29rem;
 }
 
+.model {
+    background-color: #dddddd;
+    overflow: auto;
+    border-radius: 20rem;
+    margin-top: 1rem;
+    height: 70.1rem;
+}
+
+.distance {
+    margin-top: -55rem;
+}
+
+.distance img{
+    height: 14rem;
+    width: 20rem;
+}
+
+.back-left img{
+    margin-top: 5rem;
+    margin-left: 15rem;
+    rotate: 270deg;
+}
+
+.back-right img{
+    rotate: 270deg;
+    margin-top: 12rem;
+    margin-left: 15rem;
+}
+
+.front-left img{
+    rotate: 47deg;
+    margin-left: 95rem;
+    margin-top: -90rem;
+}
+
+.front-right img {
+    rotate: 133deg;
+    margin-left: 95rem;
+    margin-top: -5rem;
+}
+
+.car {
+    margin-top: 4rem;
+    margin-left: 17rem;
+}
+
+.colour-sens button{
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    border-radius: 5rem;
+    margin-left: 88rem;
+}
+
+.colour-sens {
+    height: 60rem;
+    margin-top: -60rem;
+}
+
+.left-sens {
+    margin-top: 2.5rem;
+}
+
+.right-sens {
+    margin-top: 42.8rem;
+}
