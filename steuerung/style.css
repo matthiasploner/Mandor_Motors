@@ -60,12 +60,11 @@
 }
 
 body {
-    position: fixed;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     color: rgb(128,128,128);
-    font-size: xx-large;
     background-color: black;
     font-family: 'Noto Sans', sans-serif;
+    width: 100%;
 }
 
 .speed:hover {
@@ -88,15 +87,14 @@ body {
     cursor: pointer;
 }
 
-h1, p{
+h3, p{
     user-select: none;
-    text-align: center;
+    margin-left: 2rem;
 }
 
 .turn-str {
-    position: fixed;
-    bottom: 8rem;
-    left: 1rem;
+    margin-left: 2rem;
+    margin-top: 15rem;
 }
 
 .turn-str > button {
@@ -106,13 +104,12 @@ h1, p{
 }
 
 .str-grid {
-    position: fixed;
     display: grid;
     grid-gap: 0.625rem;
     grid-template-columns: repeat(3, 6.25rem);
     grid-template-rows: repeat(3, 6.25rem);
-    bottom: 1rem;
-    right: 1rem;
+    margin-left: 110rem;
+    margin-top: -11rem;
 }
 
 .str-grid > button {
@@ -126,4 +123,97 @@ h1, p{
 
 button:active {
     background-color: #e74c3c;
+}
+
+.stream iframe{
+    width: 50%;
+    height: 60rem;
+    margin-left: 25%;
+}
+
+.auto-drive {
+    margin-top: -60rem;
+}
+
+.speed input {
+    margin-left: 2rem;
+    width: 20rem;
+}
+
+.light, .speed{
+    margin-top: 4rem;
+}
+
+.line-colour{
+    margin-left: 110rem;
+    margin-top: -35rem
+}
+
+.bus-line-colour{
+    margin-left: 110rem;
+    margin-top: 10rem;
+}
+
+.line-colour-red, .bus-colour-red{
+    margin-left: 2rem;
+}
+
+.line-colour input[type="radio"], .bus-line-colour input[type="radio"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+.line-colour-red input[type="radio"], .bus-colour-red input[type="radio"]{
+    border-color: red;
+}
+
+.line-colour-blue input[type="radio"], .bus-colour-blue input[type="radio"]{
+    border-color: blue;
+}
+
+.line-colour-green input[type="radio"], .bus-colour-green input[type="radio"]{
+    border-color: green;
+}
+
+.line-colour-yellow input[type="radio"], .bus-colour-yellow input[type="radio"]{
+    border-color: yellow;
+}
+
+.line-colour-white input[type="radio"], .bus-colour-white input[type="radio"]{
+    border-color: white;
+}
+
+.line-colour-black input[type="radio"], .bus-colour-black input[type="radio"]{
+    border-color: gray;
+}
+
+.line-colour-white input[type="radio"]:checked, .bus-colour-white input[type="radio"]:checked{
+    background-color: white;
+}
+
+.line-colour-red input[type="radio"]:checked, .bus-colour-red input[type="radio"]:checked{
+    background-color: red;
+}
+
+.line-colour-blue input[type="radio"]:checked, .bus-colour-blue input[type="radio"]:checked{
+    background-color: blue;
+}
+
+.line-colour-green input[type="radio"]:checked, .bus-colour-green input[type="radio"]:checked{
+    background-color: green;
+}
+
+.line-colour-yellow input[type="radio"]:checked, .bus-colour-yellow input[type="radio"]:checked{
+    background-color: yellow;
+}
+
+.line-colour-black input[type="radio"]:checked, .bus-colour-black input[type="radio"]:checked{
+    background-color: gray;
 }
