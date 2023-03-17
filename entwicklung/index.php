@@ -88,7 +88,7 @@
                 <p>MK3 Front-Ansicht</p>
             </div>
             <div class="slide-1 blueprint">
-                <img src="../MK3unter" class="img-responsive" alt="Bild">
+                <img src="../MK3unten.jpg" class="img-responsive" alt="Bild">
                 <p>Verkabelung unterhalb des MK3s</p>
             </div>
             <a class="prev" onclick="arrowNextSlide(-1)">❮</a>
