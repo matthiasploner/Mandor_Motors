@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="topnav">
-            <a href="../"><img src="../MM_Icon.png"></a>
+            <a href="../"><img src="../medien/backgrounds/MM_Icon.png"></a>
             <div class="topnav-right">
                 <a href="#">About Us</a>
                 <a href="/login"><?php
