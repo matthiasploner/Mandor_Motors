@@ -114,7 +114,7 @@
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../medien/downloadzips/zip.png" class="img-responsive" alt="Download">
-                    <h4><b>Technologie und Planung.pdf</b></h4>
+                    <h4><b>Technologie und Planung.zip</b></h4>
                     <h4><b>Download: <a href="../medien/downloadzips/TechnologieUndPlanung.zip" download>Hier</a></b></h4>
                 </div>
             </div>
