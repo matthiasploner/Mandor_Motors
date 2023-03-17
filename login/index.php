@@ -21,22 +21,44 @@
     </head>
 
     <body>
-    <div class="topnav">
-        <a href="../"><img src="../medien/backgrounds/MM_Icon.png"></a>
-        <div class="topnav-right">
-            <a href="/Team">About Us</a>
-            <a href="#"><?php
-                if(!isset($_COOKIE['benutzername'])){
-                    echo 'Account';
-                }else{
-                    echo $_COOKIE['benutzername'];
-                }
-                ?></a>
-            <div class="dropdown-PC">
-                <div class="dropdown-btnPC" onclick='dropdownFunction()'>
-                    <a>Menu</a>
+        <div class="topnav">
+            <a href="../"><img src="../medien/backgrounds/MM_Icon.png"></a>
+            <div class="topnav-right">
+                <a href="/Team">About Us</a>
+                <a href="#"><?php
+                    if(!isset($_COOKIE['benutzername'])){
+                        echo 'Account';
+                    }else{
+                        echo $_COOKIE['benutzername'];
+                    }
+                    ?></a>
+                <div class="dropdown-PC">
+                    <div class="dropdown-btnPC" onclick='dropdownFunction()'>
+                        <a>Menu</a>
+                    </div>
+                    <div id="pcDropdown" class="dropdown-pcContent">
+                        <a href="/downloads">Downloads</a>
+                        <a href="/tagebuch">Tagebuch</a>
+                        <a href="/entwicklung">Entwicklung</a>
+                        <?php
+                            if(isset($_COOKIE['benutzername'])) {
+                                echo '<a href="/adminpage">Admin-Page</a>';
+                            }
+                        ?>
+                    </div>
                 </div>
-                <div id="pcDropdown" class="dropdown-pcContent">
+            </div>
+            <div id="mobile-nav" class="menu-overlay">
+                <button class="mobile-nav-clsbtn" onclick="navclose()">≡</button>
+                <div class="mobile-content">
+                    <a href="/Team">About Us</a>
+                    <a href="#"><?php
+                        if(!isset($_COOKIE['benutzername'])){
+                            echo 'Account';
+                        }else{
+                            echo $_COOKIE['benutzername'];
+                        }
+                        ?></a>
                     <a href="/downloads">Downloads</a>
                     <a href="/tagebuch">Tagebuch</a>
                     <a href="/entwicklung">Entwicklung</a>
@@ -47,30 +69,8 @@
                     ?>
                 </div>
             </div>
+            <button class="mobile-nav-btn" onclick="navopen()">≡</button>
         </div>
-        <div id="mobile-nav" class="menu-overlay">
-            <button class="mobile-nav-clsbtn" onclick="navclose()">≡</button>
-            <div class="mobile-content">
-                <a href="/Team">About Us</a>
-                <a href="#"><?php
-                    if(!isset($_COOKIE['benutzername'])){
-                        echo 'Account';
-                    }else{
-                        echo $_COOKIE['benutzername'];
-                    }
-                    ?></a>
-                <a href="/downloads">Downloads</a>
-                <a href="/tagebuch">Tagebuch</a>
-                <a href="/entwicklung">Entwicklung</a>
-                <?php
-                    if(isset($_COOKIE['benutzername'])) {
-                        echo '<a href="/adminpage">Admin-Page</a>';
-                    }
-                ?>
-            </div>
-        </div>
-        <button class="mobile-nav-btn" onclick="navopen()">≡</button>
-    </div>
         <div>
             <?php
                 if(isset($_COOKIE['accepted_cookie']) || isset($_POST['cookie_consent']) && $_POST['cookie_consent'] == 'yes'){

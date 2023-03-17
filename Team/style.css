@@ -128,6 +128,7 @@ body {
         background-color: transparent;
         border: none;
         font-size: 3rem;
+        color: #818181;
     }
 
     .mobile-nav-clsbtn{
@@ -142,6 +143,6 @@ body {
     .mobile-content {
         position: relative;
         width: 30rem;
-        margin: 15rem 5rem;
+        margin: 12rem 5rem;
     }
 }

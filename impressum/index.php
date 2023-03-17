@@ -93,5 +93,6 @@
                 <p>Eine Vervielfältigung oder Verwendung dieser Inhalte in anderen elektronischen oder gedruckten Publikationen, ist ohne ausdrückliche Zustimmung des Autors nicht gestattet.</p>
             </div>
         </div>
+        <script src="functions.js"></script>
     </body>
 </html>

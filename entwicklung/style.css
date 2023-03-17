@@ -7,10 +7,6 @@ body {
     background-size: cover;
 }
 
-.car_pic img{
-    height: 75rem;
-}
-
 .topnav {
     overflow: hidden;
     background-color: transparent;
@@ -173,6 +169,7 @@ body {
         background-color: transparent;
         border: none;
         font-size: 3rem;
+        color: #818181;
     }
 
     .mobile-nav-clsbtn{
@@ -187,6 +184,20 @@ body {
     .mobile-content {
         position: relative;
         width: 30rem;
-        margin: 15rem 5rem;
+        margin: 12rem 5rem;
+    }
+
+    .slide-1 img{
+        border-radius: 7rem;
+        width: 80%;
+        max-height: 20rem;
+    }
+
+    .slide-1 {
+        margin-left: 17%;
+    }
+
+    .prev, .next {
+        top: 35%;
     }
 }

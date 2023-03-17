@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('../warten.jpg');
+    background-image: url('/medien/backgrounds/warten.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -130,7 +130,7 @@ body {
 
     .center {
         position: absolute;
-        top: 7%;
+        top: 10%;
         width: 100%;
         text-align: center;
         color: white;
@@ -143,6 +143,10 @@ body {
 
     .center p {
         font-size: 1.25rem;
+    }
+
+    .center button {
+        margin-top: 2rem;
     }
 
     body {
@@ -181,6 +185,7 @@ body {
         background-color: transparent;
         border: none;
         font-size: 2rem;
+        color: #818181;
     }
 
     .mobile-nav-clsbtn{
@@ -195,6 +200,6 @@ body {
     .mobile-content {
         position: relative;
         width: 25rem;
-        margin: 9rem 3rem;
+        margin: 7rem 3rem;
     }
 }
