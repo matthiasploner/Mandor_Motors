@@ -88,7 +88,7 @@
                 <h3>Speed:</h3>
                 <p>In x/y :<label id = "speed"></label></p>
                 <p>In % :</p>
-                <input oninput="changeSpeed()" type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <input oninput="drive" type="range" min="1" max="100" value="50" class="slider" id="myRange">
             </div>
 
             <div class="line-colour">
@@ -136,19 +136,19 @@
             </div>
 
             <div class="turn-str">
-                <button onclick="hartLinks()">↶</button>
-                <button onclick="hartLinks()">↷</button>
+                <button onclick="drive(hartRechts())">↶</button>
+                <button onclick="drive(hartLinks())">↷</button>
             </div>
 
             <div class="str-grid">
                 <button></button>
-                <button onclick="vorwaerts()">↑</button>
+                <button onclick="drive(vorwaerts())">↑</button>
                 <button></button>
-                <button onclick="left()">←</button>
-                <button onclick="stop()"><b>| |</b></button>
-                <button onclick="rechts()">→</button>
+                <button onclick="drive(left())">←</button>
+                <button onclick="drive(stop())"><b>| |</b></button>
+                <button onclick="drive(rechts())">→</button>
                 <button></button>
-                <button onclick="zurueck()">↓</button>
+                <button onclick="drive(zurueck())">↓</button>
                 <button></button>
             </div>
         </div>

@@ -1,6 +1,7 @@
 url="http://10.11.11.100:5000/"
 temp=0;
 speed=50;
+aFn=stop();
 document.addEventListener("keydown", function(event) {
     console.log(event.key)
     if (event.key === "w") {
@@ -23,13 +24,24 @@ document.addEventListener("keyup", function(event) {
     }
 });
 
-function vorwaerts() {
+function drive(fn){
     let x = document.getElementById("myRange").value;
     x = parseInt(x);
     console.log("Temp ist"+temp);
-    if(temp=1) {
-        console.log("rufe jetzt vorwärts auf");
-        speed=x;
+    if(fn!=null){
+        aFn==fn();
+    }
+    if(aFn!==stop()){
+        if(fn==null){
+            speed=x;
+            aFn();
+        }else{
+            speed=x;
+        }
+    }
+}
+
+function vorwaerts() {
         fetch(url + 'vorwaerts', {
             method: 'POST',
             headers: {
@@ -45,10 +57,6 @@ function vorwaerts() {
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
             });
-    }else{
-        speed=x;
-
-    }
 }
 
 function setTemp(){
