@@ -1,23 +1,60 @@
 url="http://10.11.11.100:5000/"
+temp=0;
+speed=50;
+document.addEventListener("keydown", function(event) {
+    console.log(event.key)
+    if (event.key === "w") {
+        vorwaerts()
+    }
+    if (event.key === "s") {
+        zurueck()
+    }
+    if (event.key === "a") {
+        left()
+    }
+    if (event.key === "d") {
+        rechts()
+    }
+});
 
-function vorwaerts(){
-    fetch(url+'vorwaerts', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({"message":"Hallo"})
-    })
-        .then(response => response.text())
-        .then(data => {
+document.addEventListener("keyup", function(event) {
+    if (event.key === "w" || event.key === "s" || event.key === "a" || event.key === "d") {
+        stop()
+    }
+});
 
-            console.log(data)
+function vorwaerts() {
+    let x = document.getElementById("myRange").value;
+    x = parseInt(x);
+    console.log("Temp ist"+temp);
+    if(temp=1) {
+        console.log("rufe jetzt vorwärts auf");
+        speed=x;
+        fetch(url + 'vorwaerts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({"message": speed})
         })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
+            .then(response => response.text())
+            .then(data => {
+
+                console.log(data)
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    }else{
+        speed=x;
+
+    }
 }
 
+function setTemp(){
+    temp=1;
+    vorwaerts();
+}
 
 
 function zurueck(){
@@ -151,6 +188,7 @@ function changeSpeed(){
 }
 
 function stop(){
+    temp=0;
     fetch(url+'stop', {
         method: 'POST',
         headers: {

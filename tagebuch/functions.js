@@ -66,6 +66,14 @@ function toggle(id){
 
 function loadAll(){
     var xhttp = new XMLHttpRequest();
+    var select = document.getElementById('selectReadUser');
+    var selectValue = select.options[select.selectedIndex].value;
+    var id=getUser(selectValue);
+    var readArea=document.getElementById('readArea');
+    readArea.valueOf();
+    var date=$("#datepicker").datepicker({ format: 'yy/mm/dd' }).val();
+
+    select.selectedIndex=0
 
 
     xhttp.open("GET", "readAll.php",true);   //file.php muss natürlich angepasst werden
@@ -75,10 +83,26 @@ function loadAll(){
             values = JSON.parse(xhttp.responseText);
             var tagebuch="";
             for (let step = 0; step < values.length; step++){
-                tagebuch+=values[step][2];
+                if(values[step][2]==="sthubmic"){
+                    tagebuch += "Michael Huber";
+                }
+                if(values[step][2]==="stplosim"){
+                    tagebuch += "Simon Ploner";
+                }
+                if(values[step][2]==="stplamat"){
+                    tagebuch += "Matthias Plaickner";
+                }
+                if(values[step][2]==="stplomat"){
+                    tagebuch += "Matthias Ploner";
+                }
+                if(values[step][2]==="streitho"){
+                    tagebuch += "Thomas Reinthaler";
+                }
                 tagebuch+="\n";
                 tagebuch+=values[step][1];
                 tagebuch+="\n";
+
+
                 tagebuch+=values[step][0];
                 tagebuch+="\n\n";
             }
@@ -87,6 +111,7 @@ function loadAll(){
         }
     };
     xhttp.send();
+    $.datepicker._clearDate(this);
 }
 
 
@@ -97,46 +122,49 @@ function readText(){
     var readArea=document.getElementById('readArea');
     readArea.valueOf();
     var date=$("#datepicker").datepicker({ format: 'yy/mm/dd' }).val();
+    console.log(date)
+    if(date.length!=10 && id==7){
+        console.log("test")
+        loadAll();
+    }else {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "readSQL.php?benutzer=" + id + "&date=" + date, true);   //file.php muss natürlich angepasst werden
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "readSQL.php?benutzer="+id+"&date="+date,true);   //file.php muss natürlich angepasst werden
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                values = JSON.parse(xhttp.responseText);
+                var tagebuch = "";
+                console.log(values[0].length)
+                for (let step = 0; step < values.length; step++) {
 
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            values = JSON.parse(xhttp.responseText);
-            var tagebuch="";
-            for (let step = 0; step < values.length; step++){
-                if(values[step].length==2)
-                {
+                    if (values[step].length == 2) {
+                        console.log(values[step][0]);
+                        tagebuch += values[step][0];
+                        tagebuch += "\n\n";
+                        if (values[step][1] === "sthubmic") {
+                            tagebuch += "Michael Huber";
+                        }else if (values[step][1] === "stplosim") {
+                            tagebuch += "Simon Ploner";
+                        }else if (values[step][1] === "stplamat") {
+                            tagebuch += "Matthias Plaickner";
+                        }else if (values[step][1] === "stplomat") {
+                            tagebuch += "Matthias Ploner";
+                        }else if (values[step][1] === "streitho") {
+                            tagebuch += "Thomas Reinthaler";
+                        }else{
+                            tagebuch += values[step][1];
+                        }
 
-                    if(values[step][1]==="sthubmic"){
-                        tagebuch += "Michael Huber";
-                    }
-                    if(values[step][1]==="stplosim"){
-                        tagebuch += "Simon Ploner";
-                    }
-                    if(values[step][1]==="stplamat"){
-                        tagebuch += "Matthias Plaickner";
-                    }
-                    if(values[step][1]==="stplomat"){
-                        tagebuch += "Matthias Ploner";
-                    }
-                    if(values[step][1]==="streitho"){
-                        tagebuch += "Thomas Reinthaler";
+                        tagebuch += "\n";
                     }
 
-                    tagebuch += "\n";
                 }
-                tagebuch+=values[step][0];
-                tagebuch+="\n\n";
+                document.getElementById('readArea').value = tagebuch;
 
             }
-            document.getElementById('readArea').value = tagebuch;
-
-        }
-    };
-    xhttp.send();
-
+        };
+        xhttp.send();
+    }
 }
 
 

@@ -10,9 +10,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mandor Motors</title>
     </head>
-    <body>
+    <body onload="getDistance(),lichtState()">
         <div class="topnav">
-            <a href="../"><img src="../MM_Icon.png"></a>
+            <a href="../"><img src="../medien/backgrounds/MM_Icon.png"></a>
             <div class="topnav-right">
                 <a href="/Team">About Us</a>
                 <a href="/login"><?php
@@ -63,20 +63,20 @@
         </div>
         <div class="model">
             <div class="car">
-                <img src="../light-off.png">
+                <img id="light">
             </div>
             <div class="distance">
                 <div class="back-left">
-                    <img src="../very-far.png">
+                    <img id="HL">
                 </div>
                 <div class="back-right">
-                    <img src="../very-far.png">
+                    <img id="HR">
                 </div>
                 <div class="front-left">
-                    <img src="../very-far.png">
+                    <img id="VL">
                 </div>
                 <div class="front-right">
-                    <img src="../very-far.png">
+                    <img id="VR">
                 </div>
             </div>
             <div class="colour-sens">
@@ -88,6 +88,6 @@
                 </div>
             </div>
         </div>
-
+        <script src="functions.js"></script>
     </body>
 </html>
