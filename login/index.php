@@ -10,6 +10,7 @@
     }
 ?>
 
+<!DOCTYPE html>
 <html>
     <head>
         <title>Mandor Motors</title>
@@ -17,6 +18,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="myStyle.css">
     </head>
 
@@ -71,7 +73,7 @@
             </div>
             <button class="mobile-nav-btn" onclick="navopen()">≡</button>
         </div>
-        <div>
+        <div class="login-container">
             <?php
                 if(isset($_COOKIE['accepted_cookie']) || isset($_POST['cookie_consent']) && $_POST['cookie_consent'] == 'yes'){
                     setcookie('accepted_cookie', 'yes', time() + (86400 * 30), "/");
@@ -101,7 +103,6 @@
                 }
                 else{
                     ?>
-                    </div>
                         <div class="cookie-consent">
                             <p>Wir verwenden Cookies! Damit Sie sich einloggen können, müssen sie den Cookies zustimmen.</p>
                             <form method="post">
