@@ -64,10 +64,6 @@ body{
     font-family: 'Noto Sans', sans-serif;
 }
 
-.stream-window{
-    margin-left: 29rem;
-}
-
 .model {
     background-color: #dddddd;
     overflow: auto;
@@ -133,4 +129,147 @@ body{
 
 .right-sens {
     margin-top: 42.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .distance {
+        margin-top: -32.5rem;
+        width: 50rem;
+        height: 35rem;
+    }
+
+    .distance img{
+        height: 10rem;
+        width: 13rem;
+    }
+
+    .car img{
+        height: 30rem;
+        width: 45rem;
+        margin-left: 4rem;
+        margin-top: 1rem;
+    }
+
+    .model{
+        rotate: -90deg;
+        width: 50rem;
+        height: 37rem;
+        border-radius: 5rem;
+        margin-left: -6.5rem;
+        margin-top: 10rem;
+        overflow: hidden;
+    }
+
+    .back-left img{
+        margin-top: 6rem;
+        margin-left: -1rem;
+        rotate: 270deg;
+    }
+
+    .back-right img{
+        rotate: 270deg;
+        margin-top: 3rem;
+        margin-left: -1rem;
+    }
+
+    .front-left img{
+        rotate: 47deg;
+        margin-top: -50rem;
+        margin-left: 37rem;
+    }
+
+    .front-right img {
+        rotate: 133deg;
+        margin-top: -6rem;
+        margin-left: 37rem;
+    }
+
+    .car {
+        margin: 2.5rem 0 0 0;
+    }
+
+    .colour-sens button{
+        width: 3rem;
+        height: 3rem;
+        background-color: transparent;
+        border-radius: 3rem;
+        margin-left: 35rem;
+    }
+
+    .colour-sens {
+        width: 50rem;
+        height: 30rem;
+        margin-top: -33rem;
+    }
+
+    .left-sens{
+        margin-top: 1.8rem;
+    }
+
+    .right-sens{
+        margin-top: 21.2rem;
+    }
+
+    .topnav-right {
+        display: none;
+    }
+
+    body {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: auto;
+        height:100%;
+        width:100%;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        overflow-x: hidden;
+        transition: right 0.5s ease;
+        z-index: 1;
+    }
+
+    .menu-overlay a {
+        padding: 0rem 0.5rem;
+        text-decoration: none;
+        font-size: 5rem;
+        color: #818181;
+        transition: 0.3s;
+    }
+
+    .menu-overlay a:hover {
+        color: white;
+    }
+
+    .mobile-nav-btn{
+        display: block;
+        float: right;
+        padding: 0.6rem;
+        background-color: transparent;
+        border: none;
+        font-size: 3rem;
+        color: #818181;
+    }
+
+    .mobile-nav-clsbtn{
+        float: right;
+        padding: 0.6rem;
+        color: #818181;
+        background-color: transparent;
+        border: none;
+        font-size: 3rem;
+    }
+
+    .mobile-content {
+        position: relative;
+        width: 30rem;
+        margin: 12rem 5rem;
+    }
 }
