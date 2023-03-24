@@ -86,37 +86,37 @@
                 <div class="col-md-2 col-lg-2 col-sm-12">
                     <img src="../medien/downloadzips/pdf.png" class="img-responsive" alt="Download">
                     <h4><b>Websiteplanung.pdf</b></h4>
-                    <h4><b>Download: <a href="../medien/pmdownloads/Websiteplanung.pdf" download>Hier</a></b></h4>
+                    <h4><b>Download: <a href="../medien/tpdownloads/Websiteplanung.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../medien/downloadzips/pdf.png" class="img-responsive" alt="Download">
                     <h4><b>Scrum-Methode.pdf</b></h4>
-                    <h4><b>Download: <a href="../medien/pmdownloads/Scrum-Methode.pdf" download>Hier</a></b></h4>
+                    <h4><b>Download: <a href="../medien/tpdownloads/Scrum-Methode.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../medien/downloadzips/pdf.png" class="img-responsive" alt="Download">
                     <h4><b>Figma, Trello, Gantt und Website.pdf</b></h4>
-                    <h4><b>Download: <a href="../medien/pmdownloads/Figma, Trello, Gantt und Website.pdf" download>Hier</a></b></h4>
+                    <h4><b>Download: <a href="../medien/tpdownloads/Figma, Trello, Gantt und Website.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../medien/downloadzips/pdf.png" class="img-responsive" alt="Download">
                     <h4><b>ER-Modell und Use-Case.pdf</b></h4>
-                    <h4><b>Download: <a href="../medien/pmdownloads/ER-Modell und Use-Case.pdf" download>Hier</a></b></h4>
+                    <h4><b>Download: <a href="../medien/tpdownloads/ER-Modell und Use-Case.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-2 col-sm-12">
                     <img src="../medien/downloadzips/pdf.png" class="img-responsive" alt="Download">
                     <h4><b>Bauplan_Advanced.pdf</b></h4>
-                    <h4><b>Download: <a href="../medien/pmdownloads/Bauplan_Advanced.pdf" download>Hier</a></b></h4>
+                    <h4><b>Download: <a href="../medien/tpdownloads/Bauplan_Advanced.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../medien/downloadzips/pdf.png" class="img-responsive" alt="Download">
                     <h4><b>Bauplan und Websiteplan.pdf</b></h4>
-                    <h4><b>Download: <a href="../medien/pmdownloads/Bauplan und Websiteplan.pdf" download>Hier</a></b></h4>
+                    <h4><b>Download: <a href="../medien/tpdownloads/Bauplan und Websiteplan.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../medien/downloadzips/pdf.png" class="img-responsive" alt="Download">
                     <h4><b>Angebot, Projektumfang und Kostenschätzung.pdf</b></h4>
-                    <h4><b>Download: <a href="../medien/pmdownloads/Angebot, Projektumfang und Kostenschätzung.pdf" download>Hier</a></b></h4>
+                    <h4><b>Download: <a href="../medien/tpdownloads/Angebot, Projektumfang und Kostenschätzung.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../medien/downloadzips/zip.png" class="img-responsive" alt="Download">
