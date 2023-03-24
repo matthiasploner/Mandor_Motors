@@ -1,7 +1,9 @@
-url="http://10.11.11.100:5000/"
-temp=0;
-speed=50;
-aFn=stop();
+let url = "http://10.11.11.100:5000/";
+
+let speed = 50;
+let aFn=stop;
+let buttonEn=false;
+
 document.addEventListener("keydown", function(event) {
     console.log(event.key)
     if (event.key === "w") {
@@ -27,21 +29,25 @@ document.addEventListener("keyup", function(event) {
 function drive(fn){
     let x = document.getElementById("myRange").value;
     x = parseInt(x);
-    console.log("Temp ist"+temp);
+    console.log(x)
     if(fn!=null){
-        aFn==fn();
+        console.log("Wird hineingeschrieben");
+        aFn=fn;
     }
-    if(aFn!==stop()){
-        if(fn==null){
-            speed=x;
-            aFn();
-        }else{
-            speed=x;
-        }
+
+    if (aFn === stop) {
+        console.log("aFn is stop function");
+        speed = x;
+        aFn();
+    } else {
+        console.log("aFn is not stop function");
+        speed = x;
+        aFn();
     }
 }
 
 function vorwaerts() {
+    console.log("Vorwärts wird aufgerufen")
         fetch(url + 'vorwaerts', {
             method: 'POST',
             headers: {
@@ -71,7 +77,7 @@ function zurueck(){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({"message":"Hallo"})
+        body: JSON.stringify({"message":speed})
     })
         .then(response => response.text())
         .then(data => {
@@ -89,7 +95,7 @@ function rechts(){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({"message":"Hallo"})
+        body: JSON.stringify({"message":speed})
     })
         .then(response => response.text())
         .then(data => {
@@ -106,7 +112,7 @@ function hartRechts(){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({"message":"Hallo"})
+        body: JSON.stringify({"message":speed})
     })
         .then(response => response.text())
         .then(data => {
@@ -125,7 +131,7 @@ function left(){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({"message":"Hallo"})
+        body: JSON.stringify({"message":speed})
     })
         .then(response => response.text())
         .then(data => {
@@ -143,7 +149,7 @@ function hartLinks(){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({"message":"Hallo"})
+        body: JSON.stringify({"message":speed})
     })
         .then(response => response.text())
         .then(data => {
@@ -157,6 +163,11 @@ function hartLinks(){
 
 function changeType(){
     let x = document.getElementById("auton");
+    if(x.checked===true){
+        document.getElementById("licht").disabled = true;
+    }else{
+        document.getElementById("licht").disabled = false;
+    }
     fetch(url+'changeType', {
         method: 'POST',
         headers: {
@@ -166,8 +177,7 @@ function changeType(){
     })
         .then(response => response.text())
         .then(data => {
-
-            console.log(data)
+            console.log(data);
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
@@ -196,7 +206,6 @@ function changeSpeed(){
 }
 
 function stop(){
-    temp=0;
     fetch(url+'stop', {
         method: 'POST',
         headers: {
@@ -257,9 +266,11 @@ function checkAutonom(){
             if (data === 'true') {
                 console.log('Response is true');
                 x.checked=true;
+                document.getElementById("licht").disabled = true;
             } else if (data === 'false') {
                 console.log('Response is false');
                 x.checked=false;
+                document.getElementById("licht").disabled = false;
             } else {
                 console.log('Unexpected response');
 
@@ -278,31 +289,27 @@ function checkALicht(){
             if (data === 'true') {
                 console.log('Response is true');
                 x.checked=true;
+                document.getElementById("licht").disabled = true;
+
             } else if (data === 'false') {
                 console.log('Response is false');
                 x.checked=false;
+                document.getElementById("licht").disabled = false;
             } else {
                 console.log('Unexpected response');
-
             }
-        })
-        .catch(error => console.error(error));
-}
-
-function lichtState(){
-    let x = document.getElementById("licht");
-
-
-    fetch(url+'lichtState')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
+            buttonEn=true;
         })
         .catch(error => console.error(error));
 }
 
 function autoLight(){
     let x = document.getElementById("aLight");
+    if(x.checked===true){
+        document.getElementById("licht").disabled = true;
+    }else{
+        document.getElementById("licht").disabled = false;
+    }
     fetch(url+'autoLight', {
         method: 'POST',
         headers: {

@@ -11,7 +11,6 @@ async function getDistance() {
         try {
             const response = await fetch(url + "distance"); // Eine GET-Anfrage an die API senden
             const data = await response.json(); // Die Antwort als JSON-Objekt parsen
-            console.log(data)
 
             for (let i = 0; i < 4; i++) {
                 if (data[i] <= 10) {
@@ -40,7 +39,7 @@ function lichtState(){
     fetch(url+"lichtState") // Senden einer GET-Anfrage an die API
         .then(response => response.json()) // Parsen der Antwort als JSON
         .then(data => {
-            console.log(data)
+
             if(data==0){
                 x.src="../medien/assistentbilder/light-off.png"
             }else{
@@ -49,6 +48,22 @@ function lichtState(){
         }) // Ausgeben der Antwort auf der Konsole
         .catch(error => console.error(error));
     setTimeout(lichtState, 500);
+}
+
+function color(){
+    let rechts=document.getElementById("rechts");
+    let links=document.getElementById("links");
+    fetch(url+"color") // Senden einer GET-Anfrage an die API
+        .then(response => response.json()) // Parsen der Antwort als JSON
+        .then(data => {
+            console.log(data)
+            let rechtsLinks = data.split(',');
+            rechts.style.background=rechtsLinks[0];
+            links.style.background=rechtsLinks[1];
+
+        }) // Ausgeben der Antwort auf der Konsole
+        .catch(error => console.error(error));
+    setTimeout(color, 500);
 }
 
 function dropdownFunction() {

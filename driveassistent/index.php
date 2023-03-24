@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mandor Motors</title>
     </head>
-    <body onload="getDistance(),lichtState()">
+    <body onload="getDistance(),lichtState(),color()">
         <div class="topnav">
             <a href="../"><img src="../medien/backgrounds/MM_Icon.png"></a>
             <div class="topnav-right">
@@ -81,10 +81,10 @@
             </div>
             <div class="colour-sens">
                 <div class="left-colour">
-                    <button class="left-sens"></button>
+                    <button id="links" class="left-sens" disabled></button>
                 </div>
                 <div class="right-colour">
-                    <button class="right-sens"></button>
+                    <button id="rechts" class="right-sens" disabled></button>
                 </div>
             </div>
         </div>
