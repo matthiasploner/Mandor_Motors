@@ -27,13 +27,16 @@
             <a href="../"><img src="../medien/backgrounds/MM_Icon.png"></a>
             <div class="topnav-right">
                 <a href="/Team">About Us</a>
-                <a href="#"><?php
-                    if(!isset($_COOKIE['benutzername'])){
-                        echo 'Account';
-                    }else{
-                        echo $_COOKIE['benutzername'];
-                    }
-                    ?></a>
+                <?php
+                if(!isset($_COOKIE['benutzername'])){
+                    echo '<a href="#">Login</a>';
+                }else{
+                    echo '<a href="#" id="log-out" class="logOut">
+                             <span class="initial-text">' . $_COOKIE["benutzername"]. '</span>
+                             <span class="hover-text">Abmelden</span>
+                           </a>';
+                }
+                ?>
                 <div class="dropdown-PC">
                     <div class="dropdown-btnPC" onclick='dropdownFunction()'>
                         <a>Menu</a>
@@ -54,13 +57,16 @@
                 <button class="mobile-nav-clsbtn" onclick="navclose()">≡</button>
                 <div class="mobile-content">
                     <a href="/Team">About Us</a>
-                    <a href="#"><?php
-                        if(!isset($_COOKIE['benutzername'])){
-                            echo 'Account';
-                        }else{
-                            echo $_COOKIE['benutzername'];
-                        }
-                        ?></a>
+                    <?php
+                    if(!isset($_COOKIE['benutzername'])){
+                        echo '<a href="#">Login</a>';
+                    }else{
+                        echo '<a href="#" id="log-out" class="logOut">
+                             <span class="initial-text">' . $_COOKIE["benutzername"]. '</span>
+                             <span class="hover-text">Abmelden</span>
+                           </a>';
+                    }
+                    ?>
                     <a href="/downloads">Downloads</a>
                     <a href="/tagebuch">Tagebuch</a>
                     <a href="/entwicklung">Entwicklung</a>
