@@ -127,6 +127,17 @@ select{
     margin-top: 2rem;
 }
 
+.logOut .hover-text {
+    display: none;
+}
+
+.logOut:hover .initial-text {
+    display: none;
+}
+
+.logOut:hover .hover-text {
+    display: inline;
+}
 @media only screen and (max-width: 600px) {
     .topnav-right {
         display: none;

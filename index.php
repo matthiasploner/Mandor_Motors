@@ -12,13 +12,16 @@
             <a href=#><img src="medien/backgrounds/MM_Icon.png"></a>
             <div class="topnav-right">
                 <a href="/Team">About Us</a>
-                <a href="/login"><?php
-                    if(!isset($_COOKIE['benutzername'])){
-                        echo 'Account';
-                    }else{
-                        echo $_COOKIE['benutzername'];
-                    }
-                    ?></a>
+                <?php
+                if(!isset($_COOKIE['benutzername'])){
+                    echo '<a href="/login">Login</a>';
+                }else{
+                    echo '<a href="#" id="log-out" class="logOut">
+                             <span class="initial-text">' . $_COOKIE["benutzername"]. '</span>
+                             <span class="hover-text">Abmelden</span>
+                           </a>';
+                }
+                ?>
                 <div class="dropdown-PC">
                     <div class="dropdown-btnPC" onclick='dropdownFunction()'>
                         <a>Menu</a>
@@ -39,13 +42,16 @@
                 <button class="mobile-nav-clsbtn" onclick="navclose()">≡</button>
                 <div class="mobile-content">
                     <a href="/Team">About Us</a>
-                    <a href="/login"><?php
-                        if(!isset($_COOKIE['benutzername'])){
-                            echo 'Account';
-                        }else{
-                            echo $_COOKIE['benutzername'];
-                        }
-                        ?></a>
+                    <?php
+                    if(!isset($_COOKIE['benutzername'])){
+                        echo '<a href="/login">Login</a>';
+                    }else{
+                        echo '<a href="#" id="log-out" class="logOut">
+                             <span class="initial-text">' . $_COOKIE["benutzername"]. '</span>
+                             <span class="hover-text">Abmelden</span>
+                           </a>';
+                    }
+                    ?>
                     <a href="/downloads">Downloads</a>
                     <a href="/tagebuch">Tagebuch</a>
                     <a href="/entwicklung">Entwicklung</a>
@@ -80,16 +86,6 @@
             <a href="https://www.google.com/maps/place/Dantestra%C3%9Fe,+39e,+39042+Brixen,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol/@46.720341,11.6485398,18.21z/data=!4m6!3m5!1s0x4778050d856c4db3:0x5d34ee04dcc99ff7!8m2!3d46.7201447!4d11.6487849!16s%2Fg%2F11f4rdd5qz" target="_blank">Location</a>
         </div>
 
-        <script>
-            function dropdownFunction() {
-                document.getElementById("pcDropdown").classList.toggle("show");
-            }
-            function navopen() {
-                document.getElementById("mobile-nav").style.width = "100%";
-            }
-            function navclose() {
-                document.getElementById("mobile-nav").style.width = "0%";
-            }
-        </script>
+        <script src="functions.js"></script>
     </body>
 </html>

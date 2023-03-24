@@ -35,10 +35,13 @@ function drive(fn){
         aFn=fn;
     }
 
+    document.getElementById("speedP").innerText=x+"%";
+    console.log(x)
     if (aFn === stop) {
         console.log("aFn is stop function");
         speed = x;
         aFn();
+
     } else {
         console.log("aFn is not stop function");
         speed = x;
@@ -184,26 +187,7 @@ function changeType(){
         });
 }
 
-function changeSpeed(){
-    let x = document.getElementById("myRange").value;
-    x=parseInt(x);
-    console.log(x)
-    fetch(url+'changeSpeed', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({"message":x})
-    })
-        .then(response => response.text())
-        .then(data => {
 
-            console.log(data)
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
-}
 
 function stop(){
     fetch(url+'stop', {
@@ -221,21 +205,6 @@ function stop(){
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
         });
-}
-
-
-
-
-function getSpeed() {
-    let x=document.getElementById("speed");
-    fetch(url+'speed')
-        .then(response => response.json())
-        .then(data => {
-            x.innerText=data;
-        })
-        .catch(error => console.error(error));
-
-    setTimeout(getSpeed, 1000);
 }
 
 function led(){
