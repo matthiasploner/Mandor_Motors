@@ -61,7 +61,7 @@
         </div>
 
         <div class="center">
-            <h1>Sid MK3</h1>
+            <h1>Sid MK5</h1>
             <p>What color is your Super-Intelligent-Driver?</p>
             <button onclick="window.location.href='/driveassistent'">Drive-Assistent</button>
             <?php

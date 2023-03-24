@@ -72,12 +72,5 @@
         <button onclick="window.location.href='/Stream'">Stream</button>
         <button onclick="window.location.href='/driveassistent'">Drive-Assistent</button>
     </div>
-    <script>
-        function navopen() {
-        document.getElementById("mobile-nav").style.width = "100%";
-        }
-        function navclose() {
-        document.getElementById("mobile-nav").style.width = "0%";
-        }
-    </script>
+    <script src="functions.js"></script>
 </body>
