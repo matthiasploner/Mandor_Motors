@@ -67,17 +67,16 @@
                 <h4>Verantwortlich für den Inhalt dieser Webseite gemäß § 5 TMG:</h4>
                 <address>
                     Mandor Motors GbR<br>
-                    +39 342 767 8341<br>
+                    <a href="tel:+393427678341">+39 342 767 8341</a><br>
                     <a href="https://www.google.com/maps/place/Dantestra%C3%9Fe,+39e,+39042+Brixen,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol/@46.720341,11.6485398,18.21z/data=!4m6!3m5!1s0x4778050d856c4db3:0x5d34ee04dcc99ff7!8m2!3d46.7201447!4d11.6487849!16s%2Fg%2F11f4rdd5qz" target="_blank">Dantestraße, 39E 39042 Brixen, Autonome Provinz Bozen - Südtirol</a>
                 </address>
                 <h4>Vertreten durch die Geschäftsführer:</h4>
                 <ul>
                     <li>Matthias Plaickner, <a href="https://www.google.com/maps/place/Unterbrunnergasse,+18,+39040+Natz,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol/@46.7522479,11.6805642,17z/data=!3m1!4b1!4m5!3m4!1s0x477804c743602409:0x1f9e53515a3d1629!8m2!3d46.7522442!4d11.6827529" target="_blank">Unterbrunnergasse 18, 39040 Natz-Schabs</a></li>
-                    <li>Simon Ploner, <a href="https://www.google.com/maps/place/Nauders,+6,+39037+Rodengo+BZ/@46.78652,11.686132,17z/data=!3m1!4b1!4m6!3m5!1s0x4778033e220376ef:0x95eb94c37582355!8m2!3d46.7865163!4d11.6883207!16s%2Fg%2F11t9pb6b91" target="_blank"> Nauders 6, 39037 Rodeneck </a></li>
                 </ul>
                 <h4>Kontakt:</h4>
                 <ul>
-                    <li>Telefon: +39 349 628 9729</li>
+                    <li>Telefon: <a href="tel:+393496289729">+39 349 628 9729</a></li>
                     <li>E-Mail: <a href="mailto: mandormotors@gmail.com">mandormotors@gmail.com</a></li>
                 </ul>
                 <h4>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h4>
