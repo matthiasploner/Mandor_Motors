@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="style.css">
 
     </head>
-    <body scroll="no" onload="checkAutonom(),getSpeed(),checkALicht()">
+    <body scroll="no" onload="checkAutonom(),checkALicht()">
         <div class="topnav">
             <a href="../"><img src="../medien/backgrounds/MM_Icon.png"></a>
             <div class="topnav-right">
@@ -86,8 +86,7 @@
 
             <div class="speed">
                 <h3>Speed:</h3>
-                <p>In x/y :<label id = "speed"></label></p>
-                <p>In % :</p>
+                <p id="speedP">50%</p>
                 <input oninput="drive(null)" type="range" min="1" max="100" value="50" class="slider" id="myRange">
             </div>
 
