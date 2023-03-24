@@ -145,7 +145,7 @@
                 <button onclick="drive(vorwaerts)">↑</button>
                 <button></button>
                 <button onclick="drive(left)">←</button>
-                <button onclick="drive(stop)"><b>| |</b></button>
+                <button onclick="drive(stop)"><b>🛑</b></button>
                 <button onclick="drive(rechts)">→</button>
                 <button></button>
                 <button onclick="drive(zurueck)">↓</button>
