@@ -63,7 +63,7 @@ function color(){
 
         }) // Ausgeben der Antwort auf der Konsole
         .catch(error => console.error(error));
-    setTimeout(color, 500);
+    setTimeout(color, 100);
 }
 
 function dropdownFunction() {

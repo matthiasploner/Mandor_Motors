@@ -97,6 +97,22 @@
                 <img src="../medien/entwicklungbilder/MK3unten.jpg" class="img-responsive" alt="Bild">
                 <p>Verkabelung unterhalb des MK3s</p>
             </div>
+            <div class="slide-1 blueprint">
+                <img src="../medien/entwicklungbilder/MK4.jpg" class="img-responsive" alt="Bild">
+                <p>Der neue MK4</p>
+            </div>
+            <div class="slide-1 blueprint">
+                <img src="../medien/entwicklungbilder/MK4side.jpg" class="img-responsive" alt="Bild">
+                <p>Seiten/Rückansicht vom MK4</p>
+            </div>
+            <div class="slide-1 blueprint">
+                <img src="../medien/entwicklungbilder/MK4front.jpg" class="img-responsive" alt="Bild">
+                <p>MK4 Front-Ansicht</p>
+            </div>
+            <div class="slide-1 blueprint">
+                <img src="../medien/entwicklungbilder/MK4top.jpg" class="img-responsive" alt="Bild">
+                <p>MK4 aus der Luftperspektive</p>
+            </div>
             <a class="prev" onclick="arrowNextSlide(-1)">❮</a>
             <a class="next" onclick="arrowNextSlide(1)">❯</a>
         </div>

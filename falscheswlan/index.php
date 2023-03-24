@@ -68,8 +68,8 @@
 
 <div class="center">
     <h1>Es tut uns leid!</h1>
-    <p>Sie befinden sich im flaschen W-lan.</p>
-    <p>Der Name des richtigen W-lans lautet: "StartupLab"</p>
+    <p>Sie befinden sich im flaschen W-Lan.</p>
+    <p>Der Name des richtigen W-Lans lautet: "StartupLab"</p>
     <button onclick="window.location.href='../'">Home</button>
     <button onclick="window.location.href='/Stream'">Stream</button>
     <?php

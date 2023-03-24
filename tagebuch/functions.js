@@ -136,11 +136,8 @@ function readText(){
                 var tagebuch = "";
                 console.log(values[0].length)
                 for (let step = 0; step < values.length; step++) {
-
                     if (values[step].length == 2) {
-                        console.log(values[step][0]);
-                        tagebuch += values[step][0];
-                        tagebuch += "\n\n";
+
                         if (values[step][1] === "sthubmic") {
                             tagebuch += "Michael Huber";
                         }else if (values[step][1] === "stplosim") {
@@ -154,8 +151,11 @@ function readText(){
                         }else{
                             tagebuch += values[step][1];
                         }
-
                         tagebuch += "\n";
+                        console.log(values[step][0]);
+                        tagebuch += values[step][0];
+                        tagebuch += "\n\n";
+
                     }
 
                 }
