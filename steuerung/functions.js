@@ -233,7 +233,10 @@ function getSpeed() {
         .then(data => {
             x.innerText=data;
         })
-        .catch(error => console.error(error));
+        .catch(error => {
+            //window.location = "./10.10.30.42/falscheswlan";
+            console.error(error)
+        });
 
     setTimeout(getSpeed, 1000);
 }
