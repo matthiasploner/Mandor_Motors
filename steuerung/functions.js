@@ -296,4 +296,9 @@ function autoLight(){
         });
 }
 
-
+window.addEventListener('beforeunload', function(event) {
+    // Make an AJAX request to a PHP script to delete the file
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/steuerung/deleteFile.php', true);
+    xhr.send();
+});

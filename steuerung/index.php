@@ -2,6 +2,15 @@
     if(!isset($_COOKIE['benutzername']) || !isset($_COOKIE['token'])){
         header("Location: /login");
     }
+    $lock_file = '../lock.txt';
+
+    if (file_exists($lock_file)) {
+        header("Location: /warteseite");
+        exit;
+    } else {
+        $handle = fopen($lock_file, 'w');
+        fclose($handle);
+    }
 ?>
 
 <!DOCTYPE html>
