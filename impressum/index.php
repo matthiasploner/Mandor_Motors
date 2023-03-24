@@ -73,7 +73,6 @@
                 <h4>Vertreten durch die Geschäftsführer:</h4>
                 <ul>
                     <li>Matthias Plaickner, <a href="https://www.google.com/maps/place/Unterbrunnergasse,+18,+39040+Natz,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol/@46.7522479,11.6805642,17z/data=!3m1!4b1!4m5!3m4!1s0x477804c743602409:0x1f9e53515a3d1629!8m2!3d46.7522442!4d11.6827529" target="_blank">Unterbrunnergasse 18, 39040 Natz-Schabs</a></li>
-                    <li>Simon Ploner, <a href="https://www.google.com/maps/place/Nauders,+6,+39037+Rodengo+BZ/@46.78652,11.686132,17z/data=!3m1!4b1!4m6!3m5!1s0x4778033e220376ef:0x95eb94c37582355!8m2!3d46.7865163!4d11.6883207!16s%2Fg%2F11t9pb6b91" target="_blank"> Nauders 6, 39037 Rodeneck </a></li>
                 </ul>
                 <h4>Kontakt:</h4>
                 <ul>

@@ -1,3 +1,11 @@
+<?php
+$ip = $_SERVER['REMOTE_ADDR'];
+$ip_parts = explode('.', $ip);
+if ($ip_parts[1] != '10') {
+    header('Location: /falscheswlan');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="de">
     <head>
