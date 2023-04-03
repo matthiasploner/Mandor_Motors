@@ -228,3 +228,9 @@ body {
         top: 35%;
     }
 }
+
+@media only screen and (max-width: 1600px){
+    .slide-1 img{
+        max-height: 85rem;
+    }
+}
