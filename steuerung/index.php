@@ -89,7 +89,7 @@
 
             <div class="light">
                 <h3>Licht:</h3>
-                <p>Ein / Aus: <button id="licht" onclick="led()">Licht</button></p>
+                <p>Ein / Aus: <input type="checkbox" id="lichtB" onclick="licht()"></p>
                 <p>Autonom Licht: <input type="checkbox" id="aLight" onclick="autoLight()"></p>
             </div>
 
@@ -144,23 +144,25 @@
             </div>
 
             <div class="turn-str">
-                <button onclick="drive(hartRechts())">↶</button>
-                <button onclick="drive(hartLinks())">↷</button>
+                <button onclick="fahr(hartRechts)">↶</button>
+                <button onclick="fahr(hartLinks)">↷</button>
             </div>
 
             <div class="str-grid">
                 <button></button>
-                <button onclick="drive(vorwaerts)">↑</button>
+                <button onclick="fahr(vorwaerts)">↑</button>
                 <button></button>
-                <button onclick="drive(left)">←</button>
-                <button onclick="drive(stop)"><b>🛑</b></button>
-                <button onclick="drive(rechts)">→</button>
+                <button onclick="fahr(left)">←</button>
+                <button onclick="fahr(stop)"><b>🛑</b></button>
+                <button onclick="fahr(rechts)">→</button>
                 <button></button>
-                <button onclick="drive(zurueck)">↓</button>
+                <button onclick="fahr(zurueck)">↓</button>
                 <button></button>
             </div>
         </div>
 
         <script src="functions.js"></script>
+        <script src="drive.js"></script>
+        <script src="licht.js"></script>
     </body>
 </html>
