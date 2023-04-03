@@ -1,11 +1,28 @@
-<?php
-$ip = $_SERVER['REMOTE_ADDR'];
-$ip_parts = explode('.', $ip);
-if ($ip_parts[1] != '10') {
-    header('Location: /falscheswlan');
-    exit();
-}
-?>
+<script>
+    // AJAX-Anfrage an die REST-Schnittstelle senden
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/rest/status", true);
+
+    // Timeout-Handler setzen
+    var timeoutHandler = setTimeout(function() {
+        window.location.href = "/falscheswlan";
+    }, 3000);
+
+    // Event-Handler für die Antwort registrieren
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            clearTimeout(timeoutHandler);
+            if (xhr.status === 200) {
+                // Antwort empfangen, auf der Seite bleiben
+            } else {
+                // Fehler beim Empfangen der Antwort, auf falscheswlan weiterleiten
+                window.location.href = "/falscheswlan";
+            }
+        }
+    };
+
+    xhr.send();
+</script>
 <!DOCTYPE html>
 <html lang="de">
     <head>
