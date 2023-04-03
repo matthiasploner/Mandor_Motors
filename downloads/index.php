@@ -95,8 +95,8 @@
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../medien/downloadzips/pdf.png" class="img-responsive" alt="Download">
-                    <h4><b>Figma, Trello, Gantt und Website.pdf</b></h4>
-                    <h4><b>Download: <a href="../medien/tpdownloads/Figma, Trello, Gantt und Website.pdf" download>Hier</a></b></h4>
+                    <h4><b>Bauplan und Websiteplan.pdf</b></h4>
+                    <h4><b>Download: <a href="../medien/tpdownloads/Bauplan und Websiteplan.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../medien/downloadzips/pdf.png" class="img-responsive" alt="Download">
@@ -110,8 +110,8 @@
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../medien/downloadzips/pdf.png" class="img-responsive" alt="Download">
-                    <h4><b>Bauplan und Websiteplan.pdf</b></h4>
-                    <h4><b>Download: <a href="../medien/tpdownloads/Bauplan und Websiteplan.pdf" download>Hier</a></b></h4>
+                    <h4><b>Figma, Trello, Gantt und Website.pdf</b></h4>
+                    <h4><b>Download: <a href="../medien/tpdownloads/Figma, Trello, Gantt und Website.pdf" download>Hier</a></b></h4>
                 </div>
                 <div class="col-md-2 col-lg-offset-1 col-sm-12">
                     <img src="../medien/downloadzips/pdf.png" class="img-responsive" alt="Download">

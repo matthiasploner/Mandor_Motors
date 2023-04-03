@@ -89,7 +89,7 @@ h1 {
 }
 
 .pm-download{
-    margin-top: 70rem
+    margin-top: 72rem
 }
 
 .tp-download {
@@ -175,5 +175,15 @@ h1 {
 
     .tp-download {
         margin-top: 10rem
+    }
+}
+
+@media only screen and (min-width: 1800px){
+    .pm-download{
+        margin-top: 95rem
+    }
+
+    .tp-download {
+        margin-top: 45rem
     }
 }
