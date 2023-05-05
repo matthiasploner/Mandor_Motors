@@ -113,6 +113,14 @@
                 <img src="../medien/entwicklungbilder/MK4top.jpg" class="img-responsive" alt="MK4Top">
                 <p>MK4 aus der Luftperspektive</p>
             </div>
+            <div class="slide-1 blueprint">
+                <img src="../medien/entwicklungbilder/designFront.jpg" class="img-responsive" alt="3DModelFront">
+                <p>3D Model des MK5</p>
+            </div>
+            <div class="slide-1 blueprint">
+                <img src="../medien/entwicklungbilder/designBack.jpg" class="img-responsive" alt="3DModelBack">
+                <p>Rückansicht 3D Model des MK5</p>
+            </div>
             <a class="prev" onclick="arrowNextSlide(-1)">❮</a>
             <a class="next" onclick="arrowNextSlide(1)">❯</a>
         </div>
